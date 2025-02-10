@@ -13,7 +13,7 @@ urlpatterns = [
         name="savings-plan-list-create",
     ),
     path(
-        "savings-plans/<uuid:pk>/",
+        "savings-plans/<uuid:id>/",
         SavingsPlanDetailAPIView.as_view(),
         name="savings-plan-detail",
     ),
@@ -28,7 +28,7 @@ urlpatterns = [
         name="savings-transaction-list-create",
     ),
     path(
-        "savings-transactions/<uuid:pk>/",
+        "savings-transactions/<uuid:id>/",
         SavingsTransactionDetailAPIView.as_view(),
         name="savings-transaction-detail",
     ),

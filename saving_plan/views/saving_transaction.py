@@ -6,8 +6,15 @@ from django.db import transaction
 from django.utils import timezone
 from saving_plan.models import SavingsTransaction
 from saving_plan.serializers.saving_transaction import SavingsTransactionSerializer
-
+from utils.responses import (
+    success_response,
+    not_found_error_response,
+    success_single_response,
+    validation_error_response,
+    success_no_content_response,
+)
 from saving_plan.permissions import IsSavingsPlanUser
+from django.shortcuts import get_object_or_404
 
 
 class SavingsTransactionListCreateAPIView(APIView):
@@ -20,7 +27,7 @@ class SavingsTransactionListCreateAPIView(APIView):
         serializer = SavingsTransactionSerializer(
             queryset, many=True, context={"request": request}
         )
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        return success_response(serializer.data)
 
     def post(self, request):
         serializer = SavingsTransactionSerializer(
@@ -40,74 +47,48 @@ class SavingsTransactionListCreateAPIView(APIView):
                 )
 
             serializer.save(user=request.user)
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return success_single_response(
+                serializer.data, status_code=status.HTTP_201_CREATED
+            )
+        return validation_error_response(
+            serializer.errors,
+        )
 
 
 class SavingsTransactionDetailAPIView(APIView):
     permission_classes = [IsSavingsPlanUser]
 
-    def get_object(self, pk):
-        try:
-            obj = SavingsTransaction.objects.get(pk=pk, is_deleted=False)
-            self.check_object_permissions(self.request, obj)
-            return obj
-        except SavingsTransaction.DoesNotExist:
-            raise NotFound("Transaction not found")
+    def get_object(self, id):
+        saving_transacion = get_object_or_404(
+            SavingsTransaction,
+            id=id,
+        )
+        self.check_object_permissions(self.request, saving_transacion)
+        return saving_transacion
 
-    def get(self, request, pk):
-        transaction = self.get_object(pk)
+    def get(self, request, id):
+        transaction = self.get_object(id)
         serializer = SavingsTransactionSerializer(
             transaction, context={"request": request}
         )
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
-    def put(self, request, pk):
-        transaction = self.get_object(pk)
-
-        if transaction.savings_plan.is_deleted:
-            return Response(
-                {"error": "Cannot update transaction for a deleted savings plan"},
-                status=status.HTTP_400_BAD_REQUEST,
-            )
-
-        serializer = SavingsTransactionSerializer(
-            transaction, data=request.data, context={"request": request}
-        )
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return success_single_response(serializer.data)
 
     def patch(self, request, pk):
-        transaction = self.get_object(pk)
-
-        if transaction.savings_plan.is_deleted:
-            return Response(
-                {"error": "Cannot update transaction for a deleted savings plan"},
-                status=status.HTTP_400_BAD_REQUEST,
-            )
-
+        transaction = self.get_object(id)
         serializer = SavingsTransactionSerializer(
-            transaction, data=request.data, partial=True, context={"request": request}
+            transaction, data=request.data, context={"request": request}, partial=True
         )
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return success_single_response(serializer.data)
+        return validation_error_response(serializer.errors)
 
     def delete(self, request, pk):
         transaction = self.get_object(pk)
 
         try:
             transaction.is_deleted = True
-            transaction.save(update_fields=["is_deleted", "updated_at"])
-            return Response(
-                {"message": "Transaction deleted successfully"},
-                status=status.HTTP_204_NO_CONTENT,
-            )
+            transaction.save()
+            return success_no_content_response()
         except Exception as e:
-            return Response(
-                {"error": "Failed to delete transaction"},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            )
+            return not_found_error_response("Transaction not found.")

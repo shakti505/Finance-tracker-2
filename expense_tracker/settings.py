@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     "drf_yasg",
     "saving_plan",
     "recurring_transaction",
+    "transaction_summary_report",
 ]
 
 MIDDLEWARE = [
@@ -186,3 +187,4 @@ SENDGRID_RESET_PASSWORD_TEMPLATE_ID = "d-36f7a9ccf47a4a199e7acb16f3c1f0e6"
 SENDGRID_BUDGET_TEMPLATE_ID = "d-95c22b26f0e84ca7a3b23fbcfe248807"
 SENDGRID_SAVING_PLAN_TEMPLATE_ID = "d-36f7a9ccf47a4a199e7acb16f3c1f0e6"
 SENDGRID_FROM_EMAIL = "shakti@gkmit.co"
+SENDGRID_TRANSACTION_HISTORY_TEMPLATE_ID = "d-a864baa6467d4f87968f3c2b1e1a59b7"

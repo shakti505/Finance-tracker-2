@@ -40,8 +40,7 @@ class SavingsTransactionSerializer(serializers.ModelSerializer):
                 user_instance = CustomUser.objects.filter(id=user).first()
             except CustomUser.DoesNotExist:
                 raise serializers.ValidationError("User does not exist.")
-        print(user_instance)
-        print(saving_user)
+
         if user_instance != saving_user:
             raise serializers.ValidationError(
                 "You can only extend your own savings plans"

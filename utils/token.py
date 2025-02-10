@@ -1,10 +1,9 @@
-import logging
+from .logging import logger
 from rest_framework_simplejwt.tokens import RefreshToken, AccessToken
 from rest_framework.exceptions import ValidationError
 from user.models import ActiveTokens
 
 # Set up logging
-logger = logging.getLogger(__name__)
 
 
 class TokenHandler:

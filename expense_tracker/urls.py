@@ -27,6 +27,9 @@ urlpatterns = [
     path("api/v1/", include("saving_plan.urls")),
     path("api/v1/recurring-transactions/", include("recurring_transaction.urls")),
     path(
+        "api/v1/transaction-summary-report/", include("transaction_summary_report.urls")
+    ),
+    path(
         "swagger/",
         schema_view.with_ui("swagger", cache_timeout=0),
         name="schema-swagger-ui",

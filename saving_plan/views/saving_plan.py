@@ -7,19 +7,30 @@ from django.utils import timezone
 from saving_plan.models import SavingsPlan, SavingsTransaction
 from saving_plan.serializers.saving_plan import SavingsPlanSerializer
 from saving_plan.permissions import IsSavingsPlanUser
+from utils.responses import (
+    success_response,
+    not_found_error_response,
+    success_single_response,
+    validation_error_response,
+    success_no_content_response,
+    success_single_response,
+)
+from django.shortcuts import get_object_or_404
 
 
 class SavingsPlanListCreateAPIView(APIView):
     permission_classes = [IsSavingsPlanUser]
 
     def get(self, request):
-        queryset = SavingsPlan.objects.filter(is_deleted=False)
+        queryset = SavingsPlan.objects.filter()
         if not request.user.is_staff:
-            queryset = queryset.filter(user=request.user)
+            queryset = queryset.filter(user=request.user, is_deleted=False)
         serializer = SavingsPlanSerializer(
             queryset, many=True, context={"request": request}
         )
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        return success_response(
+            serializer.data,
+        )
 
     def post(self, request):
         serializer = SavingsPlanSerializer(
@@ -27,49 +38,40 @@ class SavingsPlanListCreateAPIView(APIView):
         )
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return success_single_response(
+                serializer.data, status_code=status.HTTP_201_CREATED
+            )
+        return validation_error_response(serializer.errors)
 
 
 class SavingsPlanDetailAPIView(APIView):
     permission_classes = [IsSavingsPlanUser]
 
-    def get_object(self, pk):
-        try:
-            obj = SavingsPlan.objects.get(pk=pk, is_deleted=False)
-            self.check_object_permissions(self.request, obj)
-            return obj
-        except SavingsPlan.DoesNotExist:
-            raise NotFound("Savings plan not found")
+    def get_object(self, id):
+        obj = get_object_or_404(SavingsPlan, id=id)
+        self.check_object_permissions(self.request, obj)
+        return obj
 
-    def get(self, request, pk):
-        plan = self.get_object(pk)
+    def get(self, request, id):
+        plan = self.get_object(id)
         serializer = SavingsPlanSerializer(plan, context={"request": request})
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
-    def put(self, request, pk):
-        plan = self.get_object(pk)
-        serializer = SavingsPlanSerializer(
-            plan, data=request.data, context={"request": request}
+        return success_single_response(
+            serializer.data,
         )
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def patch(self, request, pk):
-        plan = self.get_object(pk)
+    def patch(self, request, id):
+        plan = self.get_object(id)
         serializer = SavingsPlanSerializer(
             plan, data=request.data, partial=True, context={"request": request}
         )
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return success_single_response(serializer.data)
+        return validation_error_response(serializer.errors)
 
     @transaction.atomic
-    def delete(self, request, pk):
-        plan = self.get_object(pk)
+    def delete(self, request, id):
+        plan = self.get_object(id)
 
         try:
             # Update all related transactions
@@ -77,14 +79,10 @@ class SavingsPlanDetailAPIView(APIView):
                 savings_plan=plan, is_deleted=False
             ).update(is_deleted=True, updated_at=timezone.now())
 
-            # Update the savings plan
             plan.is_deleted = True
             plan.save(update_fields=["is_deleted", "updated_at"])
 
-            return Response(
-                {"message": "Plan and all related transactions deleted successfully"},
-                status=status.HTTP_204_NO_CONTENT,
-            )
+            return success_no_content_response()
         except Exception as e:
             return Response(
                 {"error": "Failed to delete plan and related transactions"},
