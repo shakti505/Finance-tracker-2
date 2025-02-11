@@ -22,6 +22,7 @@ from .swagger_docs import (
 )
 from django.shortcuts import get_object_or_404
 from utils.permissions import IsStaffOrOwner
+from django.db.models import Q
 
 
 class CategoryListView(APIView, CustomPageNumberPagination):
@@ -32,25 +33,27 @@ class CategoryListView(APIView, CustomPageNumberPagination):
     @category_list_get_doc
     def get(self, request):
         """List all categories for the authenticated user or all categories for staff."""
-        queryset = (
-            Category.objects.all().order_by("-created_at")
-            if request.user.is_staff
-            else Category.objects.filter(user=request.user, is_deleted=False).order_by(
-                "-created_at"
-            )
-            or Category.objects.filter(is_predefined=True, is_deleted=False).order_by(
-                "-created_at"
-            )
-        )
-
         category_type = request.query_params.get("type")
+
+        if request.user.is_staff:
+            categories = Category.objects.all().order_by("-created_at")
+        else:
+            categories = Category.objects.filter(
+                user=request.user,
+                is_deleted=False,
+            ).order_by("-created_at") or Category.objects.filter(
+                is_predifined=True, is_deleted=False
+            ).order_by(
+                "-created_at"
+            )
+
         if category_type in ["debit", "credit"]:
-            categories = Category.objects.filter(type=category_type)
+            categories = categories.filter(type=category_type)
         paginated_categories = self.paginate_queryset(categories, request)
         serializer = CategorySerializer(paginated_categories, many=True)
         return success_response(
             {
-                "count": queryset.count(),
+                "count": categories.count(),
                 "next": self.get_next_link(),
                 "previous": self.get_previous_link(),
                 "results": serializer.data,

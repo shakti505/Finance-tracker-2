@@ -29,6 +29,7 @@ urlpatterns = [
     path(
         "api/v1/transaction-summary-report/", include("transaction_summary_report.urls")
     ),
+    path("admin/", admin.site.urls),
     path(
         "swagger/",
         schema_view.with_ui("swagger", cache_timeout=0),

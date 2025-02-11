@@ -47,8 +47,10 @@ class LoginSerializer(serializers.Serializer):
     def validate(self, data):
         username = data.get("username")
         password = data.get("password")
-
+        print(username)
+        print(password)
         user = authenticate(username=username, password=password)
+        print(user)
         if not user:
             raise AuthenticationFailed("Invalid credentials")
 
@@ -75,6 +77,8 @@ class UpdatePasswordSerializer(serializers.Serializer):
                 raise ValidationError("Current password is required.")
             if not user.check_password(data["current_password"]):
                 raise ValidationError("Current password is incorrect.")
+        if request_user.is_staff and not request_user.is_superuser:
+            raise PermissionDenied("Staff cannot update password.")
 
         # Validate new passwords
         if data["new_password"] != data["confirm_password"]:

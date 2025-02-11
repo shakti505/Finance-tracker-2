@@ -49,7 +49,6 @@ class BudgetListCreateView(APIView):
         """Create a new budget"""
 
         serializer = BudgetSerializer(data=request.data, context={"request": request})
-
         if serializer.is_valid():
             serializer.save()
             return success_single_response(serializer.data)
@@ -60,8 +59,8 @@ class BudgetListCreateView(APIView):
         queryset = Budget.objects.filter()
 
         # Apply user filter for non-staff users
-        if not self.request.user.is_staff:
-            queryset = queryset.filter(user=self.request.user, is_deleted=False)
+        if not user.is_staff:
+            queryset = queryset.filter(user=user, is_deleted=False)
 
         # Apply category filter
         if category_id:
@@ -88,7 +87,6 @@ class BudgetDetailView(APIView):
         """Retrieve a specific budget"""
         try:
             budget = self._get_budget_object(pk)
-            self.check_object_permissions(request, budget)
             serializer = BudgetSerializer(budget, context={"request": request})
             return success_single_response(serializer.data)
         except Exception:
@@ -99,14 +97,14 @@ class BudgetDetailView(APIView):
         """Update a budget"""
         try:
             budget = self._get_budget_object(pk)
-            print(budget)
-            self.check_object_permissions(request, budget)
             serializer = BudgetSerializer(
                 budget, data=request.data, context={"request": request}, partial=True
             )
             if serializer.is_valid():
                 serializer.save()
-                return success_single_response(serializer.data)
+                return success_single_response(
+                    serializer.data, status_code=status.HTTP_201_CREATED
+                )
             return validation_error_response(serializer.errors)
 
         except Exception:
@@ -116,15 +114,14 @@ class BudgetDetailView(APIView):
         """Soft delete a budget"""
         try:
             budget = self._get_budget_object(pk)
-            self.check_object_permissions(request, budget)
             budget.is_deleted = True
             budget.save()
             return success_no_content_response()
-
         except Exception:
             return not_found_error_response()
 
     def _get_budget_object(self, pk):
         """Get budget object with proper filtering"""
         budget = get_object_or_404(Budget, pk=pk)
+        self.check_object_permissions(self.request, budget)
         return budget

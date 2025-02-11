@@ -82,12 +82,15 @@ class SavingsPlanSerializer(serializers.ModelSerializer):
             )
         return value.upper() if value else "MONTHLY"
 
-    def validate_user(self, value):
+    def validate_user(self, user):
         """Validate the user field."""
         request = self.context.get("request")
-        if not request.user.is_staff and value != request.user:
+        if not user.is_active:
+            raise serializers.ValidationError("User not found")
+
+        if not request.user.is_staff and user != request.user:
             raise serializers.ValidationError("You can only create plans for yourself")
-        return value
+        return user
 
     def validate(self, data):
         """Perform object-level validation."""
@@ -117,7 +120,6 @@ class SavingsPlanSerializer(serializers.ModelSerializer):
         today = timezone.now().date()
         if obj.current_deadline < today:
             return "Deadline passed"
-
         days_remaining = (obj.current_deadline - today).days
         if days_remaining > 30:
             return f"{days_remaining // 30} month's left"

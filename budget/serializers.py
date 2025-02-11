@@ -25,6 +25,8 @@ class BudgetSerializer(serializers.ModelSerializer):
             "year",
             "month",
             "is_deleted",
+            "created_at",
+            "updated_at",
         ]
         read_only_fields = [
             "id",
@@ -32,6 +34,8 @@ class BudgetSerializer(serializers.ModelSerializer):
             "month",
             "is_deleted",
             "spent_amount",
+            "created_at",
+            "updated_at",
         ]
 
     def __init__(self, *args, **kwargs):
@@ -48,9 +52,13 @@ class BudgetSerializer(serializers.ModelSerializer):
         """Validate user permissions"""
         request = self.context.get("request")
         request_user = request.user
-        if user.is_active == False:
+
+        if not user.is_active:
             raise serializers.ValidationError("User not found")
-        # Staff validation: can only create for non-staff users
+        if not request_user.is_staff and request_user != user:
+            raise serializers.ValidationError(
+                "You can create budgets for yourself only."
+            )
         if request_user.is_staff and user.is_staff:
             raise serializers.ValidationError(
                 "Staff can only create transactions for non-staff users."
@@ -69,14 +77,27 @@ class BudgetSerializer(serializers.ModelSerializer):
         user = CustomUser.objects.filter(id=user_id, is_active=True).first()
         return user
 
-    def validate_category(self, value):
+    def validate_category(self, category):
         """Validate category"""
-        if not value:
-            raise ValidationError("Category is required")
-        if value.is_deleted:
+        user = self._get_budget_user()
+        if not category.is_predefined and category.user != user:
+            raise serializers.ValidationError(
+                "Category does not belong to the provided user."
+            )
+        if not category.is_predefined and category.user != user:
+            raise serializers.ValidationError(
+                "Category does not belong to the provided user."
+            )
+        if category.is_deleted:
             raise ValidationError("Not Found")
-        if value.type != "debit":
+        if category.type != "debit":
             raise ValidationError("Budget can only be created for debit categories")
+        return category
+
+    def validate_amount(self, value):
+        """Validate amount"""
+        if value <= 0:
+            raise ValidationError("Amount must be greater than 0")
         return value
 
     def validate_month_year(self, value):
@@ -140,8 +161,6 @@ class BudgetSerializer(serializers.ModelSerializer):
         validated_data.pop("month_year", None)
         validated_data["month"] = self._validated_month
         validated_data["year"] = self._validated_year
-        print(self._validated_month)
-        print(self._validated_year)
 
         budget = super().create(validated_data)
 

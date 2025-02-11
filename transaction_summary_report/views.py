@@ -391,10 +391,8 @@ class TransactionHistoryExportView(BaseTransactionView):
     def get(self, request):
         try:
             file_format = request.query_params.get("file_format", "csv").lower()
-            print(file_format)
             if file_format not in ["csv", "pdf"]:
                 raise ValidationError("Invalid format. Use 'csv' or 'pdf'")
-            print("hello")
             user = self.get_target_user(request)
             start_date, end_date = self.get_date_range(request)
             transactions = self.get_transactions(user, start_date, end_date)

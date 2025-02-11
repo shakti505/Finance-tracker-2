@@ -6,7 +6,7 @@ from django.db import transaction
 from django.utils import timezone
 from saving_plan.models import SavingsPlan, SavingsTransaction
 from saving_plan.serializers.saving_plan import SavingsPlanSerializer
-from saving_plan.permissions import IsSavingsPlanUser
+from utils.permissions import IsStaffOrOwner
 from utils.responses import (
     success_response,
     not_found_error_response,
@@ -19,7 +19,7 @@ from django.shortcuts import get_object_or_404
 
 
 class SavingsPlanListCreateAPIView(APIView):
-    permission_classes = [IsSavingsPlanUser]
+    permission_classes = [IsStaffOrOwner]
 
     def get(self, request):
         queryset = SavingsPlan.objects.filter()
@@ -45,35 +45,41 @@ class SavingsPlanListCreateAPIView(APIView):
 
 
 class SavingsPlanDetailAPIView(APIView):
-    permission_classes = [IsSavingsPlanUser]
+    permission_classes = [IsStaffOrOwner]
 
     def get_object(self, id):
         obj = get_object_or_404(SavingsPlan, id=id)
-        self.check_object_permissions(self.request, obj)
+        self.check_object_permissions(self.x, obj)
         return obj
 
     def get(self, request, id):
-        plan = self.get_object(id)
-        serializer = SavingsPlanSerializer(plan, context={"request": request})
-        return success_single_response(
-            serializer.data,
-        )
+        try:
+            plan = self.get_object(id)
+            serializer = SavingsPlanSerializer(plan, context={"request": request})
+            return success_single_response(
+                serializer.data,
+            )
+        except Exception:
+            return not_found_error_response()
 
     def patch(self, request, id):
-        plan = self.get_object(id)
-        serializer = SavingsPlanSerializer(
-            plan, data=request.data, partial=True, context={"request": request}
-        )
-        if serializer.is_valid():
-            serializer.save()
-            return success_single_response(serializer.data)
-        return validation_error_response(serializer.errors)
+        try:
+            plan = self.get_object(id)
+            serializer = SavingsPlanSerializer(
+                plan, data=request.data, partial=True, context={"request": request}
+            )
+            if serializer.is_valid():
+                serializer.save()
+                return success_single_response(serializer.data)
+            return validation_error_response(serializer.errors)
+        except Exception:
+            return not_found_error_response()
 
     @transaction.atomic
     def delete(self, request, id):
-        plan = self.get_object(id)
 
         try:
+            plan = self.get_object(id)
             # Update all related transactions
             SavingsTransaction.objects.filter(
                 savings_plan=plan, is_deleted=False
@@ -83,8 +89,5 @@ class SavingsPlanDetailAPIView(APIView):
             plan.save(update_fields=["is_deleted", "updated_at"])
 
             return success_no_content_response()
-        except Exception as e:
-            return Response(
-                {"error": "Failed to delete plan and related transactions"},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            )
+        except Exception:
+            return not_found_error_response()

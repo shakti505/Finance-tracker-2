@@ -18,25 +18,37 @@ class ExtendDeadlineSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("New deadline must be in the future")
         return value
 
-    def validate_user(self, data):
-        request = self.context["request"]
-        user = request.user
-        if not user.is_staff and data != user:
-            raise serializers.ValidationError(
-                "You can only extend deadlines for yourself."
-            )
+    def validate_user(self, user):
+        """Ensure valid user selection based on user role."""
+        request_user = self.context["request"].user
 
-        return data
+        if not user.is_active:
+            raise serializers.ValidationError("User not found.")
+
+        if not request_user.is_staff and user != request_user:
+            raise serializers.ValidationError(
+                "You can only extend your own savings plans"
+            )
+        return user
+
+    def _get_saving_plan_user(self):
+        """Helper method to get and validate the transaction user."""
+
+        if "user" not in self.initial_data:
+            return None
+
+        user_id = self.initial_data.get("user")
+
+        if not is_uuid(user_id):
+            return None
+
+        user = CustomUser.objects.filter(id=user_id, is_active=True).first()
+        return user
 
     def validate_savings_plan(self, data):
         user = self.initial_data.get("user")
         saving_user = data.user
-        if is_uuid(user):
-            try:
-                user_instance = CustomUser.objects.filter(id=user).first()
-            except CustomUser.DoesNotExist:
-                raise serializers.ValidationError("User does not exist.")
-
+        user_instance = self._get_saving_plan_user()
         if user_instance != saving_user:
             raise serializers.ValidationError(
                 "You can only extend your own savings plans"

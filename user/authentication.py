@@ -4,6 +4,7 @@ from rest_framework.exceptions import AuthenticationFailed
 from django.conf import settings
 from rest_framework import exceptions
 from .models import ActiveTokens
+from rest_framework.response import Response
 
 
 class CustomTokenAuthentication(BaseAuthentication):

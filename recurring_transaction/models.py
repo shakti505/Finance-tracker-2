@@ -45,6 +45,7 @@ class RecurringTransaction(BaseModel):
 
     def save(self, *args, **kwargs):
         """Automatically set the next_run date when a new recurring transaction is created."""
+
         super().save(*args, **kwargs)
 
     def get_next_run_date(self, current_date):

@@ -6,12 +6,7 @@ from django.core.validators import (
     MinLengthValidator,
     RegexValidator,
 )
-
-
-username_validator = RegexValidator(
-    regex=r"^[a-zA-Z0-9_]+$",
-    message="Username must be alphanumeric and can include underscores.",
-)
+from utils.models import BaseModel
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
@@ -21,7 +16,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(
         max_length=50,
         unique=True,
-        validators=[username_validator, MinLengthValidator(3)],
     )
     name = models.CharField(max_length=100)
     is_active = models.BooleanField(default=True)
@@ -38,7 +32,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 
-class ActiveTokens(models.Model):
+class ActiveTokens(BaseModel):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="token")
     token = models.CharField(max_length=1024, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)

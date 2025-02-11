@@ -35,6 +35,8 @@ from django.contrib.auth.tokens import default_token_generator
 from .serializers import PasswordResetRequestSerializer
 from django.utils.http import urlsafe_base64_decode
 from utils.logging import logger
+from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError
 
 
 class BaseUserView:
@@ -93,6 +95,7 @@ class UserListView(APIView):
     @user_profile_get_doc
     def get(self, request):
         users = CustomUser.objects.all()
+        self.check_object_permissions(request, users)
         serializer = UserSerializer(users, many=True)
         return success_response(serializer.data)
 
@@ -195,9 +198,8 @@ class PasswordResetRequestView(APIView):
             )  # Use UUID bytes for encoding
 
             # Generate reset URL
-            reset_link = (
-                f"http://localhost:8000/api/auth/password-reset/confirm/{uid}/{token}/"
-            )
+            reset_link = f"http://localhost:8000/api/v1/auth/password-reset/confirm/{uid}/{token}/"
+            print(reset_link)
 
             # Send email
             send_mail.delay(
@@ -214,25 +216,39 @@ class PasswordResetConfirmView(APIView):
 
     def post(self, request, uidb64, token):
         try:
-            # Decode UID
-            uid = urlsafe_base64_decode(uidb64).decode()
-
-            # Ensure the UID is a valid UUID
-            uid = UUID(uid)  # This will raise a ValueError if the UID is invalid
-
-            # Fetch the user using the decoded UID
+            # Decode UID and fetch user
+            uid = UUID(urlsafe_base64_decode(uidb64).decode())
             user = CustomUser.objects.get(id=uid)
-        except (ValueError, CustomUser.DoesNotExist, TypeError):
-            return not_found_error_response(detail="Invalid user or token.")
 
-        if default_token_generator.check_token(user, token):
-            new_password = request.data.get("password")
-            if new_password:
-                user.set_password(new_password)
-                user.save()
-                return success_response(
-                    data={"message": "Password has been reset successfully."}
+            # Validate token
+            if not default_token_generator.check_token(user, token):
+                return validation_error_response(
+                    errors={"detail": "Invalid or expired token."}
                 )
-            return validation_error_response(errors={"detail": "Password is required."})
 
-        return validation_error_response(errors={"detail": "Invalid or expired token."})
+            # Validate and set new password
+            new_password = request.data.get("password")
+            if not new_password:
+                return validation_error_response(
+                    errors={"detail": "Password is required."}
+                )
+
+            try:
+                validate_password(new_password, user)  # Ensure strong password
+            except ValidationError as e:
+                return validation_error_response(errors={"password": e.messages})
+
+            user.set_password(new_password)
+            user.save()
+            return success_response(
+                data={"message": "Password has been reset successfully."}
+            )
+
+        except (ValueError, TypeError, CustomUser.DoesNotExist):
+            return not_found_error_response(detail="Invalid user or token.")
+        except Exception as e:
+            logger.exception("Error resetting password")  # Logs full traceback
+            return Response(
+                {"detail": "Error resetting password"},
+                status=status.HTTP_400_BAD_REQUEST,
+            )

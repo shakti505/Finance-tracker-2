@@ -12,6 +12,7 @@ from saving_plan.permissions import IsSavingsPlanUser
 from utils.responses import (
     success_single_response,
     validation_error_response,
+    success_response,
 )
 
 
@@ -28,6 +29,10 @@ class ExtendDeadlineAPIView(APIView):
         except SavingsPlan.DoesNotExist:
             raise NotFound("Savings plan not found")
 
+    def get(self, request):
+        plan = self.get_object(request)
+        return success_response(SavingsPlanSerializer(plan, many=True).data)
+
     def post(self, request):
         plan = self.get_object(request)
         print(request.data)
@@ -36,7 +41,5 @@ class ExtendDeadlineAPIView(APIView):
         )
         if serializer.is_valid():
             extension = serializer.save()
-            return success_single_response(
-                SavingsPlanSerializer(plan).data, status=status.HTTP_200_OK
-            )
+            return success_single_response(SavingsPlanSerializer(plan).data)
         return validation_error_response(serializer.errors)

@@ -79,14 +79,15 @@ class TransactionSerializer(serializers.ModelSerializer):
 
     def validate_category(self, category):
         """Ensure category belongs to the user and matches transaction type."""
-        if category.is_deleted:
-            raise serializers.ValidationError("Category not found.")
+
         type = self._get_transaction_type()
         user = self._get_transaction_user()
         if not category.is_predefined and category.user != user:
             raise serializers.ValidationError(
                 "Category does not belong to the provided user."
             )
+        if category.is_deleted:
+            raise serializers.ValidationError("Category not found.")
         if category.type != type:
             raise serializers.ValidationError(
                 "Category type does not match transaction type."

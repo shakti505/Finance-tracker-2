@@ -39,15 +39,11 @@ class RecurringTransactionSerializer(serializers.ModelSerializer):
         """Helper method to get and validate the recurring transaction user"""
         if self.instance:
             return self.instance.user
-
         if "user" not in self.initial_data:
             return None
-
         user_id = self.initial_data.get("user")
-
         if not is_uuid(user_id):
             return None
-
         user = CustomUser.objects.filter(id=user_id, is_active=True).first()
         return user
 

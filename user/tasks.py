@@ -15,9 +15,8 @@ def send_email_task(to_email, reset_link):
     }
     send_mail(
         to_email,
-        reset_link,
         subject=subject,
         dynamic_template_data=dynamic_template_data,
-        dynamic_template_id=settings.SENDGRID_PASSWORD_RESET_TEMPLATE_ID,
+        dynamic_template_id=settings.SENDGRID_RESET_PASSWORD_TEMPLATE_ID,
     )
     return "Email sent successfully"
