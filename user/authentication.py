@@ -6,6 +6,13 @@ from rest_framework import exceptions
 from .models import ActiveTokens
 from rest_framework.response import Response
 
+# from utils.exceptions import (
+#     UnauthorizedException,
+#     ForbiddenException,
+#     ResourceNotFoundException,
+#     InvalidInputException,
+# )
+
 
 class CustomTokenAuthentication(BaseAuthentication):
     def authenticate(self, request):

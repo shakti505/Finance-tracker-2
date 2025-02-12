@@ -10,6 +10,7 @@ from .views import (
     PasswordResetConfirmView,
     PasswordResetRequestView,
 )
+from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     path("auth/register/", UserCreateView.as_view(), name="user-signup"),
@@ -24,12 +25,12 @@ urlpatterns = [
     path("users/", UserListView.as_view(), name="get_all_users"),
     path(
         "auth/password-reset/",
-        PasswordResetRequestView.as_view(),
+        csrf_exempt(PasswordResetRequestView.as_view()),
         name="password-reset",
     ),
     path(
         "auth/password-reset/confirm/<str:uidb64>/<str:token>/",
-        PasswordResetConfirmView.as_view(),
+        csrf_exempt(PasswordResetConfirmView.as_view()),
         name="password-reset-confirm",
     ),
 ]

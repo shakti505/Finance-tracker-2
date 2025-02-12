@@ -37,6 +37,8 @@ from django.utils.http import urlsafe_base64_decode
 from utils.logging import logger
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
+from .tasks import soft_delete_related_data
+from rest_framework.exceptions import NotFound
 
 
 class BaseUserView:
@@ -52,7 +54,7 @@ class BaseUserView:
             user = CustomUser.objects.get(id=id)
             return user
         except CustomUser.DoesNotExist:
-            return not_found_error_response(f"No user found with ID: {id}")
+            raise NotFound(detail="User not found.")
 
 
 class UserCreateView(APIView):
@@ -86,7 +88,7 @@ class LogoutView(APIView):
     @logout_doc
     def post(self, request):
         TokenHandler.invalidate_user_session(request.user, request.auth)
-        return success_single_response({"message": "Logged out successfully"})
+        return success_single_response({"detail": "Logged out successfully"})
 
 
 class UserListView(APIView):
@@ -110,8 +112,8 @@ class UserProfileView(BaseUserView, APIView):
             self.check_object_permissions(request, user)
             serializer = UserSerializer(user)
             return success_single_response(serializer.data)
-        except Exception as e:
-            return not_found_error_response()
+        except NotFound:
+            return not_found_error_response(f"No user found with ID: {id}")
 
     @user_profile_patch_doc
     def patch(self, request, id):
@@ -128,26 +130,24 @@ class UserProfileView(BaseUserView, APIView):
                 serializer.save()
                 return success_single_response(serializer.data)
             return validation_error_response(serializer.errors)
-        except Exception as e:
-            logger.error(f"Error updating user profile: {str(e)}")
-            return not_found_error_response()
+        except NotFound:
+            return not_found_error_response(f"No user found with ID: {id}")
 
     @user_profile_delete_doc
     def delete(self, request, id):
         try:
             user = self.get_user_or_404(id)
             self.check_object_permissions(request, user)
-
             serializer = DeleteUserSerializer(
                 data=request.data, context={"request": request, "user": user}
             )
             if serializer.is_valid():
                 serializer.delete_user()
+                soft_delete_related_data.delay(user)
                 return success_no_content_response()
             return validation_error_response(serializer.errors)
-        except Exception as e:
-            logger.error(f"Error deleting user: {str(e)}")
-            return not_found_error_response("Error deleting user")
+        except NotFound:
+            return not_found_error_response(f"No user found with ID: {id}")
 
 
 class UpdatePasswordView(BaseUserView, APIView):
@@ -157,11 +157,7 @@ class UpdatePasswordView(BaseUserView, APIView):
     def patch(self, request, id):
         try:
             user = self.get_user_or_404(id)
-            if isinstance(user, Response):
-                return user
-
             self.check_object_permissions(request, user)
-
             serializer = UpdatePasswordSerializer(
                 data=request.data, context={"request": request, "user": user}
             )
@@ -170,9 +166,8 @@ class UpdatePasswordView(BaseUserView, APIView):
                 serializer.update_password()
                 return success_response("Successfully updated password.")
             return validation_error_response(serializer.errors)
-        except Exception as e:
-            logger.error(f"Error updating password: {str(e)}")
-            return not_found_error_response(f"{e}")
+        except NotFound:
+            return not_found_error_response(f"No user found with ID: {id}")
 
 
 class PasswordResetRequestView(APIView):
@@ -223,32 +218,20 @@ class PasswordResetConfirmView(APIView):
             # Validate token
             if not default_token_generator.check_token(user, token):
                 return validation_error_response(
-                    errors={"detail": "Invalid or expired token."}
+                    {"detail": "Invalid or expired token."}
                 )
 
             # Validate and set new password
             new_password = request.data.get("password")
             if not new_password:
-                return validation_error_response(
-                    errors={"detail": "Password is required."}
-                )
+                return validation_error_response({"detail": "Password is required."})
 
-            try:
-                validate_password(new_password, user)  # Ensure strong password
-            except ValidationError as e:
-                return validation_error_response(errors={"password": e.messages})
-
+            validate_password(new_password, user)  # Ensure strong password
             user.set_password(new_password)
             user.save()
             return success_response(
-                data={"message": "Password has been reset successfully."}
+                {"message": "Password has been reset successfully."}
             )
 
         except (ValueError, TypeError, CustomUser.DoesNotExist):
-            return not_found_error_response(detail="Invalid user or token.")
-        except Exception as e:
-            logger.exception("Error resetting password")  # Logs full traceback
-            return Response(
-                {"detail": "Error resetting password"},
-                status=status.HTTP_400_BAD_REQUEST,
-            )
+            return not_found_error_response("Invalid user or token.")

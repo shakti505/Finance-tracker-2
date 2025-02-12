@@ -22,7 +22,9 @@ from .swagger_docs import (
 )
 from django.shortcuts import get_object_or_404
 from utils.permissions import IsStaffOrOwner
-from django.db.models import Q
+from django.db import transaction
+from transaction.models import Transaction
+from rest_framework.exceptions import NotFound
 
 
 class CategoryListView(APIView, CustomPageNumberPagination):
@@ -98,7 +100,7 @@ class CategoryDetailView(APIView):
             category = self.get_object(id, request)
             serializer = CategorySerializer(category)
             return success_single_response(serializer.data)
-        except Exception:
+        except NotFound:
             return not_found_error_response()
 
     @category_detail_patch_doc
@@ -116,7 +118,7 @@ class CategoryDetailView(APIView):
                 serializer.save()
                 return success_single_response(serializer.data)
             return validation_error_response(serializer.errors)
-        except Exception as e:
+        except NotFound:
             return not_found_error_response()
 
     @category_detail_delete_doc
@@ -124,9 +126,18 @@ class CategoryDetailView(APIView):
         """Soft-delete a specific category."""
         try:
             category = self.get_object(id, request)
+            with transaction.atomic():
+                if Transaction.objects.filter(
+                    category=category, is_deleted=False
+                ).exists():
+                    return validation_error_response(
+                        {
+                            "detail": "Cannot delete category with associated transactions."
+                        }
+                    )
             category.is_deleted = True
             category.save()
             self.delete_associated_budgets(category)
             return success_no_content_response()
-        except Exception as e:
+        except NotFound:
             return not_found_error_response()

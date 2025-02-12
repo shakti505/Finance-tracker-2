@@ -100,16 +100,9 @@ class RecurringTransactionSerializer(serializers.ModelSerializer):
     def validate_start_date(self, start_date):
         """Validate start date"""
         today = datetime.today().date()
-        if start_date.date >= today:
+        if start_date.date() < today:
             raise serializers.ValidationError("Start date cannot be in the past.")
         return start_date
-
-    def validate_end_date(self, end_date):
-        """Validate end date"""
-        if end_date < self.initial_data.get("start_date"):
-            raise serializers.ValidationError("End date must be after start date.")
-
-        return end_date
 
     def validate(self, attrs):
         """Cross-field validations"""
@@ -120,6 +113,10 @@ class RecurringTransactionSerializer(serializers.ModelSerializer):
             start_date = attrs.get(
                 "start_date", instance.start_date if instance else None
             )
+            if attrs["end_date"].date() <= start_date.date():
+                raise serializers.ValidationError(
+                    {"End_date": "End date must be after start date."}
+                )
         return attrs
 
     @transaction.atomic

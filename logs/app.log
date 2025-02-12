@@ -10306,3 +10306,1914 @@ AttributeError: 'NoneType' object has no attribute 'id'
 2025-02-11 13:43:37,886 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
 2025-02-11 13:43:41,376 [INFO] User admin logged in successfully.
 2025-02-11 13:43:41,382 [INFO] Generated tokens for user admin.
+2025-02-11 15:01:22,828 [WARNING] Forbidden: /api/v1/users/
+2025-02-11 15:01:27,123 [INFO] User admin logged in successfully.
+2025-02-11 15:01:27,131 [INFO] Generated tokens for user admin.
+2025-02-11 15:01:45,991 [INFO] User shakti created successfully.
+2025-02-11 15:01:48,781 [WARNING] Bad Request: /api/v1/auth/register/
+2025-02-11 15:02:10,436 [INFO] User shakti logged in successfully.
+2025-02-11 15:02:10,440 [INFO] Generated tokens for user shakti.
+2025-02-11 15:02:18,363 [INFO] Fetching transactions for user: 2004shakti@gmail.com
+2025-02-11 15:02:18,368 [INFO] Transactions retrieved successfully for user: 2004shakti@gmail.com
+2025-02-11 15:04:39,433 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-11 15:05:03,922 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-11 15:05:07,258 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-11 15:06:40,535 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 103, in validate_start_date
+    if start_date.date >= today:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'builtin_function_or_method' and 'datetime.date'
+2025-02-11 15:07:21,170 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:07:35,371 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:07:36,888 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 103, in validate_start_date
+    if start_date.date >= today:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'builtin_function_or_method' and 'datetime.date'
+2025-02-11 15:07:45,093 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:08:14,434 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:08:39,458 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:08:41,200 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 103, in validate_start_date
+    if start_date < today:
+       ^^^^^^^^^^^^^^^^^^
+TypeError: can't compare datetime.datetime to datetime.date
+2025-02-11 15:08:53,218 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:08:56,631 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 103, in validate_start_date
+    if start_date.date < today:
+       ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'builtin_function_or_method' and 'datetime.date'
+2025-02-11 15:09:12,448 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:09:14,539 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 110, in validate_end_date
+    if end_date < self.initial_data.get("start_date"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'datetime.datetime' and 'str'
+2025-02-11 15:09:32,493 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:09:37,808 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:09:40,158 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:09:42,744 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 110, in validate_end_date
+    if end_date < self.initial_data.get("start_date"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'datetime.datetime' and 'str'
+2025-02-11 15:10:29,218 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:10:32,393 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 103, in validate_start_date
+    if start_date < today:
+       ^^^^^^^^^^^^^^^^^^
+TypeError: can't compare datetime.datetime to datetime.date
+2025-02-11 15:11:19,929 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:11:24,964 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 110, in validate_end_date
+    if end_date < self.initial_data.get("start_date"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'datetime.datetime' and 'str'
+2025-02-11 15:12:42,043 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:12:53,697 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:12:56,658 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:13:03,557 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 118, in validate_end_date
+    if end_date < start_date:
+       ^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare offset-naive and offset-aware datetimes
+2025-02-11 15:14:40,510 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:14:44,272 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-11 15:14:44,313 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 56, in post
+    serializer.data,
+    ^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/fields.py", line 1207, in to_representation
+    value = self.enforce_timezone(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/fields.py", line 1153, in enforce_timezone
+    if timezone.is_aware(value):
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/timezone.py", line 221, in is_aware
+    return value.utcoffset() is not None
+           ^^^^^^^^^^^^^^^
+AttributeError: 'datetime.date' object has no attribute 'utcoffset'
+2025-02-11 15:15:12,693 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:15:15,568 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 103, in validate_start_date
+    if start_date.date >= today:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'builtin_function_or_method' and 'datetime.date'
+2025-02-11 15:15:42,639 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:15:44,372 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 103, in validate_start_date
+    if start_date.date <= today:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<=' not supported between instances of 'builtin_function_or_method' and 'datetime.date'
+2025-02-11 15:15:48,703 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:15:51,375 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 103, in validate_start_date
+    if start_date.date < today:
+       ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'builtin_function_or_method' and 'datetime.date'
+2025-02-11 15:16:28,641 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:16:30,409 [ERROR] Internal Server Error: /api/v1/recurring-transactions/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py", line 52, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py", line 109, in validate_end_date
+    if end_date < self.initial_data.get("start_date"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'datetime.datetime' and 'str'
+2025-02-11 15:17:29,068 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:17:32,294 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-11 15:18:19,599 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-11 15:18:41,934 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-11 15:24:09,688 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-11 15:25:26,465 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-11 15:34:22,165 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-11 15:36:45,062 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-11 15:37:22,026 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-11 15:37:29,504 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-11 15:37:57,687 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-11 15:38:05,335 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-11 15:38:09,746 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-11 15:38:25,376 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/responses.py changed, reloading.
+2025-02-11 15:38:40,953 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/responses.py changed, reloading.
+2025-02-11 15:42:44,534 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-11 15:43:27,097 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-11 16:07:13,107 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-11 16:07:27,253 [INFO] User shakti logged in successfully.
+2025-02-11 16:07:27,262 [INFO] Generated tokens for user shakti.
+2025-02-11 16:36:32,316 [WARNING] Not Found: /api/v1/budget/e2c62488-b97c-41d4-bd12-219469c44a0f/
+2025-02-11 16:37:03,893 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/permissions.py changed, reloading.
+2025-02-11 16:37:22,534 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/responses.py changed, reloading.
+2025-02-11 16:37:27,408 [WARNING] Not Found: /api/v1/budget/asjndf/
+2025-02-11 16:37:34,108 [WARNING] Not Found: /api/v1/budget/e2c62488-b97c-41d4-bd12-219469c44a0f/
+2025-02-11 16:38:00,580 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/models.py changed, reloading.
+2025-02-11 16:46:38,543 [INFO] User shakti logged in successfully.
+2025-02-11 16:46:38,557 [INFO] Generated tokens for user shakti.
+2025-02-11 16:48:21,983 [WARNING] Bad Request: /api/v1/users/update-password/547f7668-2c75-407a-9847-eee2e0ef109c/
+2025-02-11 17:17:45,088 [INFO] User shakti_user created successfully.
+2025-02-11 17:18:03,573 [WARNING] Bad Request: /api/v1/auth/register/
+2025-02-11 17:18:10,719 [INFO] User shakti_user_2 created successfully.
+2025-02-11 17:18:23,601 [INFO] User shakti_user_3 created successfully.
+2025-02-11 17:19:32,932 [WARNING] Bad Request: /api/v1/auth/register/
+2025-02-11 17:19:37,886 [WARNING] Bad Request: /api/v1/auth/register/
+2025-02-11 17:19:49,557 [WARNING] Bad Request: /api/v1/auth/register/
+2025-02-11 18:25:52,065 [WARNING] Bad Request: /api/v1/auth/register/
+2025-02-11 18:25:56,958 [INFO] User staff_user created successfully.
+2025-02-11 18:26:25,911 [INFO] User staff_user logged in successfully.
+2025-02-11 18:26:25,917 [INFO] Generated tokens for user staff_user.
+2025-02-11 18:26:36,191 [WARNING] Not Found: /
+2025-02-11 18:26:36,339 [WARNING] Not Found: /favicon.ico
+2025-02-11 18:27:27,011 [ERROR] Error updating password: Staff cannot update password.
+2025-02-11 18:27:27,012 [WARNING] Not Found: /api/v1/users/update-password/547f7668-2c75-407a-9847-eee2e0ef109c/
+2025-02-11 18:28:15,499 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-11 18:29:45,467 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-11 18:29:48,251 [WARNING] Bad Request: /api/v1/users/update-password/547f7668-2c75-407a-9847-eee2e0ef109c/
+2025-02-11 18:30:25,536 [WARNING] Bad Request: /api/v1/users/update-password/547f7668-2c75-407a-9847-eee2e0ef109c/
+2025-02-11 18:32:11,144 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-11 18:32:39,459 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-11 18:32:40,827 [WARNING] Bad Request: /api/v1/users/update-password/547f7668-2c75-407a-9847-eee2e0ef109c/
+2025-02-12 10:21:14,731 [INFO] User staff_user logged in successfully.
+2025-02-12 10:21:14,756 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:21:53,090 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 10:22:03,471 [INFO] User staff_user logged in successfully.
+2025-02-12 10:22:03,475 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:22:59,477 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:23:19,938 [INFO] Password updated successfully for user staff_user
+2025-02-12 10:23:36,222 [INFO] User staff_user logged in successfully.
+2025-02-12 10:23:36,226 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:23:47,211 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 10:23:56,318 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 10:24:23,512 [INFO] User staff_user logged in successfully.
+2025-02-12 10:24:23,516 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:25:59,864 [INFO] User staff_user logged in successfully.
+2025-02-12 10:25:59,868 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:26:08,153 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 10:26:21,936 [INFO] Password updated successfully for user staff_user
+2025-02-12 10:26:25,462 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:26:32,115 [INFO] User staff_user logged in successfully.
+2025-02-12 10:26:32,119 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:27:01,327 [INFO] User staff_user logged in successfully.
+2025-02-12 10:27:01,331 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:27:25,070 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 10:27:31,803 [INFO] User staff_user logged in successfully.
+2025-02-12 10:27:31,807 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:31:33,527 [INFO] User staff_user logged in successfully.
+2025-02-12 10:31:33,533 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:31:53,286 [INFO] Password updated successfully for user staff_user
+2025-02-12 10:32:02,848 [INFO] User staff_user logged in successfully.
+2025-02-12 10:32:02,852 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:32:09,002 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 10:32:15,524 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 10:32:20,618 [INFO] User staff_user logged in successfully.
+2025-02-12 10:32:20,622 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:36:06,314 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:36:09,821 [INFO] User staff_user logged in successfully.
+2025-02-12 10:36:09,829 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:36:27,463 [INFO] Password updated successfully for user staff_user
+2025-02-12 10:36:30,602 [INFO] Password updated successfully for user staff_user
+2025-02-12 10:36:44,191 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 10:36:50,813 [INFO] User staff_user logged in successfully.
+2025-02-12 10:36:50,820 [INFO] Generated tokens for user staff_user.
+2025-02-12 10:36:56,556 [INFO] Password updated successfully for user staff_user
+2025-02-12 10:37:35,341 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:43:47,656 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:43:53,537 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:44:21,640 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:46:46,695 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:50:37,059 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:51:20,339 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:51:37,565 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:52:38,809 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:53:24,534 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:53:30,654 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:53:38,261 [INFO] Password updated successfully for user staff_user
+2025-02-12 10:54:05,962 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:54:26,347 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:54:38,985 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:54:40,916 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:54:43,878 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:54:56,366 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:55:38,996 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:55:42,665 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:55:51,303 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:56:08,492 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:56:15,302 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:56:22,456 [INFO] Password updated successfully for user staff_user
+2025-02-12 10:56:25,140 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:56:39,092 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:56:59,014 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:57:09,570 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:57:14,655 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:57:55,387 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:57:58,829 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:58:10,245 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 10:58:23,982 [WARNING] Not Found: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7n/
+2025-02-12 10:58:32,099 [ERROR] Error updating password: {'user': "You don't have permission to update this user's password."}
+2025-02-12 10:58:32,100 [WARNING] Not Found: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc6f/
+2025-02-12 10:58:53,836 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 10:58:56,761 [ERROR] Error updating password: {'user': 'user not found'}
+2025-02-12 10:58:56,762 [WARNING] Not Found: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc6f/
+2025-02-12 10:59:21,713 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 10:59:24,385 [ERROR] Error updating password: {'user': 'user not found'}
+2025-02-12 10:59:24,385 [WARNING] Not Found: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc6f/
+2025-02-12 11:01:49,947 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 11:01:51,148 [ERROR] Error updating password: user not found
+2025-02-12 11:01:51,149 [WARNING] Not Found: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc6f/
+2025-02-12 11:02:09,821 [ERROR] Error updating password: user not found
+2025-02-12 11:02:09,821 [WARNING] Not Found: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc6f/
+2025-02-12 11:02:16,572 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 11:13:11,481 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:13:21,641 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:13:31,162 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:13:59,344 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:14:19,789 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:14:29,361 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:14:46,095 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:16:00,936 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:16:03,348 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:16:07,423 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:16:13,936 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:16:26,699 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:16:41,462 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:16:54,195 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:17:32,827 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:17:48,654 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:17:51,557 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:17:55,935 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:19:36,430 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:19:47,947 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:19:59,419 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:20:03,904 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:20:26,939 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:20:46,661 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:21:25,359 [INFO] User user_user created successfully.
+2025-02-12 11:21:41,205 [INFO] User user_user soft-deleted successfully.
+2025-02-12 11:21:41,222 [ERROR] Error deleting user: soft_delete_related_data() missing 1 required positional argument: 'user'
+2025-02-12 11:21:41,223 [WARNING] Not Found: /api/v1/users/5aa42f19-3924-4048-84b4-ee03f165291d/
+2025-02-12 11:22:35,982 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:23:14,007 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:23:15,405 [INFO] User user_user soft-deleted successfully.
+2025-02-12 11:23:15,420 [ERROR] Error deleting user: soft_delete_related_data() missing 1 required positional argument: 'user'
+2025-02-12 11:23:15,421 [WARNING] Not Found: /api/v1/users/5aa42f19-3924-4048-84b4-ee03f165291d/
+2025-02-12 11:23:31,961 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:23:33,609 [INFO] User user_user soft-deleted successfully.
+2025-02-12 11:23:33,622 [ERROR] Error deleting user: soft_delete_related_data() missing 1 required positional argument: 'user'
+2025-02-12 11:23:33,623 [WARNING] Not Found: /api/v1/users/5aa42f19-3924-4048-84b4-ee03f165291d/
+2025-02-12 11:24:26,165 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:24:30,361 [INFO] User user_user soft-deleted successfully.
+2025-02-12 11:24:30,514 [ERROR] Error deleting user: Object of type CustomUser is not JSON serializable
+2025-02-12 11:24:30,515 [WARNING] Not Found: /api/v1/users/5aa42f19-3924-4048-84b4-ee03f165291d/
+2025-02-12 11:24:57,354 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:24:59,640 [INFO] User user_user soft-deleted successfully.
+2025-02-12 11:25:05,326 [INFO] User user_user soft-deleted successfully.
+2025-02-12 11:25:06,219 [INFO] User user_user soft-deleted successfully.
+2025-02-12 11:25:25,741 [INFO] User user_user_2 created successfully.
+2025-02-12 11:25:54,681 [WARNING] Method Not Allowed: /api/v1/categories/4ef12c67-d20e-4b0b-a0b3-80ab1b8f537b/
+2025-02-12 11:28:37,107 [INFO] Creating a new transaction for user: staff@gmail.com
+2025-02-12 11:28:37,116 [ERROR] Transaction creation failed for user: staff@gmail.com. Errors: {'category': [ErrorDetail(string='Invalid pk "547f7668-2c75-407a-9847-eee2e0ef109c" - object does not exist.', code='does_not_exist')], 'user': [ErrorDetail(string='Invalid pk "75e648f8-0cb7-4f43-9851-8995e2038d7e" - object does not exist.', code='does_not_exist')]}
+2025-02-12 11:28:37,117 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-12 11:29:04,535 [INFO] Creating a new transaction for user: staff@gmail.com
+2025-02-12 11:29:04,555 [INFO] Transaction created successfully with ID: 363e51c3-33ce-456a-9c75-6294f2093eb1
+2025-02-12 11:29:24,957 [INFO] Creating a new transaction for user: staff@gmail.com
+2025-02-12 11:29:24,964 [ERROR] Transaction creation failed for user: staff@gmail.com. Errors: {'category': [ErrorDetail(string='Category does not belong to the provided user.', code='invalid')]}
+2025-02-12 11:29:24,965 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-12 11:29:37,388 [INFO] Creating a new transaction for user: staff@gmail.com
+2025-02-12 11:29:37,397 [INFO] Transaction created successfully with ID: bbe9503a-b652-4c71-80c7-f470538954e3
+2025-02-12 11:29:42,797 [INFO] Creating a new transaction for user: staff@gmail.com
+2025-02-12 11:29:42,805 [INFO] Transaction created successfully with ID: 9a5c3369-8814-45b6-b15b-4e84a0f1f280
+2025-02-12 11:29:46,644 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:29:46,647 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:29:55,647 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:29:55,649 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:29:56,610 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:29:56,613 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:30:08,365 [INFO] User user_user_2 soft-deleted successfully.
+2025-02-12 11:30:12,733 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:30:12,735 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:30:13,839 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:30:13,841 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:30:14,668 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:30:14,671 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:30:15,457 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:30:15,461 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:30:16,197 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:30:16,200 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:30:16,899 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:30:16,901 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:30:17,580 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:30:17,582 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:30:18,374 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:30:18,377 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:30:25,727 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:30:25,729 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:31:01,338 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:31:01,341 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:31:03,103 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:31:03,105 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:31:03,989 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:31:03,992 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:32:04,905 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:32:04,910 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:32:05,950 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:32:05,953 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:32:49,972 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:32:54,879 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:33:35,876 [INFO] User user_user_2 soft-deleted successfully.
+2025-02-12 11:33:46,372 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:33:46,376 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:33:48,519 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:33:48,521 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:34:07,724 [INFO] Fetching transactions for user: staff@gmail.com
+2025-02-12 11:34:07,727 [INFO] Transactions retrieved successfully for user: staff@gmail.com
+2025-02-12 11:38:10,525 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:38:58,799 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:39:18,165 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:42:18,989 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:42:57,302 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:44:02,662 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 11:45:52,113 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:45:54,533 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:46:05,106 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:46:41,282 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 11:46:49,361 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 11:47:18,633 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:47:25,162 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:47:32,569 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:47:35,787 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:47:42,187 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:47:45,584 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:47:57,188 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:47:59,506 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:48:01,763 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:48:19,502 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:48:23,769 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 11:48:58,068 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:49:07,572 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 11:50:56,399 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:55:36,354 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 11:58:02,964 [WARNING] Bad Request: /api/v1/auth/password-reset/
+2025-02-12 12:06:17,408 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:09:18,570 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:09:25,559 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:09:28,866 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:09:44,780 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:09:52,839 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:10:21,109 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:10:45,685 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:10:56,735 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:11:05,207 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:16:07,424 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:16:14,550 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:16:38,711 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:16:49,351 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:16:55,529 [ERROR] Internal Server Error: /api/v1/auth/password-reset/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/views.py", line 189, in post
+    user = serializer.validated_data["user"]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'user'
+2025-02-12 12:17:42,562 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:17:50,003 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:18:04,982 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl425r-66fd396aad055464c9c9988caf7c61f8/
+2025-02-12 12:18:29,631 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:18:37,997 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:18:43,481 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:18:53,955 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:19:15,903 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:19:37,884 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:19:47,415 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:21:20,662 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:21:26,644 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:21:30,978 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:21:39,448 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:21:42,802 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:24:42,423 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl425r-66fd396aad055464c9c9988caf7c61f8/
+2025-02-12 12:24:59,347 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42hd-2dc5b7fc700edf544383ab01f4741d2e/
+2025-02-12 12:25:10,513 [WARNING] Not Found: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42hd-2dc5b7fc700edf544383ab01f4741d2e
+2025-02-12 12:25:13,071 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42hd-2dc5b7fc700edf544383ab01f4741d2e/
+2025-02-12 12:25:25,714 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42hd2dc5b7fc700edf544383ab01f4741d2e/
+2025-02-12 12:25:29,845 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42hd-2dc5b7fc700edf544383ab01f4741d2e/
+2025-02-12 12:27:56,030 [WARNING] Method Not Allowed: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42hd-2dc5b7fc700edf544383ab01f4741d2e/
+2025-02-12 12:28:05,083 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42hd-2dc5b7fc700edf544383ab01f4741d2e/
+2025-02-12 12:28:38,840 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:28:50,122 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:28:51,927 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42hd-2dc5b7fc700edf544383ab01f4741d2e/
+2025-02-12 12:28:54,884 [ERROR] Internal Server Error: /api/v1/auth/password-reset/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/views.py", line 191, in post
+    token = default_token_generator.make_token(user)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/auth/tokens.py", line 45, in make_token
+    return self._make_token_with_timestamp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/auth/tokens.py", line 90, in _make_token_with_timestamp
+    self._make_hash_value(user, timestamp),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/auth/tokens.py", line 117, in _make_hash_value
+    if user.last_login is None
+       ^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'last_login'
+2025-02-12 12:28:59,655 [ERROR] Internal Server Error: /api/v1/auth/password-reset/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/views.py", line 191, in post
+    token = default_token_generator.make_token(user)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/auth/tokens.py", line 45, in make_token
+    return self._make_token_with_timestamp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/auth/tokens.py", line 90, in _make_token_with_timestamp
+    self._make_hash_value(user, timestamp),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/auth/tokens.py", line 117, in _make_hash_value
+    if user.last_login is None
+       ^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'last_login'
+2025-02-12 12:29:07,169 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:29:10,389 [ERROR] Internal Server Error: /api/v1/auth/password-reset/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/views.py", line 191, in post
+    token = default_token_generator.make_token(user)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/auth/tokens.py", line 45, in make_token
+    return self._make_token_with_timestamp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/auth/tokens.py", line 90, in _make_token_with_timestamp
+    self._make_hash_value(user, timestamp),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/auth/tokens.py", line 117, in _make_hash_value
+    if user.last_login is None
+       ^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'last_login'
+2025-02-12 12:29:21,550 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:32:19,508 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42p0-0a0dedf3c65fbbef8135746f8a89a057/
+2025-02-12 12:35:31,653 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:35:44,982 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:36:10,975 [WARNING] Method Not Allowed: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl4304-4e01f4af11eb1b1173c490ed5f4e808d/
+2025-02-12 12:36:12,927 [WARNING] Not Found: /apple-touch-icon-precomposed.png
+2025-02-12 12:36:12,931 [WARNING] Not Found: /favicon.ico
+2025-02-12 12:36:12,936 [WARNING] Not Found: /apple-touch-icon.png
+2025-02-12 12:36:29,527 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl4304-4e01f4af11eb1b1173c490ed5f4e808d/
+2025-02-12 12:37:39,677 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl432f-5c126b0e406a288cffa13361d60df5be/
+2025-02-12 12:37:46,727 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:38:18,295 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl432f-5c126b0e406a288cffa13361d60df5be/
+2025-02-12 12:38:50,252 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:39:10,239 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:39:28,899 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:39:45,715 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:39:49,223 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:40:16,831 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl436i-d5fad3e3ef9fad6b7999c82c52e6cf56/
+2025-02-12 12:40:34,452 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:40:45,220 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl437p-6d817d2556658d5f1da254b0659438c6/
+2025-02-12 12:40:53,062 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 12:42:13,941 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:42:17,384 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl437p-6d817d2556658d5f1da254b0659438c6/
+2025-02-12 12:42:34,419 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:42:37,704 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl437p-6d817d2556658d5f1da254b0659438c6/
+2025-02-12 12:42:51,106 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl437p-6d817d2556658d5f1da254b0659438c6/
+2025-02-12 12:44:17,650 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:44:26,265 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:44:27,531 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl437p-6d817d2556658d5f1da254b0659438c6/
+2025-02-12 12:44:32,223 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl437p-6d817d2556658d5f1da254b0659438c6/
+2025-02-12 12:46:12,435 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:46:23,704 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl437p-6d817d2556658d5f1da254b0659438c6/
+2025-02-12 12:46:52,511 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43hr-669e4b561e0fdc516115a4de41e7b272/
+2025-02-12 12:51:27,470 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/urls.py changed, reloading.
+2025-02-12 12:51:38,340 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/urls.py changed, reloading.
+2025-02-12 12:51:41,256 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43hr-669e4b561e0fdc516115a4de41e7b272/
+2025-02-12 12:51:42,236 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43hr-669e4b561e0fdc516115a4de41e7b272/
+2025-02-12 12:53:50,823 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43hr-669e4b561e0fdc516115a4de41e7b272/
+2025-02-12 12:53:51,762 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43hr-669e4b561e0fdc516115a4de41e7b272/
+2025-02-12 12:54:02,188 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43tu-ec9fac26e7c6f58bf3753b8ae2747fbf/
+2025-02-12 12:54:07,720 [WARNING] Forbidden: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43tu-ec9fac26e7c6f58bf3753b8ae2747fbf/
+2025-02-12 12:54:11,755 [WARNING] Method Not Allowed: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43tu-ec9fac26e7c6f58bf3753b8ae2747fbf/
+2025-02-12 12:54:15,957 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43tu-ec9fac26e7c6f58bf3753b8ae2747fbf/
+2025-02-12 12:54:35,766 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:54:38,334 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 12:54:52,207 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43v6-fe1ac9dca34234df7bb103269e1f7bb9/
+2025-02-12 12:55:02,211 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl43v6-fe1ac9dca34234df7bb103269e1f7bb9/
+2025-02-12 12:57:57,041 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 13:05:18,518 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 13:05:37,902 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 13:09:43,665 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 13:09:53,536 [INFO] User admin logged in successfully.
+2025-02-12 13:09:53,544 [INFO] Generated tokens for user admin.
+2025-02-12 13:09:59,589 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:10:30,287 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:10:36,471 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:10:40,320 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:10:58,210 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:11:05,409 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:13:54,110 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 13:13:56,613 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 13:13:59,790 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:14:38,471 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 13:14:43,044 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 13:15:00,201 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:15:34,954 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:15:40,691 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:16:47,778 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 13:16:55,838 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 13:17:14,540 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 13:17:18,977 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 13:17:20,627 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 13:18:00,533 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/models.py changed, reloading.
+2025-02-12 13:18:54,214 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 13:19:39,002 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 13:20:46,168 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 13:20:50,000 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 13:21:04,716 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 13:21:11,567 [INFO] User admin logged in successfully.
+2025-02-12 13:21:11,574 [INFO] Generated tokens for user admin.
+2025-02-12 13:21:43,447 [ERROR] Internal Server Error: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 179, in import_from_string
+    return import_string(val)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1137, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'utils.global_exeptions_handler.module'; 'utils.global_exeptions_handler' is not a package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 463, in handle_exception
+    exception_handler = self.get_exception_handler()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 298, in get_exception_handler
+    return self.settings.EXCEPTION_HANDLER
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 227, in __getattr__
+    val = perform_import(val, attr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return import_from_string(val, setting_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 182, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'utils.global_exeptions_handler.module.custom_exception_handler' for API setting 'EXCEPTION_HANDLER'. ModuleNotFoundError: No module named 'utils.global_exeptions_handler.module'; 'utils.global_exeptions_handler' is not a package.
+2025-02-12 13:22:00,201 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 13:22:03,998 [ERROR] Internal Server Error: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 179, in import_from_string
+    return import_string(val)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1137, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'utils.global_exeptions_handler.module'; 'utils.global_exeptions_handler' is not a package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 463, in handle_exception
+    exception_handler = self.get_exception_handler()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 298, in get_exception_handler
+    return self.settings.EXCEPTION_HANDLER
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 227, in __getattr__
+    val = perform_import(val, attr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return import_from_string(val, setting_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 182, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'utils.global_exeptions_handler.module.custom_exception_handler' for API setting 'EXCEPTION_HANDLER'. ModuleNotFoundError: No module named 'utils.global_exeptions_handler.module'; 'utils.global_exeptions_handler' is not a package.
+2025-02-12 13:22:52,487 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/global_exeptions_handler.py changed, reloading.
+2025-02-12 13:22:56,666 [ERROR] Internal Server Error: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 179, in import_from_string
+    return import_string(val)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1137, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'utils.global_exeptions_handler.module'; 'utils.global_exeptions_handler' is not a package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 463, in handle_exception
+    exception_handler = self.get_exception_handler()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 298, in get_exception_handler
+    return self.settings.EXCEPTION_HANDLER
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 227, in __getattr__
+    val = perform_import(val, attr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return import_from_string(val, setting_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 182, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'utils.global_exeptions_handler.module.custom_exception_handler' for API setting 'EXCEPTION_HANDLER'. ModuleNotFoundError: No module named 'utils.global_exeptions_handler.module'; 'utils.global_exeptions_handler' is not a package.
+2025-02-12 13:24:27,276 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 13:24:41,143 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 13:24:54,417 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 13:24:57,559 [ERROR] Internal Server Error: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 179, in import_from_string
+    return import_string(val)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1137, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'utils.exceptions.module'; 'utils.exceptions' is not a package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 463, in handle_exception
+    exception_handler = self.get_exception_handler()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 298, in get_exception_handler
+    return self.settings.EXCEPTION_HANDLER
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 227, in __getattr__
+    val = perform_import(val, attr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return import_from_string(val, setting_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 182, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'utils.exceptions.module.custom_exception_handler' for API setting 'EXCEPTION_HANDLER'. ModuleNotFoundError: No module named 'utils.exceptions.module'; 'utils.exceptions' is not a package.
+2025-02-12 13:25:22,968 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 13:25:26,355 [ERROR] Internal Server Error: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 179, in import_from_string
+    return import_string(val)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1137, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'utils.exceptions.module'; 'utils.exceptions' is not a package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 463, in handle_exception
+    exception_handler = self.get_exception_handler()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 298, in get_exception_handler
+    return self.settings.EXCEPTION_HANDLER
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 227, in __getattr__
+    val = perform_import(val, attr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return import_from_string(val, setting_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 182, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'utils.exceptions.module.custom_exception_handler' for API setting 'EXCEPTION_HANDLER'. ModuleNotFoundError: No module named 'utils.exceptions.module'; 'utils.exceptions' is not a package.
+2025-02-12 13:27:33,243 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 13:27:36,531 [ERROR] Unexpected error: 'current_password'
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/views.py", line 421, in patch
+    if not serializer.is_valid():
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/serializers.py", line 97, in validate
+    if data["new_password"] == data["current_password"]:
+                               ~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'current_password'
+2025-02-12 13:27:36,541 [ERROR] API Error: 500 - An unexpected error occurred
+2025-02-12 13:27:36,542 [ERROR] Internal Server Error: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 13:27:48,380 [INFO] Password updated successfully for user staff_user
+2025-02-12 13:27:57,817 [ERROR] Unexpected error: 'current_password'
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/views.py", line 421, in patch
+    if not serializer.is_valid():
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/serializers.py", line 97, in validate
+    if data["new_password"] == data["current_password"]:
+                               ~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'current_password'
+2025-02-12 13:27:57,818 [ERROR] API Error: 500 - An unexpected error occurred
+2025-02-12 13:27:57,818 [ERROR] Internal Server Error: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 13:32:00,304 [INFO] Password updated successfully for user staff_user
+2025-02-12 14:19:16,228 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 14:19:26,413 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 14:19:38,947 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 14:19:45,273 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 14:19:53,407 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 14:20:36,458 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 14:20:42,451 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 14:21:03,029 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 14:25:19,671 [ERROR] API Error: 405 - Method "GET" not allowed.
+2025-02-12 14:25:19,725 [WARNING] Method Not Allowed: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl42hd-2dc5b7fc700edf544383ab01f4741d2e/
+2025-02-12 14:26:19,009 [ERROR] API Error: 403 - Token has expired
+2025-02-12 14:26:19,010 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:26:25,312 [INFO] User admin logged in successfully.
+2025-02-12 14:26:25,321 [INFO] Generated tokens for user admin.
+2025-02-12 14:29:13,920 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/authentication.py changed, reloading.
+2025-02-12 14:30:16,616 [INFO] Invalidated access token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM5MzU0MTg1LCJpYXQiOjE3MzkzNTA1ODUsImp0aSI6IjU5NzQ5MzQ2M2FhZDQyYWE5OGVhZjM0MzcwMjUzNjQzIiwidXNlcl9pZCI6ImQ5YzZkOGE5LTYyOWMtNGU4Yi1iZmI4LTM1NDM0NzIzNmU5MyJ9.of7WNNBBChcZpT_4Z9qN6I2hQxyk73TD5lKxdHdjQXU.
+2025-02-12 14:30:16,618 [INFO] Invalidated 6 tokens for user admin.
+2025-02-12 14:30:16,618 [INFO] User session invalidated for admin.
+2025-02-12 14:30:19,884 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:30:19,884 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:34:11,741 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:34:21,875 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:34:27,851 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:34:27,852 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:34:49,727 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:34:53,579 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:35:04,200 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:35:09,567 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:35:16,912 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:35:37,441 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:35:46,082 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:36:34,976 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:39:10,531 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:39:16,277 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:39:16,278 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:39:18,116 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:39:18,117 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:42:09,564 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:42:11,682 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:42:11,682 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:42:14,763 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:42:14,763 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:42:21,902 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:42:25,153 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:42:25,154 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:42:33,080 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:42:36,394 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:42:38,825 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:42:38,826 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:42:42,032 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:43:43,772 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:43:43,772 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:43:44,731 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:43:44,732 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:43:48,688 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:43:50,492 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:43:50,493 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:44:21,285 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:44:40,147 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:44:40,148 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:44:41,125 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:44:41,125 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:44:54,798 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:44:57,103 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:44:57,103 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:45:30,772 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:45:33,012 [ERROR] Internal Server Error: /api/v1/users/
+Traceback (most recent call last):
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/authentication.py", line 36, in authenticate
+    raise AuthenticationFailed("Invalid or expired token")
+rest_framework.exceptions.AuthenticationFailed: Invalid or expired token
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/request.py", line 231, in user
+    self._authenticate()
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/authentication.py", line 49, in authenticate
+    raise AuthenticationFailed(str(e))
+rest_framework.exceptions.AuthenticationFailed: Invalid or expired token
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 16, in cached_import
+    return getattr(module, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'utils.exceptions' has no attribute 'custom_exception_handler'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 179, in import_from_string
+    return import_string(val)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/module_loading.py", line 32, in import_string
+    raise ImportError(
+ImportError: Module "utils.exceptions" does not define a "custom_exception_handler" attribute/class
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 463, in handle_exception
+    exception_handler = self.get_exception_handler()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 298, in get_exception_handler
+    return self.settings.EXCEPTION_HANDLER
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 227, in __getattr__
+    val = perform_import(val, attr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return import_from_string(val, setting_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/settings.py", line 182, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'utils.exceptions.custom_exception_handler' for API setting 'EXCEPTION_HANDLER'. ImportError: Module "utils.exceptions" does not define a "custom_exception_handler" attribute/class.
+2025-02-12 14:45:39,722 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:46:00,719 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 14:46:02,451 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:46:25,848 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:46:28,027 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:46:34,687 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:46:49,348 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:46:51,011 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:46:57,998 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:47:00,032 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:47:37,801 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 14:47:40,629 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:47:40,630 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:48:21,236 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:49:11,361 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:49:11,362 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:49:12,905 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:49:12,906 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:49:14,165 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:49:14,166 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:49:14,959 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:49:14,960 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:49:15,724 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:49:15,725 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:49:52,718 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:49:52,719 [WARNING] Forbidden: /api/v1/users/547f7668-2c75-407a-9847-eee2e0ef109c/
+2025-02-12 14:50:32,590 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:50:35,129 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:50:35,129 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:50:43,813 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:50:46,317 [ERROR] API Error: 403 - Invalid or expired token
+2025-02-12 14:50:46,318 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:51:49,739 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/exceptions.py changed, reloading.
+2025-02-12 14:52:02,123 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:52:03,544 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 14:52:06,309 [WARNING] Forbidden: /api/v1/users/547f7668-2c75-407a-9847-eee2e0ef109c/
+2025-02-12 14:52:10,492 [WARNING] Forbidden: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 14:52:15,269 [INFO] User admin logged in successfully.
+2025-02-12 14:52:15,276 [INFO] Generated tokens for user admin.
+2025-02-12 14:52:18,256 [INFO] Password updated successfully for user staff_user
+2025-02-12 14:52:22,456 [ERROR] Unexpected error: 'current_password'
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/views.py", line 312, in patch
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/user/serializers.py", line 97, in validate
+    if data["new_password"] == data["current_password"]:
+                               ~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'current_password'
+2025-02-12 14:52:22,461 [ERROR] Internal Server Error: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 14:52:38,586 [INFO] Password updated successfully for user staff_user
+2025-02-12 14:52:43,686 [WARNING] Bad Request: /api/v1/users/update-password/150e2f30-f5bf-4a81-93ec-1de0dd3acc7f/
+2025-02-12 14:53:57,112 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/authentication.py changed, reloading.
+2025-02-12 14:54:45,461 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 14:54:47,791 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 14:54:50,724 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 14:55:06,487 [INFO] Password updated successfully for user staff_user
+2025-02-12 14:55:26,074 [INFO] User staff_user logged in successfully.
+2025-02-12 14:55:26,080 [INFO] Generated tokens for user staff_user.
+2025-02-12 14:55:41,030 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 14:55:58,306 [WARNING] Not Found: /api/v1/users/asdfas
+2025-02-12 14:56:07,703 [WARNING] Bad Request: /api/v1/auth/password-reset/
+2025-02-12 14:56:24,271 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 14:56:52,975 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:59:17,497 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:59:28,626 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 14:59:47,977 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:02:15,584 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:02:51,130 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:02:55,453 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:03:13,218 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:03:17,589 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:06:54,943 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:07:56,569 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:08:13,296 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:08:34,184 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:08:40,701 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:08:59,585 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:09:02,166 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:09:05,592 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:09:29,591 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:09:33,098 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:10:06,352 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:10:09,687 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 15:10:42,930 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:10:49,406 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:10:52,818 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:10:56,170 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:11:15,147 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:11:24,748 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:11:52,068 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 15:12:05,906 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 15:12:12,325 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 15:12:33,222 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 15:12:35,184 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 15:12:46,789 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 15:13:34,546 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 15:13:37,982 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 15:13:41,328 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 15:13:54,040 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 15:14:03,545 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 15:14:21,591 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 15:14:25,222 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 15:14:28,455 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 15:16:02,880 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 15:16:14,733 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 15:16:19,253 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 15:16:38,214 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 15:16:46,760 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 15:17:09,798 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:17:22,579 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:18:36,585 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:18:41,581 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:19:03,081 [INFO] User admin logged in successfully.
+2025-02-12 15:19:03,091 [INFO] Generated tokens for user admin.
+2025-02-12 15:22:55,871 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:23:00,609 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:23:04,224 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:23:06,103 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:23:12,143 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:24:48,267 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:24:49,867 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:25:09,396 [INFO] User staff_user logged in successfully.
+2025-02-12 15:25:09,405 [INFO] Generated tokens for user staff_user.
+2025-02-12 15:25:13,707 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:25:55,121 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:29:13,452 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:29:18,939 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:31:22,281 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:31:52,453 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 15:33:33,056 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:34:39,607 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:34:52,333 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:34:58,431 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:35:04,853 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:35:32,934 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:35:40,901 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 15:37:53,793 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:38:06,813 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:38:17,529 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:39:37,483 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:41:21,935 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:41:30,014 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:41:55,020 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:41:57,381 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:42:14,136 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:42:25,852 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:42:56,326 [ERROR] Internal Server Error: /api/v1/transaction-summary-report/summary/
+2025-02-12 15:43:03,263 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 15:43:10,104 [WARNING] Method Not Allowed: /api/v1/transaction-summary-report/summary/
+2025-02-12 15:43:14,036 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 15:46:25,201 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 15:46:42,620 [INFO] Creating a new transaction for user: staff@gmail.com
+2025-02-12 15:46:42,641 [INFO] Transaction created successfully with ID: 3de8e7d0-9d90-4657-99cd-c2255f918feb
+2025-02-12 15:48:43,651 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:48:53,898 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:49:06,781 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:49:17,868 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 15:49:24,341 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 16:53:44,743 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 16:58:42,897 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 16:59:34,043 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:00:13,868 [WARNING] Forbidden: /api/v1/auth/login/
+2025-02-12 17:00:24,703 [INFO] User shakti logged in successfully.
+2025-02-12 17:00:24,712 [INFO] Generated tokens for user shakti.
+2025-02-12 17:02:23,572 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:02:23,579 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'category': [ErrorDetail(string='Category type does not match transaction type.', code='invalid')]}
+2025-02-12 17:02:23,580 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-12 17:02:29,241 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:02:29,371 [INFO] Transaction created successfully with ID: 50924e48-25d7-4e06-8937-ed1440537217
+2025-02-12 17:02:41,407 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:02:41,416 [INFO] Transaction created successfully with ID: 76b8a379-2122-4aee-ab5e-85d54a79e434
+2025-02-12 17:02:42,514 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:02:42,523 [INFO] Transaction created successfully with ID: 517239b7-2d79-444c-8a5c-055bf1e99fae
+2025-02-12 17:04:29,141 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:04:41,972 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:04:42,096 [INFO] Transaction created successfully with ID: afb75a32-953d-4996-ae63-bac528f8b9cc
+2025-02-12 17:05:33,699 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:05:44,419 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:05:44,553 [INFO] Transaction created successfully with ID: 545c6409-6dc1-4d5a-93e5-5e06d189108e
+2025-02-12 17:06:50,430 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:06:53,223 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:06:53,349 [INFO] Transaction created successfully with ID: 4091648d-cdd6-4fe6-a9e5-e5928986d960
+2025-02-12 17:08:43,703 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:08:52,324 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:09:07,583 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:09:07,702 [INFO] Transaction created successfully with ID: 45977616-1ec2-470e-979b-3f1071cceb72
+2025-02-12 17:09:08,618 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:09:08,628 [INFO] Transaction created successfully with ID: ff102380-9913-426e-bc93-c4176896d18a
+2025-02-12 17:09:09,612 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:09:09,619 [INFO] Transaction created successfully with ID: fa8813e6-b113-49da-a8d0-a0e7059cec76
+2025-02-12 17:09:10,439 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:09:10,449 [INFO] Transaction created successfully with ID: d1b716f4-f73f-4dbd-91c3-ab0053c7eecf
+2025-02-12 17:09:18,424 [ERROR] Unexpected error: Object of type Budget is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/serialization.py", line 41, in _reraise_errors
+    yield
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/serialization.py", line 220, in dumps
+    payload = encoder(data)
+              ^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/utils/json.py", line 63, in dumps
+    return _dumps(s, cls=cls, **dict(default_kwargs, **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/utils/json.py", line 47, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Budget is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/budget/views.py", line 62, in post
+    calculate_budget_transactions.delay(budget)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/celery/app/base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/messaging.py", line 175, in publish
+    body, content_type, content_encoding = self._prepare(
+                                           ^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/messaging.py", line 268, in _prepare
+    body) = dumps(body, serializer=serializer)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/serialization.py", line 219, in dumps
+    with _reraise_errors(EncodeError):
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/serialization.py", line 45, in _reraise_errors
+    reraise(wrapper, wrapper(exc), sys.exc_info()[2])
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/exceptions.py", line 34, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/serialization.py", line 41, in _reraise_errors
+    yield
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/serialization.py", line 220, in dumps
+    payload = encoder(data)
+              ^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/utils/json.py", line 63, in dumps
+    return _dumps(s, cls=cls, **dict(default_kwargs, **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/kombu/utils/json.py", line 47, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+kombu.exceptions.EncodeError: Object of type Budget is not JSON serializable
+2025-02-12 17:09:18,437 [ERROR] Internal Server Error: /api/v1/budget/
+2025-02-12 17:10:31,297 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:10:35,747 [WARNING] Bad Request: /api/v1/budget/
+2025-02-12 17:10:56,317 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:10:56,469 [INFO] Transaction created successfully with ID: 16724193-bba3-4a10-83c7-f36613f8dfc3
+2025-02-12 17:10:57,225 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:10:57,236 [INFO] Transaction created successfully with ID: 1cbb28a0-2ced-4f4a-9630-2e2c322491cb
+2025-02-12 17:10:58,072 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:10:58,083 [INFO] Transaction created successfully with ID: 30d3d385-d6e8-4ee8-a52f-9fb873a3507b
+2025-02-12 17:11:40,866 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:11:54,218 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:11:54,342 [INFO] Transaction created successfully with ID: b7790bdc-f853-4f35-972a-840fd358e547
+2025-02-12 17:11:55,230 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:11:55,241 [INFO] Transaction created successfully with ID: 4b8514e5-5751-4bf1-bc3a-4a302be46c99
+2025-02-12 17:11:56,076 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:11:56,083 [INFO] Transaction created successfully with ID: db5ce39b-7556-4639-bde2-c6f29a2ab6c5
+2025-02-12 17:11:56,915 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-12 17:11:56,926 [INFO] Transaction created successfully with ID: 609d2b26-adbd-47ff-bde7-15a866c5d691
+2025-02-12 17:12:05,180 [WARNING] Bad Request: /api/v1/budget/
+2025-02-12 17:13:19,212 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:14:58,212 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:15:02,687 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:19:14,894 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:19:36,413 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:20:26,777 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:20:47,209 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:20:50,767 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:20:53,034 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:20:59,410 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:23:13,312 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:23:21,252 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:23:26,715 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
+2025-02-12 17:24:09,400 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:24:16,050 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:24:18,035 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/tasks.py changed, reloading.
+2025-02-12 17:24:24,089 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:24:29,641 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:27:07,966 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:27:24,286 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:27:49,603 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:35:06,763 [WARNING] Not Found: /api/auth/login/
+2025-02-12 17:35:20,048 [INFO] User admin logged in successfully.
+2025-02-12 17:35:20,057 [INFO] Generated tokens for user admin.
+2025-02-12 17:35:28,793 [WARNING] Not Found: /api/account/logout/

@@ -18,7 +18,7 @@ class Category(BaseModel):
         on_delete=models.CASCADE,
         related_name="categories",
     )
-    type = models.CharField(max_length=10, choices=CATEGORY_TYPES)  # Add type field
+    type = models.CharField(max_length=10, choices=CATEGORY_TYPES)
     is_predefined = models.BooleanField(default=False)
 
     def __str__(self):

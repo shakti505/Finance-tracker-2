@@ -8,7 +8,6 @@ from utils.responses import (
     validation_error_response,
     success_no_content_response,
     not_found_error_response,
-    internal_server_error_response,
 )
 from .models import Budget
 from .serializers import BudgetSerializer
@@ -21,9 +20,12 @@ from .swagger_docs import (
     budget_detail_get_doc,
     budget_detail_patch_doc,
 )
+from rest_framework.exceptions import NotFound
+from utils.pagination import CustomPageNumberPagination
+from .tasks import process_budget_spending
 
 
-class BudgetListCreateView(APIView):
+class BudgetListCreateView(APIView, CustomPageNumberPagination):
     permission_classes = [IsAuthenticated]
 
     @budget_list_get_doc
@@ -34,15 +36,20 @@ class BudgetListCreateView(APIView):
             month_year = request.query_params.get("month_year")
             user = request.user
             queryset = self._get_filtered_queryset(category_id, month_year, user)
+            paginated_budget = self.paginate_queryset(queryset, request)
             serializer = BudgetSerializer(
-                queryset, many=True, context={"request": request}
+                paginated_budget, many=True, context={"request": request}
             )
-            return success_response(serializer.data)
-
+            return success_response(
+                {
+                    "count": queryset.count(),
+                    "next": self.get_next_link(),
+                    "previous": self.get_previous_link(),
+                    "results": serializer.data,
+                }
+            )
         except Category.DoesNotExist:
             return not_found_error_response("Category not found")
-        except Exception as e:
-            return internal_server_error_response(str(e))
 
     @budget_create_doc
     def post(self, request):
@@ -50,7 +57,8 @@ class BudgetListCreateView(APIView):
 
         serializer = BudgetSerializer(data=request.data, context={"request": request})
         if serializer.is_valid():
-            serializer.save()
+            budget = serializer.save()
+            process_budget_spending.delay(budget.id)
             return success_single_response(serializer.data)
         return validation_error_response(serializer.errors)
 
@@ -89,7 +97,7 @@ class BudgetDetailView(APIView):
             budget = self._get_budget_object(pk)
             serializer = BudgetSerializer(budget, context={"request": request})
             return success_single_response(serializer.data)
-        except Exception:
+        except NotFound:
             return not_found_error_response()
 
     @budget_detail_patch_doc
@@ -107,7 +115,7 @@ class BudgetDetailView(APIView):
                 )
             return validation_error_response(serializer.errors)
 
-        except Exception:
+        except NotFound:
             return not_found_error_response()
 
     def delete(self, request, pk):
@@ -117,7 +125,7 @@ class BudgetDetailView(APIView):
             budget.is_deleted = True
             budget.save()
             return success_no_content_response()
-        except Exception:
+        except NotFound:
             return not_found_error_response()
 
     def _get_budget_object(self, pk):

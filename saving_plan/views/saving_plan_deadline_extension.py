@@ -13,6 +13,7 @@ from utils.responses import (
     success_single_response,
     validation_error_response,
     success_response,
+    not_found_error_response,
 )
 
 
@@ -30,8 +31,11 @@ class ExtendDeadlineAPIView(APIView):
             raise NotFound("Savings plan not found")
 
     def get(self, request):
-        plan = self.get_object(request)
-        return success_response(SavingsPlanSerializer(plan, many=True).data)
+        try:
+            plan = self.get_object(request)
+            return success_single_response(SavingsPlanSerializer(plan).data)
+        except NotFound:
+            return not_found_error_response("Savings plan not found")
 
     def post(self, request):
         plan = self.get_object(request)

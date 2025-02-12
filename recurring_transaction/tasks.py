@@ -21,7 +21,6 @@ def send_transaction_notification(
 
     # Prepare dynamic template data
     dynamic_template_data = {
-        "subject": subject,
         "user_name": user_name,
         "amount": f"{amount}",
         "type_name": type_name,
@@ -36,7 +35,7 @@ def send_transaction_notification(
             user_email=user_email,
             subject=subject,
             dynamic_template_data=dynamic_template_data,
-            dyanmic_template_id=settings.SENDGRID_RECURRING_TRANSACTION_TEMPLATE_ID,
+            dynamic_template_id=settings.SENDGRID_RECURRING_TRANSACTION_TEMPLATE_ID,
         )
     except Exception as e:
         print(f"Failed to send email notification: {str(e)}")
@@ -75,7 +74,6 @@ def process_recurring_transactions():
                 description=rec_txn.description,
             )
 
-            # Update next run date
             rec_txn.next_run = rec_txn.get_next_run_date(rec_txn.next_run)
             rec_txn.save()
 

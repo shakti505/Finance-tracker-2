@@ -55,7 +55,9 @@ def validation_error_response(errors, status_code=status.HTTP_400_BAD_REQUEST):
     return Response(response_data, status=status_code)
 
 
-def not_found_error_response(detail="Not found", status_code=status.HTTP_404_NOT_FOUND):
+def not_found_error_response(
+    detail="Resource not found", status_code=status.HTTP_404_NOT_FOUND
+):
     """
     Returns a standardized 'not found' error response.
     """

@@ -146,6 +146,7 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "user.authentication.CustomTokenAuthentication",
     ],
+    "EXCEPTION_HANDLER": "utils.exceptions.custom_exception_handler",
 }
 
 
@@ -174,7 +175,7 @@ SENDGRID_TEMPLATE_ID = os.getenv("SENDGRID_TEMPLATE_ID")
 CELERY_BEAT_SCHEDULE = {
     "process-recurring-transactions": {
         "task": "recurring_transaction.tasks.process_recurring_transactions",
-        "schedule": crontab(minute="*/5"),
+        "schedule": crontab(minute="*/1"),
     },
 }
 

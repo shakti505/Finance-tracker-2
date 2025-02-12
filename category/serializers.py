@@ -4,8 +4,11 @@ from .models import Category
 from django.utils.text import slugify
 
 
+def custom_slugify(value):
+    return slugify(value, allow_unicode=True).replace("-", " ")
+
+
 class CategorySerializer(serializers.ModelSerializer):
-    # user = serializers.UUIDField(write_only=True, required=False)
 
     class Meta:
         model = Category
@@ -62,16 +65,12 @@ class CategorySerializer(serializers.ModelSerializer):
         """Validate that the category name is unique for the determined user."""
         request = self.context.get("request")
 
-        # Normalize the value using slugify
-        normalized_value = slugify(value)
-
-        # Check if a category with the same normalized name exists
         if (
             Category.objects.filter(
-                name__iexact=normalized_value, user=user, is_deleted=False, type=type
+                name__iexact=value, user=user, is_deleted=False, type=type
             ).exists()
             or Category.objects.filter(
-                name__iexact=normalized_value,
+                name__iexact=value,
                 is_deleted=False,
                 is_predefined=True,
                 type=type,
@@ -83,7 +82,7 @@ class CategorySerializer(serializers.ModelSerializer):
                 }
             )
 
-        return normalized_value
+        return value
 
     def validate(self, data):
         """Ensure the user field is handled correctly during creation and updates."""

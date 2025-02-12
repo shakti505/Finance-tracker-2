@@ -4,7 +4,6 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 
 from django.shortcuts import get_object_or_404
-from django.db import transaction as db_transaction
 from .models import Transaction
 from .serializers import TransactionSerializer
 from utils.responses import (
@@ -18,6 +17,7 @@ from utils.pagination import CustomPageNumberPagination
 from utils.permissions import IsStaffOrOwner
 from .tasks import track_and_notify_budget
 from utils.logging import logger
+from rest_framework.exceptions import NotFound
 
 
 class TransactionListCreateView(APIView, CustomPageNumberPagination):
@@ -93,15 +93,14 @@ class TransactionDetailView(APIView):
             serializer = TransactionSerializer(transaction)
             logger.info("Transaction retrieved successfully with ID: %s", id)
             return success_single_response(serializer.data)
-        except Exception as e:
-            logger.error(
-                "Transaction retrieval failed for ID: %s. Error: %s", id, str(e)
-            )
-            return not_found_error_response("Transaction not found.")
+        except NotFound:
+            logger.error("Transaction not found with ID: %s", id)
+            return not_found_error_response(f"No transaction found with ID: {id}")
 
     def patch(self, request, id):
         """Update a specific transaction."""
         try:
+
             transaction = self.get_object(id, request)
             serializer = TransactionSerializer(
                 transaction,
@@ -120,9 +119,9 @@ class TransactionDetailView(APIView):
                 serializer.errors,
             )
             return validation_error_response(serializer.errors)
-        except Exception as e:
-            logger.error("Transaction update failed for ID: %s. Error: %s", id, str(e))
-            return not_found_error_response("Transaction not found.")
+        except NotFound:
+            logger.error("Transaction not found with ID: %s", id)
+            return not_found_error_response(f"No transaction found with ID: {id}")
 
     def delete(self, request, id):
         """Delete a specific transaction by ID."""
@@ -132,8 +131,6 @@ class TransactionDetailView(APIView):
             transaction.save()
             logger.info("Transaction deleted successfully with ID: %s", id)
             return success_no_content_response()
-        except Exception as e:
-            logger.error(
-                "Transaction deletion failed for ID: %s. Error: %s", id, str(e)
-            )
-            return not_found_error_response("Transaction not found.")
+        except NotFound:
+            logger.error("Transaction not found with ID: %s", id)
+            return not_found_error_response(f"No transaction found with ID: {id}")

@@ -67,28 +67,37 @@ class SavingsTransactionDetailAPIView(APIView):
         return saving_transacion
 
     def get(self, request, id):
-        transaction = self.get_object(id)
-        serializer = SavingsTransactionSerializer(
-            transaction, context={"request": request}
-        )
-        return success_single_response(serializer.data)
-
-    def patch(self, request, pk):
-        transaction = self.get_object(id)
-        serializer = SavingsTransactionSerializer(
-            transaction, data=request.data, context={"request": request}, partial=True
-        )
-        if serializer.is_valid():
-            serializer.save()
+        try:
+            transaction = self.get_object(id)
+            serializer = SavingsTransactionSerializer(
+                transaction, context={"request": request}
+            )
             return success_single_response(serializer.data)
-        return validation_error_response(serializer.errors)
+        except NotFound:
+            return not_found_error_response("Transaction not found.")
 
-    def delete(self, request, pk):
-        transaction = self.get_object(pk)
+    def patch(self, request, id):
+        try:
+            transaction = self.get_object(id)
+            serializer = SavingsTransactionSerializer(
+                transaction,
+                data=request.data,
+                context={"request": request},
+                partial=True,
+            )
+            if serializer.is_valid():
+                serializer.save()
+                return success_single_response(serializer.data)
+            return validation_error_response(serializer.errors)
+        except NotFound:
+            return not_found_error_response("Transaction not found.")
+
+    def delete(self, request, id):
+        transaction = self.get_object(id)
 
         try:
             transaction.is_deleted = True
             transaction.save()
             return success_no_content_response()
-        except Exception as e:
+        except NotFound:
             return not_found_error_response("Transaction not found.")

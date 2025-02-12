@@ -16,6 +16,7 @@ from utils.responses import (
     success_single_response,
 )
 from django.shortcuts import get_object_or_404
+from saving_plan.tasks import delete_related
 
 
 class SavingsPlanListCreateAPIView(APIView):
@@ -59,7 +60,7 @@ class SavingsPlanDetailAPIView(APIView):
             return success_single_response(
                 serializer.data,
             )
-        except Exception:
+        except NotFound:
             return not_found_error_response()
 
     def patch(self, request, id):
@@ -72,7 +73,7 @@ class SavingsPlanDetailAPIView(APIView):
                 serializer.save()
                 return success_single_response(serializer.data)
             return validation_error_response(serializer.errors)
-        except Exception:
+        except NotFound:
             return not_found_error_response()
 
     @transaction.atomic
@@ -86,8 +87,8 @@ class SavingsPlanDetailAPIView(APIView):
             ).update(is_deleted=True, updated_at=timezone.now())
 
             plan.is_deleted = True
-            plan.save(update_fields=["is_deleted", "updated_at"])
-
+            plan.save()
+            delete_related.delay(plan.id)
             return success_no_content_response()
-        except Exception:
+        except NotFound:
             return not_found_error_response()

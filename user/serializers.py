@@ -72,28 +72,32 @@ class UpdatePasswordSerializer(serializers.Serializer):
         request_user = self.context["request"].user
 
         # Staff can update password without current password
-        if not request_user.is_staff:
-            if "current_password" not in data:
-                raise ValidationError("Current password is required.")
-            if not user.check_password(data["current_password"]):
-                raise ValidationError("Current password is incorrect.")
-        if request_user.is_staff and not request_user.is_superuser:
-            raise PermissionDenied("Staff cannot update password.")
+        if not request_user.is_superuser:
+            if request_user != user:
+                raise PermissionDenied("user not found")
 
-        # Validate new passwords
+            if "current_password" not in data:
+                raise ValidationError(
+                    {"current_password": "Current password is required."}
+                )
+            if not user.check_password(data["current_password"]):
+                raise ValidationError(
+                    {"current_password": "Current password is incorrect."}
+                )
+            if data["new_password"] == data["current_password"]:
+                raise ValidationError(
+                    {
+                        "new_password": "New password cannot be the same as the current password."
+                    }
+                )
+
         if data["new_password"] != data["confirm_password"]:
-            raise ValidationError("New passwords do not match.")
+            raise ValidationError({"confirm_password": "New password do not match."})
 
         try:
             validate_password(data["new_password"], user)
         except ValidationError as e:
             raise ValidationError({"new_password": list(e.messages)})
-
-        # Prevent reusing current password for non-staff users
-        if not request_user.is_staff and user.check_password(data["new_password"]):
-            raise ValidationError(
-                "New password cannot be the same as the current password."
-            )
 
         return data
 
@@ -138,15 +142,8 @@ class DeleteUserSerializer(serializers.Serializer):
         try:
             user = self.context["user"]
 
-            # Soft delete user
             user.is_active = False
             user.save()
-
-            # Update related records if user is staff
-            # if user.is_staff:
-            #     Category.objects.filter(user=user).update(user=None)
-
-            # Invalidate all tokens
             ActiveTokens.objects.filter(user=user).delete()
 
             logger.info(f"User {user.username} soft-deleted successfully.")
@@ -203,7 +200,7 @@ class PasswordResetRequestSerializer(serializers.Serializer):
 
     def validate_email(self, value):
         try:
-            user = CustomUser.objects.get(email=value)
+            CustomUser.objects.get(email=value, is_active=True)
         except CustomUser.DoesNotExist:
             raise serializers.ValidationError("No user found with this email address.")
         return value
