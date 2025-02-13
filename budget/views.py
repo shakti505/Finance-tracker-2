@@ -91,45 +91,46 @@ class BudgetDetailView(APIView):
     permission_classes = [IsStaffOrOwner]
 
     @budget_detail_get_doc
-    def get(self, request, pk):
+    def get(self, request, id):
         """Retrieve a specific budget"""
         try:
-            budget = self._get_budget_object(pk)
-            serializer = BudgetSerializer(budget, context={"request": request})
-            return success_single_response(serializer.data)
-        except NotFound:
+            budget = self._get_budget_object(id)
+        except Exception:
             return not_found_error_response()
+        serializer = BudgetSerializer(budget, context={"request": request})
+        return success_single_response(serializer.data)
 
     @budget_detail_patch_doc
-    def patch(self, request, pk):
+    def patch(self, request, id):
         """Update a budget"""
+
         try:
-            budget = self._get_budget_object(pk)
-            serializer = BudgetSerializer(
-                budget, data=request.data, context={"request": request}, partial=True
-            )
-            if serializer.is_valid():
-                serializer.save()
-                return success_single_response(
-                    serializer.data, status_code=status.HTTP_201_CREATED
-                )
-            return validation_error_response(serializer.errors)
-
-        except NotFound:
+            budget = self._get_budget_object(id)
+        except Exception:
             return not_found_error_response()
+        serializer = BudgetSerializer(
+            budget, data=request.data, context={"request": request}, partial=True
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return success_single_response(
+                serializer.data, status_code=status.HTTP_201_CREATED
+            )
+        return validation_error_response(serializer.errors)
 
-    def delete(self, request, pk):
+    def delete(self, request, id):
         """Soft delete a budget"""
         try:
-            budget = self._get_budget_object(pk)
-            budget.is_deleted = True
-            budget.save()
-            return success_no_content_response()
-        except NotFound:
+            budget = self._get_budget_object(id)
+        except Exception:
             return not_found_error_response()
+        budget = self._get_budget_object(id)
+        budget.is_deleted = True
+        budget.save()
+        return success_no_content_response()
 
-    def _get_budget_object(self, pk):
+    def _get_budget_object(self, id):
         """Get budget object with proper filtering"""
-        budget = get_object_or_404(Budget, pk=pk)
+        budget = get_object_or_404(Budget, id=id)
         self.check_object_permissions(self.request, budget)
         return budget

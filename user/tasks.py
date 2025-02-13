@@ -2,6 +2,7 @@ from celery import shared_task
 from services.notification import send_mail
 from django.conf import settings
 from django.db import transaction
+from user.models import CustomUser
 
 
 @shared_task
@@ -23,7 +24,7 @@ def send_email_task(to_email, reset_link):
 
 
 @shared_task
-def soft_delete_related_data(user):
+def soft_delete_related_data(user_id):
     """
     Soft delete related data by setting is_deleted = True.
     """
@@ -35,6 +36,7 @@ def soft_delete_related_data(user):
 
     # Update all related records to is_deleted=True
     try:
+        user = CustomUser.objects.get(id=user_id)
         with transaction.atomic():
             Transaction.objects.filter(user=user).update(is_deleted=True)
             Budget.objects.filter(user=user).update(is_deleted=True)

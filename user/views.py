@@ -97,7 +97,10 @@ class UserListView(APIView):
     @user_profile_get_doc
     def get(self, request):
         users = CustomUser.objects.all()
-        self.check_object_permissions(request, users)
+        try:
+            self.check_object_permissions(request, users)
+        except Exception:
+            return not_found_error_response("No users found.")
         serializer = UserSerializer(users, many=True)
         return success_response(serializer.data)
 
@@ -143,7 +146,7 @@ class UserProfileView(BaseUserView, APIView):
             )
             if serializer.is_valid():
                 serializer.delete_user()
-                soft_delete_related_data.delay(user)
+                soft_delete_related_data.delay(user.id)
                 return success_no_content_response()
             return validation_error_response(serializer.errors)
         except NotFound:
@@ -189,7 +192,7 @@ class PasswordResetRequestView(APIView):
 
             token = default_token_generator.make_token(user)
             uid = urlsafe_base64_encode(
-                str(user.pk).encode()
+                str(user.id).encode()
             )  # Use UUID bytes for encoding
 
             # Generate reset URL

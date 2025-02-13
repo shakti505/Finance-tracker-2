@@ -4,7 +4,7 @@ from transaction.models import Transaction
 
 class TransactionReportSerializer(serializers.ModelSerializer):
     category = serializers.CharField(source="category.name")
-    date = serializers.DateTimeField("date")
+    date = serializers.DateTimeField()
 
     class Meta:
         model = Transaction

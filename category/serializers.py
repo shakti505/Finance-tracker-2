@@ -4,8 +4,8 @@ from .models import Category
 from django.utils.text import slugify
 
 
-def custom_slugify(value):
-    return slugify(value, allow_unicode=True).replace("-", " ")
+# def custom_slugify(value):
+#     return slugify(value, allow_unicode=True).replace("-", " ")
 
 
 class CategorySerializer(serializers.ModelSerializer):

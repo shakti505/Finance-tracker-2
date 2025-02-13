@@ -21,28 +21,25 @@ class RecurringTransactionListCreateView(APIView, CustomPageNumberPagination):
 
     def get(self, request):
         """List recurring transactions with comprehensive filtering"""
-        try:
-            if request.user.is_staff:
-                queryset = RecurringTransaction.objects.all().order_by("-created_at")
-            else:
-                queryset = RecurringTransaction.objects.filter(
-                    user=request.user, is_deleted=False
-                ).order_by("-created_at")
 
-            paginated_data = self.paginate_queryset(queryset, request)
-            serializer = RecurringTransactionSerializer(paginated_data, many=True)
-            logger.info(f"User {request.user.id} retrieved recurring transactions.")
-            return success_response(
-                {
-                    "count": queryset.count(),
-                    "next": self.get_next_link(),
-                    "previous": self.get_previous_link(),
-                    "results": serializer.data,
-                }
-            )
-        except Exception as e:
-            logger.error(f"Error fetching recurring transactions: {str(e)}")
-            return not_found_error_response("Error fetching recurring transactions.")
+        if request.user.is_staff:
+            queryset = RecurringTransaction.objects.all().order_by("-created_at")
+        else:
+            queryset = RecurringTransaction.objects.filter(
+                user=request.user, is_deleted=False
+            ).order_by("-created_at")
+
+        paginated_data = self.paginate_queryset(queryset, request)
+        serializer = RecurringTransactionSerializer(paginated_data, many=True)
+        logger.info(f"User {request.user.id} retrieved recurring transactions.")
+        return success_response(
+            {
+                "count": queryset.count(),
+                "next": self.get_next_link(),
+                "previous": self.get_previous_link(),
+                "results": serializer.data,
+            }
+        )
 
     def post(self, request):
         """Create a new recurring transaction"""
@@ -76,45 +73,41 @@ class RecurringTransactionDetailView(APIView):
         """Retrieve specific recurring transaction"""
         try:
             recurring_transaction = self.get_object(id, request)
-            serializer = RecurringTransactionSerializer(recurring_transaction)
-            logger.info(f"User {request.user.id} retrieved transaction {id}.")
-            return success_single_response(serializer.data)
-        except Exception as e:
-            logger.error(f"Error retrieving transaction {id}: {str(e)}")
+        except Exception:
             return not_found_error_response("Recurring Transaction not found.")
+        serializer = RecurringTransactionSerializer(recurring_transaction)
+        logger.info(f"User {request.user.id} retrieved transaction {id}.")
+        return success_single_response(serializer.data)
 
     def patch(self, request, id):
         """Update specific recurring transaction"""
         try:
             recurring_transaction = self.get_object(id, request)
-            serializer = RecurringTransactionSerializer(
-                recurring_transaction,
-                data=request.data,
-                partial=True,
-                context={"request": request},
-            )
-            if serializer.is_valid():
-                serializer.save()
-                logger.info(f"User {request.user.id} updated transaction {id}.")
-                return success_single_response(serializer.data)
-
-            logger.warning(f"Validation error while updating {id}: {serializer.errors}")
-            return validation_error_response(serializer.errors)
-
-        except Exception as e:
-            logger.error(f"Error updating transaction {id}: {str(e)}")
+        except Exception:
             return not_found_error_response("Recurring Transaction not found.")
+        serializer = RecurringTransactionSerializer(
+            recurring_transaction,
+            data=request.data,
+            partial=True,
+            context={"request": request},
+        )
+        if serializer.is_valid():
+            serializer.save()
+            logger.info(f"User {request.user.id} updated transaction {id}.")
+            return success_single_response(serializer.data)
+
+        logger.warning(f"Validation error while updating {id}: {serializer.errors}")
+        return validation_error_response(serializer.errors)
 
     def delete(self, request, id):
         """Soft delete recurring transaction"""
         try:
             recurring_transaction = self.get_object(id, request)
-            with db_transaction.atomic():
-                recurring_transaction.is_deleted = True
-                recurring_transaction.save()
-
-            logger.info(f"User {request.user.id} deleted transaction {id}.")
-            return success_no_content_response()
-        except Exception as e:
-            logger.error(f"Error deleting transaction {id}: {str(e)}")
+        except Exception:
             return not_found_error_response("Recurring Transaction not found.")
+        with db_transaction.atomic():
+            recurring_transaction.is_deleted = True
+            recurring_transaction.save()
+
+        logger.info(f"User {request.user.id} deleted transaction {id}.")
+        return success_no_content_response()

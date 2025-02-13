@@ -22,7 +22,6 @@ class RecurringTransactionSerializer(serializers.ModelSerializer):
             "end_date",
             "next_run",
             "description",
-            "status",
         ]
         read_only_fields = ["id", "next_run"]
 

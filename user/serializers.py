@@ -177,7 +177,7 @@ class UpdateUserSerializer(serializers.ModelSerializer):
     def validate_username(self, value):
         try:
             user = self.context["user"]
-            if CustomUser.objects.exclude(pk=user.pk).filter(username=value).exists():
+            if CustomUser.objects.exclude(id=user.id).filter(username=value).exists():
                 raise ValidationError("Username already exists")
             return value
         except Exception as e:
@@ -187,7 +187,7 @@ class UpdateUserSerializer(serializers.ModelSerializer):
     def validate_email(self, value):
         try:
             user = self.context["user"]
-            if CustomUser.objects.exclude(pk=user.pk).filter(email=value).exists():
+            if CustomUser.objects.exclude(id=user.id).filter(email=value).exists():
                 raise ValidationError("Email already exists")
             return value
         except Exception as e:

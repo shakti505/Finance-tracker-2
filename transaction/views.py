@@ -90,47 +90,44 @@ class TransactionDetailView(APIView):
         """Retrieve a specific transaction by its ID."""
         try:
             transaction = self.get_object(id, request)
-            serializer = TransactionSerializer(transaction)
-            logger.info("Transaction retrieved successfully with ID: %s", id)
-            return success_single_response(serializer.data)
-        except NotFound:
-            logger.error("Transaction not found with ID: %s", id)
+        except Exception:
             return not_found_error_response(f"No transaction found with ID: {id}")
+        serializer = TransactionSerializer(transaction)
+        logger.info("Transaction retrieved successfully with ID: %s", id)
+        return success_single_response(serializer.data)
 
     def patch(self, request, id):
         """Update a specific transaction."""
-        try:
 
+        try:
             transaction = self.get_object(id, request)
-            serializer = TransactionSerializer(
-                transaction,
-                data=request.data,
-                partial=True,
-                context={"request": request},
-            )
-            if serializer.is_valid():
-                updated_transaction = serializer.save()
-                track_and_notify_budget.delay(updated_transaction.id)
-                logger.info("Transaction updated successfully with ID: %s", id)
-                return success_single_response(serializer.data)
-            logger.error(
-                "Transaction update failed for ID: %s. Errors: %s",
-                id,
-                serializer.errors,
-            )
-            return validation_error_response(serializer.errors)
-        except NotFound:
-            logger.error("Transaction not found with ID: %s", id)
+        except Exception:
             return not_found_error_response(f"No transaction found with ID: {id}")
+        serializer = TransactionSerializer(
+            transaction,
+            data=request.data,
+            partial=True,
+            context={"request": request},
+        )
+        if serializer.is_valid():
+            updated_transaction = serializer.save()
+            track_and_notify_budget.delay(updated_transaction.id)
+            logger.info("Transaction updated successfully with ID: %s", id)
+            return success_single_response(serializer.data)
+        logger.error(
+            "Transaction update failed for ID: %s. Errors: %s",
+            id,
+            serializer.errors,
+        )
+        return validation_error_response(serializer.errors)
 
     def delete(self, request, id):
         """Delete a specific transaction by ID."""
         try:
             transaction = self.get_object(id, request)
-            transaction.is_deleted = True
-            transaction.save()
-            logger.info("Transaction deleted successfully with ID: %s", id)
-            return success_no_content_response()
-        except NotFound:
-            logger.error("Transaction not found with ID: %s", id)
+        except Exception:
             return not_found_error_response(f"No transaction found with ID: {id}")
+        transaction.is_deleted = True
+        transaction.save()
+        logger.info("Transaction deleted successfully with ID: %s", id)
+        return success_no_content_response()

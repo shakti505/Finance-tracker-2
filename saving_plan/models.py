@@ -13,12 +13,6 @@ class SavingsPlan(BaseModel):
         ("WEEKLY", "Weekly"),
         ("MONTHLY", "Monthly"),
     ]
-    STATUS_CHOICES = [
-        ("ACTIVE", "Active"),
-        ("COMPLETED", "Completed"),
-        ("EXTENDED", "Extended"),
-        ("FAILED", "Failed"),
-    ]
 
     user = models.ForeignKey(
         CustomUser, on_delete=models.CASCADE, related_name="savings_plans"
@@ -31,7 +25,7 @@ class SavingsPlan(BaseModel):
     current_deadline = models.DateField()
     priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES)
     frequency = models.CharField(max_length=10, choices=FREQUENCY_CHOICES)
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="ACTIVE")
+    is_completed = models.BooleanField(default=False)
 
     def get_total_saved(self):
         return (

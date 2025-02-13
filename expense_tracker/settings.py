@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 from celery.schedules import crontab
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "abc-1234"
+SECRET_KEY = "abc123"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -92,8 +93,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "finance_tracker",
-        "USERNAME": "shakti",
-        "PASSWORD": "1234",
+        "USERNAME": os.getenv("POSTGRES_USER"),
+        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
     }
 }
 
@@ -122,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "Asia/Kolkata"
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -161,31 +162,35 @@ SIMPLE_JWT = {
 # Celery settings
 CELERY_BROKER_URL = "redis://localhost:6379/0"
 CELERY_RESULT_BACKEND = "django-db"
-CELERY_TIMEZONE = "Asia/Kolkata"
+CELERY_TIMEZONE = "UTC"
 
 # settings.py
 APPEND_SLASH = False
 
 import os
 
-SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
-SENDGRID_FROM_EMAIL = os.getenv("SENDGRID_FROM_EMAIL")
-SENDGRID_TEMPLATE_ID = os.getenv("SENDGRID_TEMPLATE_ID")
 
 CELERY_BEAT_SCHEDULE = {
     "process-recurring-transactions": {
         "task": "recurring_transaction.tasks.process_recurring_transactions",
         "schedule": crontab(minute="*/1"),
     },
+    "check_overdue_savings_plans": {
+        "task": "saving_plan.tasks.check_overdue_savings_plans",
+        "schedule": 86400.0,
+    },
 }
 
 
-SENDGRID_RECURRING_TRANSACTION_TEMPLATE_ID = "d-7fd045041c204ddb831f9143c54f43b0"
-SENDGRID_API_KEY = (
-    "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"
+SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
+SENDGRID_FROM_EMAIL = os.getenv("SENDGRID_FROM_EMAIL")
+SENDGRID_RECURRING_TRANSACTION_TEMPLATE_ID = os.getenv(
+    "SENDGRID_RECURRING_TRANSACTION_TEMPLATE_ID"
 )
-SENDGRID_RESET_PASSWORD_TEMPLATE_ID = "d-36f7a9ccf47a4a199e7acb16f3c1f0e6"
-SENDGRID_BUDGET_TEMPLATE_ID = "d-95c22b26f0e84ca7a3b23fbcfe248807"
-SENDGRID_SAVING_PLAN_TEMPLATE_ID = "d-36f7a9ccf47a4a199e7acb16f3c1f0e6"
-SENDGRID_FROM_EMAIL = "shakti@gkmit.co"
-SENDGRID_TRANSACTION_HISTORY_TEMPLATE_ID = "d-a864baa6467d4f87968f3c2b1e1a59b7"
+SENDGRID_RESET_PASSWORD_TEMPLATE_ID = os.getenv("SENDGRID_RESET_PASSWORD_TEMPLATE_ID")
+SENDGRID_BUDGET_TEMPLATE_ID = os.getenv("SENDGRID_BUDGET_TEMPLATE_ID")
+SENDGRID_SAVING_PLAN_TEMPLATE_ID = os.getenv("SENDGRID_SAVING_PLAN_TEMPLATE_ID")
+SENDGRID_TRANSACTION_HISTORY_TEMPLATE_ID = os.getenv(
+    "SENDGRID_TRANSACTION_HISTORY_TEMPLATE_ID"
+)
+SENDGRID_OVERDUE_TEMPLATE_ID = os.getenv("SENDGRID_OVERDUE_TEMPLATE_ID")

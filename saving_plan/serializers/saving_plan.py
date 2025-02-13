@@ -22,15 +22,25 @@ class SavingsPlanSerializer(serializers.ModelSerializer):
             "current_deadline",
             "priority",
             "frequency",
-            "status",
             "total_saved",
             "created_at",
             "updated_at",
             "user",
             "progress",
             "time_remaining",
+            "is_completed",
+            "is_deleted",
         ]
-        read_only_fields = ["original_deadline"]
+        read_only_fields = [
+            "original_deadline",
+            "created_at",
+            "updated_at",
+            "is_deleted",
+            "is_completed",
+            "progress",
+            "time_remaining",
+            "total_saved",
+        ]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -40,9 +50,21 @@ class SavingsPlanSerializer(serializers.ModelSerializer):
 
     def validate_name(self, value):
         """Validate the name field."""
+        user = self.context.get("request").user
         if not value or len(value.strip()) < 3:
             raise serializers.ValidationError("Name must be at least 3 characters long")
-        return value.strip()
+        value = value.strip()
+
+        existing_plans = SavingsPlan.objects.filter(user=user, name__iexact=value)
+
+        if self.instance:
+            existing_plans = existing_plans.exclude(id=self.instance.id)
+        if existing_plans.exists():
+            raise serializers.ValidationError(
+                "You already have a savings plan with this name."
+            )
+
+        return value
 
     def validate_target_amount(self, value):
         """Validate the target_amount field."""
@@ -105,15 +127,25 @@ class SavingsPlanSerializer(serializers.ModelSerializer):
         return obj.get_total_saved()
 
     def get_progress(self, obj):
+        """Calculate and return the progress of the savings plan."""
         total_saved = obj.get_total_saved()
+        percentage = (
+            round((total_saved / obj.target_amount) * 100, 2)
+            if obj.target_amount > 0
+            else 0
+        )
+
+        if percentage >= 100 and not obj.is_completed:
+            obj.is_completed = True
+            obj.save()  # Save the updated is_completed status
+        elif percentage < 100 and obj.is_completed:
+            obj.is_completed = False
+            obj.save()  # Save the updated is_completed status
+
         return {
             "amount_saved": total_saved,
             "remaining_amount": obj.get_remaining_amount(),
-            "percentage": (
-                round((total_saved / obj.target_amount) * 100, 2)
-                if obj.target_amount > 0
-                else 0
-            ),
+            "percentage": percentage,
         }
 
     def get_time_remaining(self, obj):
@@ -126,6 +158,3 @@ class SavingsPlanSerializer(serializers.ModelSerializer):
         elif days_remaining > 7:
             return f"{days_remaining // 7} week left"
         return f"{days_remaining} day left"
-
-    def get_total_saved(self, obj):
-        return obj.get_total_saved()

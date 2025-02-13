@@ -66,6 +66,5 @@ class ExtendDeadlineSerializer(serializers.ModelSerializer):
             user_id=user,
         )
         savings_plan.current_deadline = validated_data["new_deadline"]
-        savings_plan.status = "EXTENDED"
-        savings_plan.save(update_fields=["current_deadline", "status"])
+        savings_plan.save()
         return extension

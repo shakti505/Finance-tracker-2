@@ -46,10 +46,6 @@ class SavingsTransactionSerializer(serializers.ModelSerializer):
                 "You can only extend your own savings plans"
             )
 
-        if data.status == "COMPLETED":
-            raise serializers.ValidationError(
-                "Cannot add transactions to completed savings plan"
-            )
         return data
 
     def validate_amount(self, value):

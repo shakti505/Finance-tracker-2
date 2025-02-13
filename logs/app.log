@@ -12217,3 +12217,927 @@ kombu.exceptions.EncodeError: Object of type Budget is not JSON serializable
 2025-02-12 17:35:20,048 [INFO] User admin logged in successfully.
 2025-02-12 17:35:20,057 [INFO] Generated tokens for user admin.
 2025-02-12 17:35:28,793 [WARNING] Not Found: /api/account/logout/
+2025-02-12 17:59:17,770 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:59:38,129 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 17:59:51,940 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 18:03:14,289 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 18:03:18,301 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 18:03:53,834 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 18:04:04,234 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 18:04:26,236 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 18:05:11,137 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 18:05:22,883 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 18:05:34,478 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 18:05:46,185 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 18:05:49,673 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-12 18:06:29,100 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/views.py changed, reloading.
+2025-02-12 18:06:34,693 [INFO] /Users/mac/Downloads/expense_tracker copy 3/budget/urls.py changed, reloading.
+2025-02-12 18:07:20,724 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 18:08:03,502 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 18:08:18,303 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 18:08:55,783 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 18:09:02,999 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 18:09:56,113 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py changed, reloading.
+2025-02-12 18:10:02,633 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py changed, reloading.
+2025-02-12 18:10:21,161 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py changed, reloading.
+2025-02-12 18:10:39,984 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py changed, reloading.
+2025-02-12 18:12:01,854 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 18:14:25,834 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 18:14:44,924 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 18:14:47,960 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 18:16:54,673 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 18:16:58,658 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 18:17:10,363 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 18:17:18,960 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 18:18:17,990 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 18:23:34,435 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 18:26:30,847 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 18:26:33,338 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 18:26:39,470 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 18:28:12,308 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 18:28:25,671 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 18:37:37,745 [WARNING] Forbidden: /api/v1/categories/
+2025-02-12 18:37:43,967 [INFO] User shakti logged in successfully.
+2025-02-12 18:37:43,978 [INFO] Generated tokens for user shakti.
+2025-02-12 18:38:48,508 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 18:41:02,616 [WARNING] Bad Request: /api/v1/categories/
+2025-02-12 18:42:17,472 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/views.py changed, reloading.
+2025-02-12 18:46:30,695 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 18:48:51,177 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 18:48:54,583 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 18:56:44,252 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 18:58:51,009 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 19:05:20,400 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 19:05:30,046 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 19:05:34,426 [INFO] /Users/mac/Downloads/expense_tracker copy 3/category/serializers.py changed, reloading.
+2025-02-12 21:05:19,083 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/serializers.py changed, reloading.
+2025-02-12 21:09:55,564 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:10:00,106 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:10:08,678 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:10:16,161 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:10:25,795 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:10:42,535 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:11:06,511 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:14:39,012 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 21:15:03,678 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 21:15:44,420 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-12 21:19:02,670 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:21:39,087 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:22:13,525 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:23:13,964 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:23:21,427 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:24:28,966 [WARNING] Forbidden: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:24:39,962 [INFO] User admin logged in successfully.
+2025-02-12 21:24:39,969 [INFO] Generated tokens for user admin.
+2025-02-12 21:24:46,026 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:25:07,123 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:25:11,904 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:25:42,289 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:26:11,607 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:26:15,120 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:26:18,140 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:26:22,175 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:26:33,726 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:26:39,942 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:27:06,259 [WARNING] Bad Request: /api/v1/transaction-summary-report/
+2025-02-12 21:27:10,152 [WARNING] Bad Request: /api/v1/transaction-summary-report/
+2025-02-12 21:27:40,149 [ERROR] Unexpected error: CustomUser matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 403, in get
+    user = self.get_target_user(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 292, in get_target_user
+    return CustomUser.objects.get(id=user_id, is_staff=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+user.models.CustomUser.DoesNotExist: CustomUser matching query does not exist.
+2025-02-12 21:27:40,155 [ERROR] Internal Server Error: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:27:48,961 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:27:53,773 [ERROR] Unexpected error: CustomUser matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 403, in get
+    user = self.get_target_user(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 292, in get_target_user
+    return CustomUser.objects.get(id=user_id, is_staff=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+user.models.CustomUser.DoesNotExist: CustomUser matching query does not exist.
+2025-02-12 21:27:53,774 [ERROR] Internal Server Error: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:28:53,268 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:30:19,994 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:30:34,858 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:30:41,332 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:30:42,987 [WARNING] Not Found: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:31:01,409 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:31:04,380 [WARNING] Not Found: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:31:11,336 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:31:13,269 [WARNING] Not Found: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:32:57,064 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:33:05,638 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:33:15,241 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:33:23,704 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:33:45,881 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:34:28,790 [WARNING] Not Found: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:34:29,739 [WARNING] Not Found: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:34:46,927 [WARNING] Not Found: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:35:21,618 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:35:27,671 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:35:43,564 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:36:04,505 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:36:09,231 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:36:15,772 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:36:19,076 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:36:29,509 [ERROR] Unexpected error: validation_error_response() missing 1 required positional argument: 'errors'
+Traceback (most recent call last):
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 408, in get
+    user = self.get_target_user(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 292, in get_target_user
+    raise ValidationError("Valid user_id required for staff")
+rest_framework.exceptions.ValidationError: [ErrorDetail(string='Valid user_id required for staff', code='invalid')]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 422, in get
+    return validation_error_response()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validation_error_response() missing 1 required positional argument: 'errors'
+2025-02-12 21:36:29,512 [ERROR] Internal Server Error: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:36:43,225 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:36:45,569 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:36:47,026 [ERROR] Unexpected error: validation_error_response() missing 1 required positional argument: 'errors'
+Traceback (most recent call last):
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 408, in get
+    user = self.get_target_user(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 292, in get_target_user
+    raise ValidationError("Valid user_id required for staff")
+rest_framework.exceptions.ValidationError: [ErrorDetail(string='Valid user_id required for staff', code='invalid')]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 422, in get
+    return validation_error_response()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validation_error_response() missing 1 required positional argument: 'errors'
+2025-02-12 21:36:47,028 [ERROR] Internal Server Error: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:36:57,157 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:36:58,489 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:37:17,156 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:37:18,593 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:37:22,506 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:37:24,861 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:37:26,477 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:37:27,360 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:37:28,164 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:37:32,370 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:37:36,956 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:37:38,792 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:37:39,999 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:37:45,451 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:37:47,278 [ERROR] Unexpected error: validation_error_response() missing 1 required positional argument: 'errors'
+Traceback (most recent call last):
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 408, in get
+    user = self.get_target_user(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 292, in get_target_user
+    raise ValidationError("Valid user_id required for staff")
+rest_framework.exceptions.ValidationError: [ErrorDetail(string='Valid user_id required for staff', code='invalid')]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 422, in get
+    return validation_error_response()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validation_error_response() missing 1 required positional argument: 'errors'
+2025-02-12 21:37:47,280 [ERROR] Internal Server Error: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:37:50,992 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:37:52,422 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:37:53,421 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:38:22,576 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:38:25,110 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:38:30,433 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:38:32,256 [ERROR] Unexpected error: validation_error_response() missing 1 required positional argument: 'errors'
+Traceback (most recent call last):
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 408, in get
+    user = self.get_target_user(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 292, in get_target_user
+    raise ValidationError({"user_id": "Valid user_id required for staff"})
+rest_framework.exceptions.ValidationError: {'user_id': ErrorDetail(string='Valid user_id required for staff', code='invalid')}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 422, in get
+    return validation_error_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validation_error_response() missing 1 required positional argument: 'errors'
+2025-02-12 21:38:32,258 [ERROR] Internal Server Error: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:38:33,800 [ERROR] Unexpected error: validation_error_response() missing 1 required positional argument: 'errors'
+Traceback (most recent call last):
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 408, in get
+    user = self.get_target_user(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 292, in get_target_user
+    raise ValidationError({"user_id": "Valid user_id required for staff"})
+rest_framework.exceptions.ValidationError: {'user_id': ErrorDetail(string='Valid user_id required for staff', code='invalid')}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py", line 422, in get
+    return validation_error_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validation_error_response() missing 1 required positional argument: 'errors'
+2025-02-12 21:38:33,802 [ERROR] Internal Server Error: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:38:38,958 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:38:43,460 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:38:47,922 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:38:51,778 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:38:54,940 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 21:40:26,597 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:40:30,105 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:41:04,323 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/views.py changed, reloading.
+2025-02-12 21:42:28,351 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py changed, reloading.
+2025-02-12 21:42:43,210 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py changed, reloading.
+2025-02-12 21:43:06,253 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py changed, reloading.
+2025-02-12 21:44:40,582 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-12 21:50:33,847 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 21:50:37,453 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 21:50:48,143 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-12 22:03:27,136 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 22:03:33,387 [WARNING] Bad Request: /api/v1/transaction-summary-report/summary/
+2025-02-12 22:03:50,955 [WARNING] Not Found: /api/v1/transaction-summary-report/summary/
+2025-02-12 22:07:47,478 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/models.py changed, reloading.
+2025-02-12 22:07:50,078 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/models.py changed, reloading.
+2025-02-12 22:08:05,933 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:08:17,448 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 22:08:29,164 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_transaction.py changed, reloading.
+2025-02-12 22:09:12,072 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:14:21,157 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:14:28,219 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:14:33,928 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:14:43,327 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:14:51,863 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:15:02,250 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:15:41,797 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:16:25,265 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:16:53,565 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:17:07,955 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:17:39,146 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:18:08,348 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:18:10,367 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:18:19,900 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:18:26,205 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:19:01,683 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:19:09,162 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:19:27,986 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:19:34,176 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:19:40,362 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:20:56,217 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:21:00,630 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:21:12,255 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:21:41,233 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:21:43,450 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:22:28,018 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:22:36,267 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:22:41,342 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:22:46,344 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:22:50,601 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:23:54,959 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:23:59,562 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:24:04,960 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:24:12,436 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:24:18,851 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:24:25,305 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:24:30,750 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:25:24,908 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:26:15,476 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:26:19,397 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:27:58,172 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:28:03,217 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:29:04,607 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:31:05,956 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 22:31:10,018 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 22:31:52,854 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 22:31:58,872 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 22:32:08,480 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-12 22:32:29,349 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:32:50,323 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:32:55,723 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 22:34:08,209 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:34:12,722 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 22:34:32,803 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 22:34:37,200 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/serializers.py changed, reloading.
+2025-02-12 22:35:08,458 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:35:33,534 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:35:37,891 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:36:10,304 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:36:21,708 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:36:35,199 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:36:37,606 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:37:25,372 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:37:47,483 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:38:03,386 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:38:15,944 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:38:23,346 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 22:38:36,072 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:38:38,401 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:38:40,846 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 22:38:50,448 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:38:59,076 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:39:09,634 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 22:39:47,320 [INFO] User admin logged in successfully.
+2025-02-12 22:39:47,330 [INFO] Generated tokens for user admin.
+2025-02-12 22:40:55,113 [INFO] User d9c6d8a9-629c-4e8b-bfb8-354347236e93 retrieved recurring transactions.
+2025-02-12 22:41:17,320 [INFO] User shakti logged in successfully.
+2025-02-12 22:41:17,325 [INFO] Generated tokens for user shakti.
+2025-02-12 22:41:20,220 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c retrieved recurring transactions.
+2025-02-12 22:41:22,150 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c retrieved recurring transactions.
+2025-02-12 22:42:03,171 [WARNING] Validation error: {'End_date': [ErrorDetail(string='End date must be after start date.', code='invalid')]}
+2025-02-12 22:42:03,172 [WARNING] Bad Request: /api/v1/recurring-transactions/
+2025-02-12 22:42:09,525 [WARNING] Validation error: {'start_date': [ErrorDetail(string='Start date cannot be in the past.', code='invalid')]}
+2025-02-12 22:42:09,525 [WARNING] Bad Request: /api/v1/recurring-transactions/
+2025-02-12 22:42:13,949 [WARNING] Validation error: {'start_date': [ErrorDetail(string='Start date cannot be in the past.', code='invalid')]}
+2025-02-12 22:42:13,956 [WARNING] Bad Request: /api/v1/recurring-transactions/
+2025-02-12 22:42:18,684 [WARNING] Validation error: {'End_date': [ErrorDetail(string='End date must be after start date.', code='invalid')]}
+2025-02-12 22:42:18,685 [WARNING] Bad Request: /api/v1/recurring-transactions/
+2025-02-12 22:42:23,147 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 22:42:53,297 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 22:48:45,217 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 22:49:16,465 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c retrieved recurring transactions.
+2025-02-12 22:53:49,745 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-12 22:53:57,919 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-12 22:57:49,714 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 22:58:17,739 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 22:59:37,370 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:00:31,762 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:01:33,422 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:09:09,649 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:09:23,110 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:10:11,745 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:11:23,603 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:11:41,517 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:12:43,319 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:12:50,186 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:13:55,269 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:14:03,083 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:15:19,352 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:15:35,735 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:15:50,143 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:21:35,250 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:24:45,390 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:24:52,567 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:24:57,564 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:25:02,235 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:25:49,975 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:28:34,401 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:28:42,617 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:40:19,506 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:40:23,289 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:40:40,570 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:40:45,808 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:43:13,537 [WARNING] Forbidden: /api/v1/recurring-transactions/
+2025-02-12 23:43:18,566 [INFO] User shakti logged in successfully.
+2025-02-12 23:43:18,573 [INFO] Generated tokens for user shakti.
+2025-02-12 23:43:22,123 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:44:38,564 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:45:57,281 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:47:13,163 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:49:12,804 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:51:38,217 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:54:36,448 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:54:54,172 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:55:13,378 [ERROR] Internal Server Error: /admin/recurring_transaction/recurringtransaction/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column recurring_transaction_recurringtransaction.status does not exist
+LINE 1: ..._transaction_recurringtransaction"."description", "recurring...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2140, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column recurring_transaction_recurringtransaction.status does not exist
+LINE 1: ..._transaction_recurringtransaction"."description", "recurring...
+                                                             ^
+
+2025-02-12 23:55:16,001 [ERROR] Internal Server Error: /admin/recurring_transaction/recurringtransaction/
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column recurring_transaction_recurringtransaction.status does not exist
+LINE 1: ..._transaction_recurringtransaction"."description", "recurring...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2140, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column recurring_transaction_recurringtransaction.status does not exist
+LINE 1: ..._transaction_recurringtransaction"."description", "recurring...
+                                                             ^
+
+2025-02-12 23:55:41,193 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:55:44,395 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:55:54,049 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 23:58:35,085 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 23:58:37,964 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/serializers.py changed, reloading.
+2025-02-12 23:58:40,521 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/views.py changed, reloading.
+2025-02-12 23:58:50,848 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-13 00:00:33,994 [WARNING] Validation error: {'start_date': [ErrorDetail(string='Start date cannot be in the past.', code='invalid')]}
+2025-02-13 00:00:33,994 [WARNING] Bad Request: /api/v1/recurring-transactions/
+2025-02-13 00:00:49,359 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-13 00:00:54,983 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-13 00:01:02,026 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-13 00:02:43,458 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-13 00:03:45,081 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-13 00:05:09,008 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-13 00:06:09,722 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 18:36:56,616 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 18:37:58,585 [INFO] User 547f7668-2c75-407a-9847-eee2e0ef109c created a new recurring transaction.
+2025-02-12 18:46:01,627 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 18:46:06,635 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 18:46:09,923 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 18:46:46,325 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 18:50:46,922 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl4kb1-2299caae3cd1efde199f60bd299d1ccd/
+2025-02-12 18:50:56,265 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl4kb1-2299caae3cd1efde199f60bd299d1ccd/
+2025-02-12 18:51:11,235 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl4kb1-2299caae3cd1efde199f60bd299d1ccd/
+2025-02-12 18:51:31,467 [INFO] User shakti logged in successfully.
+2025-02-12 18:51:31,477 [INFO] Generated tokens for user shakti.
+2025-02-12 18:53:21,156 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 18:53:36,335 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 18:54:47,960 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 18:58:22,913 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 18:58:49,671 [INFO] /Users/mac/Downloads/expense_tracker copy 3/recurring_transaction/models.py changed, reloading.
+2025-02-12 19:04:28,097 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/urls.py changed, reloading.
+2025-02-12 19:04:35,166 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/models.py changed, reloading.
+2025-02-12 19:05:11,494 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 19:06:12,793 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 19:07:13,681 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:07:16,431 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:07:21,987 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-12 19:07:21,992 [WARNING] Validation error while creating savings plan: {'user': [ErrorDetail(string='Invalid pk "d3d27461-400e-422d-9052-4ce70f14c086" - object does not exist.', code='does_not_exist')]}
+2025-02-12 19:07:21,993 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-12 19:07:27,631 [INFO] User shakti logged in successfully.
+2025-02-12 19:07:27,637 [INFO] Generated tokens for user shakti.
+2025-02-12 19:07:33,872 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 19:08:22,575 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-12 19:08:25,084 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 19:08:26,777 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 19:09:42,146 [WARNING] Forbidden: /api/v1/users/
+2025-02-12 19:10:14,065 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-12 19:10:14,071 [ERROR] Unexpected error: null value in column "status" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (71430467-9b9f-43ed-9884-66b7e066ca36, 2025-02-12 19:10:14.070253+00, 2025-02-12 19:10:14.070272+00, f, MANALI TRIP, 30000.00, 2026-01-01, 2026-01-01, HIGH, WEEKLY, null, 547f7668-2c75-407a-9847-eee2e0ef109c).
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "status" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (71430467-9b9f-43ed-9884-66b7e066ca36, 2025-02-12 19:10:14.070253+00, 2025-02-12 19:10:14.070272+00, f, MANALI TRIP, 30000.00, 2026-01-01, 2026-01-01, HIGH, WEEKLY, null, 547f7668-2c75-407a-9847-eee2e0ef109c).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py", line 37, in post
+    serializer.save()
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/base.py", line 1160, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/base.py", line 1201, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "status" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (71430467-9b9f-43ed-9884-66b7e066ca36, 2025-02-12 19:10:14.070253+00, 2025-02-12 19:10:14.070272+00, f, MANALI TRIP, 30000.00, 2026-01-01, 2026-01-01, HIGH, WEEKLY, null, 547f7668-2c75-407a-9847-eee2e0ef109c).
+
+2025-02-12 19:10:14,082 [ERROR] Internal Server Error: /api/v1/savings-plans/
+2025-02-12 19:11:05,363 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-12 19:11:05,372 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-12 19:11:16,578 [INFO] Fetching savings plan with ID: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:11:16,580 [INFO] Fetched savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:11:21,492 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:12:31,993 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:12:33,441 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:12:47,516 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:12:48,504 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:12:49,537 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:13:10,721 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:13:14,103 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:13:16,020 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:13:19,083 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:13:44,441 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:13:46,293 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:14:01,512 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:14:04,004 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:14:05,015 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:14:29,911 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:14:31,956 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:15:08,439 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:15:19,752 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:15:21,785 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:15:46,663 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:16:28,277 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:16:30,724 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:17:14,228 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:17:16,405 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:17:41,528 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:17:43,224 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:17:47,579 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:18:02,663 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:18:04,581 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:18:11,411 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:19:33,937 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 19:19:41,451 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-12 19:19:43,527 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:20:06,260 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:20:11,435 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:20:32,623 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:20:38,063 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:22:21,974 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:22:36,152 [INFO] Fetching savings plan with ID: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:22:36,155 [INFO] Updating savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:22:36,161 [INFO] Savings plan updated successfully: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:22:59,473 [INFO] Fetching savings plan with ID: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:22:59,476 [INFO] Updating savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:22:59,481 [INFO] Savings plan updated successfully: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:23:07,275 [INFO] Fetching savings plan with ID: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:23:07,278 [INFO] Updating savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:23:07,282 [INFO] Savings plan updated successfully: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:23:43,542 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:23:51,220 [WARNING] Bad Request: /api/v1/savings-transactions/
+2025-02-12 19:24:18,756 [WARNING] Bad Request: /api/v1/savings-transactions/
+2025-02-12 19:24:26,651 [WARNING] Bad Request: /api/v1/savings-transactions/
+2025-02-12 19:24:39,095 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:24:53,524 [WARNING] Bad Request: /api/v1/savings-transactions/
+2025-02-12 19:24:57,474 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:25:26,659 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:27:33,334 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/permissions.py changed, reloading.
+2025-02-12 19:27:35,262 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a/
+2025-02-12 19:27:40,047 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a/
+2025-02-12 19:27:54,186 [WARNING] Not Found: /api/v1/savings-transactions
+2025-02-12 19:27:57,916 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a//
+2025-02-12 19:28:46,066 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/permissions.py changed, reloading.
+2025-02-12 19:28:52,686 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/permissions.py changed, reloading.
+2025-02-12 19:28:56,916 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a/
+2025-02-12 19:29:00,250 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a/
+2025-02-12 19:29:10,674 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/permissions.py changed, reloading.
+2025-02-12 19:29:12,297 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a/
+2025-02-12 19:29:39,006 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:30:48,229 [WARNING] Not Found: /api/categories/3d9e0a3b-ada8-47bc-aa09-393a2d1c0baa/
+2025-02-12 19:31:08,332 [WARNING] Not Found: /api/v1/categories/3d9e0a3b-ada8-47bc-aa09-393a2d1c0baa/
+2025-02-12 19:33:35,614 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/permissions.py changed, reloading.
+2025-02-12 19:33:42,372 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a/
+2025-02-12 19:33:45,318 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a/
+2025-02-12 19:34:16,092 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-12 19:34:27,268 [WARNING] Not Found: /api/v1/categories/3d9e0a3b-ada8-47bc-aa09-393a2d1c0baa/
+2025-02-12 19:34:28,544 [WARNING] Not Found: /api/v1/categories/3d9e0a3b-ada8-47bc-aa09-393a2d1c0baa/
+2025-02-12 19:35:32,699 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-12 19:35:36,268 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-12 19:35:40,714 [WARNING] Not Found: /api/v1/categories/3d9e0a3b-ada8-47bc-aa09-393a2d1c0baa/
+2025-02-12 19:35:49,082 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-12 19:38:09,957 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-12 19:38:38,188 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/permissions.py changed, reloading.
+2025-02-12 19:38:49,819 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-12 19:39:32,522 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:39:40,149 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:39:44,486 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_transaction.py changed, reloading.
+2025-02-12 19:40:10,989 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a/
+2025-02-12 19:40:22,206 [WARNING] Not Found: /api/v1/savings-transactions/3e7ec583-2ac6-40f2-a9e4-33f77745b19a/
+2025-02-12 19:40:34,533 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:41:23,119 [ERROR] Error fetching savings plan: No SavingsPlan matches the given query.
+2025-02-12 19:41:23,120 [ERROR] Unexpected error in extending deadline: No SavingsPlan matches the given query.
+2025-02-12 19:41:23,120 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:42:21,125 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:42:31,875 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:42:33,392 [ERROR] Error fetching savings plan: No SavingsPlan matches the given query.
+2025-02-12 19:42:33,392 [ERROR] Unexpected error in extending deadline: No SavingsPlan matches the given query.
+2025-02-12 19:42:33,393 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:43:16,791 [ERROR] Error fetching savings plan: No SavingsPlan matches the given query.
+2025-02-12 19:43:16,791 [ERROR] Unexpected error in extending deadline: No SavingsPlan matches the given query.
+2025-02-12 19:43:16,792 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:43:17,660 [ERROR] Error fetching savings plan: No SavingsPlan matches the given query.
+2025-02-12 19:43:17,660 [ERROR] Unexpected error in extending deadline: No SavingsPlan matches the given query.
+2025-02-12 19:43:17,661 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:43:18,186 [ERROR] Error fetching savings plan: No SavingsPlan matches the given query.
+2025-02-12 19:43:18,186 [ERROR] Unexpected error in extending deadline: No SavingsPlan matches the given query.
+2025-02-12 19:43:18,187 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:43:24,108 [ERROR] Error fetching savings plan: No SavingsPlan matches the given query.
+2025-02-12 19:43:24,108 [ERROR] Unexpected error in extending deadline: No SavingsPlan matches the given query.
+2025-02-12 19:43:24,109 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:43:42,646 [ERROR] Error fetching savings plan: No SavingsPlan matches the given query.
+2025-02-12 19:43:42,646 [ERROR] Unexpected error in extending deadline: No SavingsPlan matches the given query.
+2025-02-12 19:43:42,647 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:44:06,444 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:44:10,551 [ERROR] Error fetching savings plan: No SavingsPlan matches the given query.
+2025-02-12 19:44:10,552 [ERROR] Unexpected error in extending deadline: No SavingsPlan matches the given query.
+2025-02-12 19:44:10,552 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:45:02,940 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:45:04,942 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:45:04,955 [ERROR] Unexpected error in extending deadline: The following fields do not exist in this model, are m2m fields, or are non-concrete fields: status
+2025-02-12 19:45:04,956 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:45:13,786 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:45:21,435 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:45:32,985 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:45:34,631 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:45:34,637 [ERROR] Unexpected error in extending deadline: The following fields do not exist in this model, are m2m fields, or are non-concrete fields: status
+2025-02-12 19:45:34,638 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:45:50,016 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:45:54,128 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:45:54,136 [ERROR] Unexpected error in extending deadline: The following fields do not exist in this model, are m2m fields, or are non-concrete fields: status
+2025-02-12 19:45:54,137 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:46:52,125 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:46:54,231 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:46:54,240 [ERROR] Unexpected error in extending deadline: The following fields do not exist in this model, are m2m fields, or are non-concrete fields: status
+2025-02-12 19:46:54,241 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:47:03,457 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:47:05,925 [ERROR] Unexpected error in extending deadline: Cannot resolve keyword 'SavingsPlan_id' into field. Choices are: created_at, current_deadline, deadline_extensions, frequency, id, is_deleted, name, original_deadline, priority, target_amount, transactions, updated_at, user, user_id
+2025-02-12 19:47:05,925 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:47:10,110 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:47:39,570 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:47:45,740 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:47:48,172 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:47:54,764 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:48:09,496 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:48:12,406 [ERROR] Unexpected error in extending deadline: ExtendDeadlineAPIView.get_object() takes 1 positional argument but 2 were given
+2025-02-12 19:48:12,407 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:48:23,707 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:48:25,515 [ERROR] Unexpected error in extending deadline: ExtendDeadlineAPIView.get_object() takes 1 positional argument but 2 were given
+2025-02-12 19:48:25,516 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:48:28,644 [ERROR] Unexpected error in extending deadline: ExtendDeadlineAPIView.get_object() takes 1 positional argument but 2 were given
+2025-02-12 19:48:28,644 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:49:36,672 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:49:48,572 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:49:58,263 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:50:16,193 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:50:19,055 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:50:23,523 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:50:25,841 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:50:25,850 [ERROR] Unexpected error in extending deadline: The following fields do not exist in this model, are m2m fields, or are non-concrete fields: status
+2025-02-12 19:50:25,850 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:52:25,241 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:52:28,307 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:52:28,314 [ERROR] Unexpected error in extending deadline: The following fields do not exist in this model, are m2m fields, or are non-concrete fields: status
+2025-02-12 19:52:28,316 [WARNING] Bad Request: /api/v1/savings-plans/extend-deadline/
+2025-02-12 19:53:10,696 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:53:24,943 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:53:24,951 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 19:53:46,448 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 19:54:00,881 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:54:13,586 [WARNING] Session data corrupted
+2025-02-12 19:54:13,637 [WARNING] Session data corrupted
+2025-02-12 19:54:17,350 [WARNING] Session data corrupted
+2025-02-12 19:54:57,396 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 19:55:08,699 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan_deadline_extension.py changed, reloading.
+2025-02-12 20:00:39,871 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/models.py changed, reloading.
+2025-02-12 20:01:04,576 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/models.py changed, reloading.
+2025-02-12 20:11:12,163 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 20:11:18,737 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 20:11:24,228 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 20:11:54,481 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 20:11:55,906 [WARNING] Forbidden: /api/v1/savings-plans/
+2025-02-12 20:12:02,934 [INFO] User shakti logged in successfully.
+2025-02-12 20:12:02,940 [INFO] Generated tokens for user shakti.
+2025-02-12 20:12:06,570 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 20:12:27,171 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 20:12:46,937 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 20:13:31,791 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-12 20:13:34,209 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 20:22:23,002 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 20:22:30,071 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 20:22:42,728 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 20:24:09,177 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:24:15,154 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:24:42,330 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:24:45,651 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:24:47,935 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:24:53,229 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:25:26,764 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:25:44,680 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:25:49,029 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:25:51,428 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:28:56,210 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:29:06,991 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:29:32,247 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-12 20:33:03,029 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-12 20:33:07,698 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:07,707 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:09,065 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:09,072 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:10,034 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:10,041 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:10,937 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:10,945 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:11,802 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:11,809 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:12,678 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:12,684 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:13,507 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:13,513 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:14,239 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:14,245 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:14,936 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:14,942 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:50,130 [INFO] Extending deadline for savings plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:33:50,137 [INFO] Deadline extended successfully for plan: 621c462e-aec7-48f6-bc9c-40ea44649a05
+2025-02-12 20:42:38,961 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-12 20:43:05,801 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.

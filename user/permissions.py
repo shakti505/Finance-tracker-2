@@ -28,6 +28,3 @@ class IsStaffOrOwner(BasePermission):
 
         # Check if user is accessing their own data
         return obj.id == request.user.id
-
-
-#         try:

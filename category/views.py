@@ -98,46 +98,42 @@ class CategoryDetailView(APIView):
         """Retrieve a specific category."""
         try:
             category = self.get_object(id, request)
-            serializer = CategorySerializer(category)
-            return success_single_response(serializer.data)
-        except NotFound:
+        except Exception:
             return not_found_error_response()
+        serializer = CategorySerializer(category)
+        return success_single_response(serializer.data)
 
     @category_detail_patch_doc
     def patch(self, request, id):
         """Update a specific category."""
         try:
             category = self.get_object(id, request)
-            serializer = CategorySerializer(
-                category,
-                data=request.data,
-                partial=True,
-                context={"request": request},
-            )
-            if serializer.is_valid():
-                serializer.save()
-                return success_single_response(serializer.data)
-            return validation_error_response(serializer.errors)
-        except NotFound:
+        except Exception:
             return not_found_error_response()
+        serializer = CategorySerializer(
+            category,
+            data=request.data,
+            partial=True,
+            context={"request": request},
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return success_single_response(serializer.data)
+        return validation_error_response(serializer.errors)
 
     @category_detail_delete_doc
     def delete(self, request, id):
         """Soft-delete a specific category."""
         try:
             category = self.get_object(id, request)
-            with transaction.atomic():
-                if Transaction.objects.filter(
-                    category=category, is_deleted=False
-                ).exists():
-                    return validation_error_response(
-                        {
-                            "detail": "Cannot delete category with associated transactions."
-                        }
-                    )
-            category.is_deleted = True
-            category.save()
-            self.delete_associated_budgets(category)
-            return success_no_content_response()
-        except NotFound:
+        except Exception:
             return not_found_error_response()
+        with transaction.atomic():
+            if Transaction.objects.filter(category=category, is_deleted=False).exists():
+                return validation_error_response(
+                    {"detail": "Cannot delete category with associated transactions."}
+                )
+        category.is_deleted = True
+        category.save()
+        self.delete_associated_budgets(category)
+        return success_no_content_response()
