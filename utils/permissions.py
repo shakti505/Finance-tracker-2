@@ -1,16 +1,4 @@
 from rest_framework.permissions import BasePermission
-from rest_framework.exceptions import NotFound
-
-
-# class IsStaffUser(BasePermission):
-#     """
-#     Custom permission to only allow staff users.
-#     """
-
-#     def has_permission(self, request, view):
-#         if not request.user.is_staff:
-#             raise NotFound(detail=f"This page not found.")
-#         return True
 
 
 class IsStaffOrOwner(BasePermission):

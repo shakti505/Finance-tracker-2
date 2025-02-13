@@ -1,5 +1,4 @@
 from rest_framework.views import APIView
-from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 
@@ -17,7 +16,6 @@ from utils.pagination import CustomPageNumberPagination
 from utils.permissions import IsStaffOrOwner
 from .tasks import track_and_notify_budget
 from utils.logging import logger
-from rest_framework.exceptions import NotFound
 
 
 class TransactionListCreateView(APIView, CustomPageNumberPagination):
@@ -77,7 +75,7 @@ class TransactionListCreateView(APIView, CustomPageNumberPagination):
 class TransactionDetailView(APIView):
     """API view for retrieving, updating, and deleting a specific transaction."""
 
-    permission_classes = [IsStaffOrOwner]
+    permission_classes = [IsStaffOrOwner, IsAuthenticated]
 
     def get_object(self, id, request):
         """Helper method to get the transaction object by primary key with permission check."""

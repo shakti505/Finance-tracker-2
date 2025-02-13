@@ -14,10 +14,11 @@ from django.shortcuts import get_object_or_404
 from saving_plan.tasks import delete_related
 from utils.logging import logger
 from utils.pagination import CustomPageNumberPagination
+from rest_framework.permissions import IsAuthenticated
 
 
 class SavingsPlanListCreateAPIView(APIView, CustomPageNumberPagination):
-    permission_classes = [IsStaffOrOwner]
+    permission_classes = [IsStaffOrOwner, IsAuthenticated]
 
     def get(self, request):
         logger.info("Fetching savings plans for user: %s", request.user)
@@ -57,7 +58,7 @@ class SavingsPlanListCreateAPIView(APIView, CustomPageNumberPagination):
 
 
 class SavingsPlanDetailAPIView(APIView):
-    permission_classes = [IsStaffOrOwner]
+    permission_classes = [IsStaffOrOwner, IsAuthenticated]
 
     def get_object(self, id):
         logger.info("Fetching savings plan with ID: %s", id)

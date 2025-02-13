@@ -13838,3 +13838,14 @@ Original exception text was: 'SavingsPlan' object has no attribute 'new_deadline
 2025-02-13 10:26:49,406 [INFO] Deadline extended successfully for plan: 6dc46e5d-dc78-4751-a646-d9e7feccb398
 2025-02-13 10:30:48,432 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/tasks.py changed, reloading.
 2025-02-13 10:31:05,158 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan_deadline_extension.py changed, reloading.
+2025-02-13 11:39:13,031 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-13 11:41:06,057 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-13 11:44:07,725 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-13 11:44:10,072 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-13 11:44:25,904 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-13 11:44:31,323 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-13 11:45:06,698 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/permissions.py changed, reloading.
+2025-02-13 11:46:50,562 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-13 11:47:05,839 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
+2025-02-13 11:47:25,776 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
+2025-02-13 11:50:24,853 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
