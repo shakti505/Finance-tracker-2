@@ -24,7 +24,6 @@ from django.shortcuts import get_object_or_404
 from utils.permissions import IsStaffOrOwner
 from django.db import transaction
 from transaction.models import Transaction
-from rest_framework.exceptions import NotFound
 
 
 class CategoryListView(APIView, CustomPageNumberPagination):

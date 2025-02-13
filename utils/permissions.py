@@ -23,7 +23,6 @@ class IsStaffOrOwner(BasePermission):
         if request.method == "GET":
             if request.user.is_staff:
                 return True
-            return not obj.is_deleted
 
         if request.user.is_staff:
             return not obj.is_deleted

@@ -82,12 +82,20 @@ class SavingsPlanDetailAPIView(APIView):
         except Exception as e:
             logger.error("Savings plan not found for update: %s, Error: %s", id, str(e))
             return not_found_error_response()
+        was_completed = plan.is_completed
         serializer = SavingsPlanSerializer(
             plan, data=request.data, partial=True, context={"request": request}
         )
         if serializer.is_valid():
-            serializer.save()
-            logger.info("Savings plan updated successfully: %s", id)
+            updated_plan = serializer.save()
+
+            if was_completed != updated_plan.is_completed:
+                logger.info(
+                    "Savings plan completion status changed from %s to %s: %s",
+                    was_completed,
+                    updated_plan.is_completed,
+                    id,
+                )
             return success_single_response(serializer.data)
         logger.warning(
             "Validation error while updating savings plan: %s, Errors: %s",

@@ -3,6 +3,7 @@ from decimal import Decimal
 from saving_plan.models import SavingsTransaction
 from user.models import CustomUser
 from utils.is_uuid import is_uuid
+from django.db import transaction
 
 
 class SavingsTransactionSerializer(serializers.ModelSerializer):
@@ -71,35 +72,73 @@ class SavingsTransactionSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         """Perform object-level validation."""
-        if "savings_plan" in data and "amount" in data:
-            # Check if contribution would exceed target amount
-            savings_plan = data["savings_plan"]
-            new_amount = data["amount"]
+        savings_plan = data.get(
+            "savings_plan", getattr(self.instance, "savings_plan", None)
+        )
+        new_amount = data.get("amount", getattr(self.instance, "amount", None))
+
+        if savings_plan and new_amount:
             current_total = savings_plan.get_total_saved()
 
-            if current_total + new_amount > savings_plan.target_amount:
+            # If updating, subtract the old amount first
+            if self.instance:
+                new_total = current_total - self.instance.amount + new_amount
+            else:
+                new_total = current_total + new_amount
+
+            if new_total > savings_plan.target_amount:
                 raise serializers.ValidationError(
                     {"amount": "This contribution would exceed the target amount"}
                 )
 
+            # Store the new total for use in create/update
+            self.new_total = new_total
+
         return data
 
+    @transaction.atomic
     def create(self, validated_data):
         savings_plan = validated_data["savings_plan"]
         user = self.initial_data["user"]
         amount = validated_data["amount"]
         notes = validated_data.get("notes", "")
+
+        # Create the transaction
         transaction = SavingsTransaction.objects.create(
             savings_plan=savings_plan,
             user_id=user,
             amount=amount,
             notes=notes,
         )
+
+        # Update savings plan completion status if needed
+        if hasattr(self, "new_total"):
+            percentage = self.new_total / savings_plan.target_amount * 100
+            if percentage >= 100 and not savings_plan.is_completed:
+                savings_plan.is_completed = True
+                savings_plan.save(update_fields=["is_completed"])
+
         return transaction
 
+    @transaction.atomic
     def update(self, instance, validated_data):
-        """Update the transaction and recalculate the total saved amount."""
+        """Update the transaction and recalculate completion status."""
+
+        old_amount = instance.amount  # Store old amount for calculation
         instance.amount = validated_data.get("amount", instance.amount)
         instance.notes = validated_data.get("notes", instance.notes)
         instance.save(update_fields=["amount", "notes"])
+
+        # Recalculate total savings
+        savings_plan = instance.savings_plan
+        new_total = savings_plan.get_total_saved()
+
+        # Update is_completed status correctly
+        if new_total >= savings_plan.target_amount and not savings_plan.is_completed:
+            savings_plan.is_completed = True
+            savings_plan.save(update_fields=["is_completed"])
+        elif new_total < savings_plan.target_amount and savings_plan.is_completed:
+            savings_plan.is_completed = False
+            savings_plan.save(update_fields=["is_completed"])
+
         return instance

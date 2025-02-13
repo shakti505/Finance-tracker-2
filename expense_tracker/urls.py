@@ -26,9 +26,7 @@ urlpatterns = [
     path("api/v1/budget/", include("budget.urls")),
     path("api/v1/", include("saving_plan.urls")),
     path("api/v1/recurring-transactions/", include("recurring_transaction.urls")),
-    path(
-        "api/v1/transaction-summary-report/", include("transaction_summary_report.urls")
-    ),
+    path("api/v1/transaction-analytics/", include("transaction_summary_report.urls")),
     path("admin/", admin.site.urls),
     path(
         "swagger/",

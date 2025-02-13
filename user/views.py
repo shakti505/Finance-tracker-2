@@ -58,6 +58,7 @@ class BaseUserView:
 
 
 class UserCreateView(APIView):
+    authentication_classes = []
     permission_classes = [AllowAny]
 
     @user_create_doc
@@ -70,6 +71,7 @@ class UserCreateView(APIView):
 
 
 class LoginView(APIView):
+    authentication_classes = []
     permission_classes = [AllowAny]
 
     @login_doc
@@ -113,44 +115,44 @@ class UserProfileView(BaseUserView, APIView):
         try:
             user = self.get_user_or_404(id)
             self.check_object_permissions(request, user)
-            serializer = UserSerializer(user)
-            return success_single_response(serializer.data)
-        except NotFound:
+        except Exception:
             return not_found_error_response(f"No user found with ID: {id}")
+        serializer = UserSerializer(user)
+        return success_single_response(serializer.data)
 
     @user_profile_patch_doc
     def patch(self, request, id):
         try:
             user = self.get_user_or_404(id)
             self.check_object_permissions(request, user)
-            serializer = UpdateUserSerializer(
-                instance=user,
-                data=request.data,
-                context={"request": request, "user": user},
-                partial=True,
-            )
-            if serializer.is_valid():
-                serializer.save()
-                return success_single_response(serializer.data)
-            return validation_error_response(serializer.errors)
-        except NotFound:
+        except Exception:
             return not_found_error_response(f"No user found with ID: {id}")
+        serializer = UpdateUserSerializer(
+            instance=user,
+            data=request.data,
+            context={"request": request, "user": user},
+            partial=True,
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return success_single_response(serializer.data)
+        return validation_error_response(serializer.errors)
 
     @user_profile_delete_doc
     def delete(self, request, id):
         try:
             user = self.get_user_or_404(id)
             self.check_object_permissions(request, user)
-            serializer = DeleteUserSerializer(
-                data=request.data, context={"request": request, "user": user}
-            )
-            if serializer.is_valid():
-                serializer.delete_user()
-                soft_delete_related_data.delay(user.id)
-                return success_no_content_response()
-            return validation_error_response(serializer.errors)
-        except NotFound:
+        except Exception:
             return not_found_error_response(f"No user found with ID: {id}")
+        serializer = DeleteUserSerializer(
+            data=request.data, context={"request": request, "user": user}
+        )
+        if serializer.is_valid():
+            serializer.delete_user()
+            soft_delete_related_data.delay(user.id)
+            return success_no_content_response()
+        return validation_error_response(serializer.errors)
 
 
 class UpdatePasswordView(BaseUserView, APIView):
@@ -161,19 +163,20 @@ class UpdatePasswordView(BaseUserView, APIView):
         try:
             user = self.get_user_or_404(id)
             self.check_object_permissions(request, user)
-            serializer = UpdatePasswordSerializer(
-                data=request.data, context={"request": request, "user": user}
-            )
-
-            if serializer.is_valid():
-                serializer.update_password()
-                return success_response("Successfully updated password.")
-            return validation_error_response(serializer.errors)
-        except NotFound:
+        except Exception:
             return not_found_error_response(f"No user found with ID: {id}")
+        serializer = UpdatePasswordSerializer(
+            data=request.data, context={"request": request, "user": user}
+        )
+
+        if serializer.is_valid():
+            serializer.update_password()
+            return success_response({"detail": "Successfully updated password."})
+        return validation_error_response(serializer.errors)
 
 
 class PasswordResetRequestView(APIView):
+    authentication_classes = []
     permission_classes = [AllowAny]
 
     @password_reset_request_doc
@@ -210,6 +213,7 @@ class PasswordResetRequestView(APIView):
 
 
 class PasswordResetConfirmView(APIView):
+    authentication_classes = []
     permission_classes = [AllowAny]
 
     def post(self, request, uidb64, token):

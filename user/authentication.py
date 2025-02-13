@@ -6,13 +6,6 @@ from rest_framework import exceptions
 from .models import ActiveTokens
 from rest_framework.response import Response
 
-# from utils.exceptions import (
-#     UnauthorizedException,
-#     ForbiddenException,
-#     ResourceNotFoundException,
-#     InvalidInputException,
-# )
-
 
 class CustomTokenAuthentication(BaseAuthentication):
     def authenticate(self, request):
@@ -23,7 +16,7 @@ class CustomTokenAuthentication(BaseAuthentication):
         """
         auth_header = request.headers.get("Authorization")
         if not auth_header or not auth_header.startswith("Bearer "):
-            return None
+            raise AuthenticationFailed("Invalid token")
 
         try:
             token = auth_header.split(" ")[1]

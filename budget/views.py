@@ -20,7 +20,6 @@ from .swagger_docs import (
     budget_detail_get_doc,
     budget_detail_patch_doc,
 )
-from rest_framework.exceptions import NotFound
 from utils.pagination import CustomPageNumberPagination
 from .tasks import process_budget_spending
 
@@ -88,7 +87,7 @@ class BudgetListCreateView(APIView, CustomPageNumberPagination):
 
 
 class BudgetDetailView(APIView):
-    permission_classes = [IsStaffOrOwner]
+    permission_classes = [IsStaffOrOwner, IsAuthenticated]
 
     @budget_detail_get_doc
     def get(self, request, id):

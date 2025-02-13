@@ -14,10 +14,13 @@ from .models import RecurringTransaction
 from .serializers import RecurringTransactionSerializer
 from utils.pagination import CustomPageNumberPagination
 from utils.permissions import IsStaffOrOwner
+from rest_framework.permissions import IsAuthenticated
 
 
 class RecurringTransactionListCreateView(APIView, CustomPageNumberPagination):
     """Comprehensive list and create view for recurring transactions"""
+
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         """List recurring transactions with comprehensive filtering"""
@@ -61,7 +64,7 @@ class RecurringTransactionListCreateView(APIView, CustomPageNumberPagination):
 class RecurringTransactionDetailView(APIView):
     """Comprehensive detail view for recurring transactions"""
 
-    permission_classes = [IsStaffOrOwner]
+    permission_classes = [IsStaffOrOwner, IsAuthenticated]
 
     def get_object(self, id, request):
         """Retrieve recurring transaction with comprehensive permissions"""

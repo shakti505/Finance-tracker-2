@@ -61,12 +61,12 @@ class BudgetSerializer(serializers.ModelSerializer):
             )
         if request_user.is_staff and user.is_staff:
             raise serializers.ValidationError(
-                "Staff can only create transactions for non-staff users."
+                "Staff can only create budgets for non-staff users."
             )
         return user
 
     def _get_budget_user(self):
-        """Helper method to get and validate the transaction user based on context."""
+        """Helper method to get and validate the budgets user based on context."""
         if self.instance:
             return self.instance.user
         if "user" not in self.initial_data:
@@ -157,7 +157,7 @@ class BudgetSerializer(serializers.ModelSerializer):
         return data
 
     def create(self, validated_data):
-        """Create budget and update exhausted amount from existing transactions"""
+        """Create budget and update exhausted amount from existing budgets"""
         validated_data.pop("month_year", None)
         validated_data["month"] = self._validated_month
         validated_data["year"] = self._validated_year

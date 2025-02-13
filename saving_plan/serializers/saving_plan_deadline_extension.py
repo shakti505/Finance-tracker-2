@@ -11,11 +11,28 @@ class ExtendDeadlineSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DeadlineExtension
-        fields = ["new_deadline", "reason", "savings_plan", "user"]
+        fields = [
+            "new_deadline",
+            "reason",
+            "savings_plan",
+            "user",
+            "id",
+            "created_at",
+            "updated_at",
+            "is_deleted",
+        ]
+        read_only_fields = ["id", "created_at", "updated_at", "is_deleted"]
 
     def validate_new_deadline(self, value):
+        savings_plan = self.context["savings_plan"]  # Get the savings plan from context
         if value <= timezone.now().date():
-            raise serializers.ValidationError("New deadline must be in the future")
+            raise serializers.ValidationError("New deadline must be in the future.")
+
+        if value <= savings_plan.current_deadline:
+            raise serializers.ValidationError(
+                "New deadline must be after the current deadline."
+            )
+
         return value
 
     def validate_user(self, user):

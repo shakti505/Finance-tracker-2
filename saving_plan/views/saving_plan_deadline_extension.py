@@ -15,6 +15,7 @@ from utils.responses import (
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
 from utils.logging import logger
+from saving_plan.models import DeadlineExtension
 
 
 class ExtendDeadlineAPIView(APIView):
@@ -27,40 +28,42 @@ class ExtendDeadlineAPIView(APIView):
 
     def get(self, request):
         try:
-            id = request.data.get("savings_plan")
-            if not id:
+            savings_plan_id = request.query_params.get("savings_plan")
+            if not savings_plan_id:
                 return validation_error_response("savings_plan parameter is required")
 
-            plan = self.get_object(id)
-            logger.info(f"Fetched savings plan: {plan.id}")
-            return success_single_response(SavingsPlanSerializer(plan).data)
-        except SavingsPlan.DoesNotExist:
+            savings_plan = get_object_or_404(SavingsPlan, id=savings_plan_id)
+            self.check_object_permissions(request, savings_plan)
+        except Exception:
             logger.warning("Savings plan not found")
             return not_found_error_response("Savings plan not found")
-        except Exception as e:
-            logger.error(f"Unexpected error in fetching savings plan: {e}")
-            return validation_error_response("An unexpected error occurred")
+
+        extensions = DeadlineExtension.objects.filter(
+            savings_plan=savings_plan
+        ).order_by("-created_at")
+        logger.info(
+            f"Fetched {extensions.count()} extensions for savings plan: {savings_plan.id}"
+        )
+
+        return success_response(ExtendDeadlineSerializer(extensions, many=True).data)
 
     def post(self, request):
+        id = request.data.get("savings_plan")
+        if not id:
+            return validation_error_response("savings_plan parameter is required")
         try:
-            id = request.data.get("savings_plan")
-            if not id:
-                return validation_error_response("savings_plan parameter is required")
 
             plan = self.get_object(id)
-            logger.info(f"Extending deadline for savings plan: {plan.id}")
-            serializer = ExtendDeadlineSerializer(
-                data=request.data, context={"request": request, "savings_plan": plan}
-            )
-            if serializer.is_valid():
-                extension = serializer.save()
-                logger.info(f"Deadline extended successfully for plan: {plan.id}")
-                return success_single_response(SavingsPlanSerializer(plan).data)
-            logger.warning(f"Validation error: {serializer.errors}")
-            return validation_error_response(serializer.errors)
-        except SavingsPlan.DoesNotExist:
+        except Exception:
             logger.warning("Savings plan not found")
             return not_found_error_response("Savings plan not found")
-        except Exception as e:
-            logger.error(f"Unexpected error in extending deadline: {e}")
-            return validation_error_response("An unexpected error occurred")
+        logger.info(f"Extending deadline for savings plan: {plan.id}")
+        serializer = ExtendDeadlineSerializer(
+            data=request.data, context={"request": request, "savings_plan": plan}
+        )
+        if serializer.is_valid():
+            extension = serializer.save()
+            logger.info(f"Deadline extended successfully for plan: {plan.id}")
+            return success_single_response(SavingsPlanSerializer(plan).data)
+        logger.warning(f"Validation error: {serializer.errors}")
+        return validation_error_response(serializer.errors)

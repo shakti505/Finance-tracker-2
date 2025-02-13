@@ -96,7 +96,7 @@ class CategorySerializer(serializers.ModelSerializer):
             )
             data["user"] = user
             data["is_predefined"] = user.is_staff
-        else:  # Updates
+        else:
             if "name" in data:
                 data["name"] = self._validate_name(
                     data["name"], self.instance.user, self.instance.type

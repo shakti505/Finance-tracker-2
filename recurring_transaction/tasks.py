@@ -5,11 +5,18 @@ from django.conf import settings
 from services.notification import send_mail
 from transaction.models import Transaction
 from .models import RecurringTransaction
+from transaction.tasks import track_and_notify_budget
 
 
 @shared_task
 def send_transaction_notification(
-    user_name, user_email, amount, type_name, category_name, next_run_date
+    user_name,
+    user_email,
+    amount,
+    type_name,
+    category_name,
+    next_run_date,
+    transaction_date,
 ):
     """
     Asynchronously send email notification to user about the recurring transaction using SendGrid.
@@ -21,7 +28,7 @@ def send_transaction_notification(
         "amount": str(amount),
         "type_name": type_name.upper(),
         "category_name": category_name,
-        "transaction_date": timezone.now().strftime("%B %d, %Y"),
+        "transaction_date": transaction_date,
         "next_run_date": next_run_date,
     }
 
@@ -56,7 +63,7 @@ def process_recurring_transactions():
                 rec_txn.save()
                 continue
 
-            Transaction.objects.create(
+            transaction = Transaction.objects.create(
                 user=rec_txn.user,
                 category=rec_txn.category,
                 type=rec_txn.type,
@@ -64,7 +71,7 @@ def process_recurring_transactions():
                 date=rec_txn.next_run,
                 description=rec_txn.description,
             )
-
+            track_and_notify_budget.delay(transaction.id)
             rec_txn.next_run = rec_txn.get_next_run_date(rec_txn.next_run)
             rec_txn.save()
 
@@ -75,4 +82,5 @@ def process_recurring_transactions():
                 type_name=rec_txn.type,
                 category_name=rec_txn.category.name,
                 next_run_date=rec_txn.next_run.strftime("%Y-%m-%d"),
+                transaction_date=transaction.date.strftime("%Y-%m-%d %H:%M:%S"),
             )

@@ -32,25 +32,28 @@ def check_overdue_savings_plans():
     """
     # Query for overdue plans
     overdue_plans = SavingsPlan.objects.filter(
-        current_deadline__lt=timezone.now().date(),  # Deadline is in the past
-        is_completed=False,  # Plan is not completed
+        current_deadline__lt=timezone.now().date(),
+    )
+    extend_deadline_link = (
+        f"http://127.0.0.1:8000/api/v1/savings-plans/extend-deadline/"
     )
 
     # Send email for each overdue plan
     for plan in overdue_plans:
         subject = f"Savings Plan Deadline Crossed: {plan.name}"
 
+        dynamic_template_data = {
+            "subject": subject,
+            "user_name": plan.user.name,
+            "plan_name": plan.name,
+            "deadline": plan.current_deadline.strftime("%Y-%m-%d"),
+            "target_amount": f"{plan.target_amount:,.2f}",
+            "extend_deadline_link": extend_deadline_link,
+        }
+
         send_mail(
-            subject,
-            settings.SENDGRID_FROM_EMAIL,
             [plan.user.email],
-            dynamic_template_data={
-                "subject": subject,
-                "user_name": plan.user.name,
-                "plan_name": plan.name,
-                "deadline": plan.current_deadline,
-                "target_amount": f"{plan.target_amount:,.2f}",
-                "extend_deadline_link": f"localhost:8000/api/v1/savings-plans/extend-deadline/",
-            },
+            subject,
+            dynamic_template_data=dynamic_template_data,
             dynamic_template_id=settings.SENDGRID_OVERDUE_TEMPLATE_ID,
         )
