@@ -1,7 +1,7 @@
 from rest_framework import status
 from rest_framework.views import APIView
 from saving_plan.models import SavingsPlan
-from saving_plan.serializers.saving_plan import SavingsPlanSerializer
+from .serializers import SavingsPlanSerializer
 from utils.permissions import IsStaffOrOwner
 from utils.responses import (
     success_response,
@@ -15,7 +15,7 @@ from saving_plan.tasks import delete_related
 from utils.logging import logger
 from utils.pagination import CustomPageNumberPagination
 from rest_framework.permissions import IsAuthenticated
-
+from .tasks import send_savings_plan_creation_notification
 
 class SavingsPlanListCreateAPIView(APIView, CustomPageNumberPagination):
     permission_classes = [IsStaffOrOwner, IsAuthenticated]
@@ -46,7 +46,8 @@ class SavingsPlanListCreateAPIView(APIView, CustomPageNumberPagination):
             data=request.data, context={"request": request}
         )
         if serializer.is_valid():
-            serializer.save()
+            plan = serializer.save()
+            send_savings_plan_creation_notification.delay(plan.id)
             logger.info("Savings plan created successfully for user: %s", request.user)
             return success_single_response(
                 serializer.data, status_code=status.HTTP_201_CREATED
@@ -83,20 +84,11 @@ class SavingsPlanDetailAPIView(APIView):
         except Exception as e:
             logger.error("Savings plan not found for update: %s, Error: %s", id, str(e))
             return not_found_error_response()
-        was_completed = plan.is_completed
         serializer = SavingsPlanSerializer(
             plan, data=request.data, partial=True, context={"request": request}
         )
         if serializer.is_valid():
             updated_plan = serializer.save()
-
-            if was_completed != updated_plan.is_completed:
-                logger.info(
-                    "Savings plan completion status changed from %s to %s: %s",
-                    was_completed,
-                    updated_plan.is_completed,
-                    id,
-                )
             return success_single_response(serializer.data)
         logger.warning(
             "Validation error while updating savings plan: %s, Errors: %s",

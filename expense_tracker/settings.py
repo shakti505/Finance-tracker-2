@@ -128,6 +128,7 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
+PASSWORD_RESET_TIMEOUT = 3600  # 1 hour (in seconds)
 
 
 # Static files (CSS, JavaScript, Images)
@@ -177,7 +178,11 @@ CELERY_BEAT_SCHEDULE = {
     },
     "check_overdue_savings_plans": {
         "task": "saving_plan.tasks.check_overdue_savings_plans",
-        "schedule": 86400.0,
+        "schedule": crontab(hour=6, minute=0),
+    },
+    'check-savings-progress': {
+        'task': 'saving_plan.tasks.schedule_savings_checks',
+        'schedule': crontab(hour=20 ,minute=0),  
     },
 }
 
@@ -194,3 +199,9 @@ SENDGRID_TRANSACTION_HISTORY_TEMPLATE_ID = os.getenv(
     "SENDGRID_TRANSACTION_HISTORY_TEMPLATE_ID"
 )
 SENDGRID_OVERDUE_TEMPLATE_ID = os.getenv("SENDGRID_OVERDUE_TEMPLATE_ID")
+SENDGRID_DEADLINE_WARNING_TEMPLATE_ID = os.getenv("SENDGRID_DEADLINE_WARNING_TEMPLATE_ID")
+SENDGRID_BEHIND_SCHEDULE_TEMPLATE_ID = os.getenv("SENDGRID_BEHIND_SCHEDULE_TEMPLATE_ID")
+SENDGRID_PROGRESS_REPORT_TEMPLATE_ID = os.getenv("SENDGRID_PROGRESS_REPORT_TEMPLATE_ID")
+SENDGRID_GOAL_COMPLETED_TEMPLATE_ID = os.getenv("SENDGRID_GOAL_COMPLETED_TEMPLATE_ID")
+SENDGRID_PLAN_CREATED_TEMPLATE_ID = os.getenv("SENDGRID_PLAN_CREATED_TEMPLATE_ID")
+

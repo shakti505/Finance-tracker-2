@@ -5,32 +5,25 @@ from category.models import Category
 from utils.models import BaseModel
 from dateutil.relativedelta import relativedelta
 import calendar
-
+from saving_plan.models import SavingsPlan
+from utils.constants import TransactionType, Frequency
 
 class RecurringTransaction(BaseModel):
     """Model to store recurring transaction details with advanced scheduling"""
 
-    FREQUENCY_CHOICES = [
-        ("daily", "Daily"),
-        ("weekly", "Weekly"),
-        ("monthly", "Monthly"),
-        ("yearly", "Yearly"),
-    ]
-    TYPE_CHOICES = [
-        ("credit", "Credit"),
-        ("debit", "Debit"),
-    ]
+
 
     user = models.ForeignKey(
         CustomUser, on_delete=models.CASCADE, related_name="recurring_transactions"
     )
 
-    type = models.CharField(max_length=10, choices=TYPE_CHOICES)
+    type = models.CharField(max_length=10, choices=TransactionType.CHOICES)
     category = models.ForeignKey(
-        Category, on_delete=models.CASCADE, related_name="recurring_transactions"
+        Category, on_delete=models.CASCADE, related_name="recurring_transactions", blank=True, null=True
     )
+    savings_plan = models.ForeignKey(SavingsPlan, on_delete=models.CASCADE,blank=True, null=True, related_name="recurring_transactions")
     amount = models.DecimalField(max_digits=10, decimal_places=2)
-    frequency = models.CharField(max_length=10, choices=FREQUENCY_CHOICES)
+    frequency = models.CharField(max_length=10, choices=Frequency.CHOICES)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField(null=True, blank=True)
     next_run = models.DateTimeField()
@@ -44,13 +37,13 @@ class RecurringTransaction(BaseModel):
         """
         Calculate the next run date with special handling for monthly transactions
         """
-        if self.frequency == "daily":
+        if self.frequency == "DAILY":
             return current_date + timezone.timedelta(days=1)
-        elif self.frequency == "weekly":
+        elif self.frequency == "WEEKLY":
             return current_date + timezone.timedelta(weeks=1)
-        elif self.frequency == "monthly":
+        elif self.frequency == "MONTHLY":
             return self.calculate_monthly_next_run(current_date)
-        elif self.frequency == "yearly":
+        elif self.frequency == "YEARLY":
             return self.calculate_yearly_next_run(current_date)
         return current_date
 

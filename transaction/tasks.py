@@ -4,23 +4,16 @@ from transaction.models import Transaction
 from budget.utils import monitor_budget_and_notify
 
 
+from django.core.exceptions import ObjectDoesNotExist
+
 @shared_task
 def track_and_notify_budget(transaction_id):
-    """
-    Asynchronously track the budget and send a notification if the limit is reached.
-    """
-    # Fetch the transaction from the database by ID
-    transaction = Transaction.objects.select_related("user", "category").get(
-        id=transaction_id
-    )
-    # Get the budget for the category and time of the transaction
-    budget = Budget.objects.filter(
-        user=transaction.user,
-        category=transaction.category,
-        year=transaction.date.year,
-        month=transaction.date.month,
-        is_deleted=False,
-    )
-    if not budget:
-        return
-    monitor_budget_and_notify(budget)
+    try:
+        transaction = Transaction.objects.select_related("user", "category").filter(id=transaction_id).first()
+        
+        if not transaction:
+            raise ObjectDoesNotExist(f"Transaction with ID {transaction_id} does not exist.")
+
+
+    except ObjectDoesNotExist as e:
+        print(f"Error: {e}")

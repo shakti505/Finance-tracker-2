@@ -2,13 +2,10 @@ from services.notification import send_mail
 from celery import shared_task
 from django.conf import settings
 from transaction.models import Transaction
-import csv
-import io
+import csv, io
 from utils.logging import logger
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
-from reportlab.lib.styles import getSampleStyleSheet
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
 from user.models import CustomUser
 from reportlab.platypus import (
     SimpleDocTemplate,
@@ -144,7 +141,6 @@ class TransactionReport:
             content.append(table)
             content.append(Spacer(1, 15))
 
-        # Add Income & Expense Tables
         if self.income:
             make_transaction_table("Income Transactions", self.income)
         if self.expenses:
@@ -217,9 +213,7 @@ def email_transaction_history(user_id, user_email, start_date, end_date, file_ty
 
         if not success:
             raise Exception("Couldn't send email")
-
         return {"message": "Report sent to your email!"}
-
     except Exception as e:
         logger.error(f"Failed to send transaction report: {str(e)}")
         # Retry the task if it fails

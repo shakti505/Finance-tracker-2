@@ -4,16 +4,10 @@ from django.core.validators import MinValueValidator
 from user.models import CustomUser
 import uuid
 from utils.models import BaseModel
+from utils.constants import SavingsPlanStatus, Frequency
 
 
 class SavingsPlan(BaseModel):
-    PRIORITY_CHOICES = [("HIGH", "High"), ("MEDIUM", "Medium"), ("LOW", "Low")]
-    FREQUENCY_CHOICES = [
-        ("DAILY", "Daily"),
-        ("WEEKLY", "Weekly"),
-        ("MONTHLY", "Monthly"),
-    ]
-
     user = models.ForeignKey(
         CustomUser, on_delete=models.CASCADE, related_name="savings_plans"
     )
@@ -23,9 +17,8 @@ class SavingsPlan(BaseModel):
     target_amount = models.DecimalField(max_digits=10, decimal_places=2)
     original_deadline = models.DateField()
     current_deadline = models.DateField()
-    priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES)
-    frequency = models.CharField(max_length=10, choices=FREQUENCY_CHOICES)
-    is_completed = models.BooleanField(default=False)
+    status = models.CharField(max_length=10, choices=SavingsPlanStatus.CHOICES, default=SavingsPlanStatus.ACTIVE)
+    frequency = models.CharField(max_length=10, choices=Frequency.CHOICES)
 
     def get_total_saved(self):
         return (
@@ -50,34 +43,4 @@ class SavingsPlan(BaseModel):
         ]
 
 
-class SavingsTransaction(BaseModel):
-    savings_plan = models.ForeignKey(
-        SavingsPlan, on_delete=models.CASCADE, related_name="transactions"
-    )
-    user = models.ForeignKey(
-        CustomUser, on_delete=models.CASCADE, related_name="savings_transactions"
-    )
-    amount = models.DecimalField(max_digits=12, decimal_places=2)
-    date = models.DateTimeField(auto_now_add=True)
 
-    notes = models.TextField(blank=True)
-
-    class Meta:
-        ordering = ["-date"]
-
-
-class DeadlineExtension(BaseModel):
-
-    savings_plan = models.ForeignKey(
-        SavingsPlan, on_delete=models.CASCADE, related_name="deadline_extensions"
-    )
-    previous_deadline = models.DateField()
-    new_deadline = models.DateField()
-    reason = models.TextField(blank=True)
-    extended_at = models.DateTimeField(auto_now_add=True)
-    user = models.ForeignKey(
-        CustomUser, on_delete=models.CASCADE, related_name="deadline_extensions"
-    )
-
-    class Meta:
-        ordering = ["-extended_at"]

@@ -13849,3 +13849,1574 @@ Original exception text was: 'SavingsPlan' object has no attribute 'new_deadline
 2025-02-13 11:47:05,839 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction/views.py changed, reloading.
 2025-02-13 11:47:25,776 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/tasks.py changed, reloading.
 2025-02-13 11:50:24,853 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-13 11:51:34,598 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/permissions.py changed, reloading.
+2025-02-13 11:52:54,521 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-13 11:54:23,488 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-13 11:55:26,312 [INFO] /Users/mac/Downloads/expense_tracker copy 3/expense_tracker/settings.py changed, reloading.
+2025-02-13 11:59:40,366 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/views.py changed, reloading.
+2025-02-13 11:59:47,325 [INFO] /Users/mac/Downloads/expense_tracker copy 3/user/tasks.py changed, reloading.
+2025-02-13 12:02:24,454 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:02:32,938 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:02:35,259 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:02:57,155 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:02:59,405 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:03:29,758 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:03:33,125 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:03:49,752 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:04:19,968 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:04:37,886 [INFO] /Users/mac/Downloads/expense_tracker copy 3/transaction_summary_report/tasks.py changed, reloading.
+2025-02-13 12:08:35,818 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:08:57,869 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:11:56,036 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:12:13,804 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:12:22,388 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:12:39,048 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:12:50,804 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:13:05,490 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:13:09,865 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:13:14,240 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:13:22,922 [WARNING] Unauthorized: /api/v1/savings-plans/extend-deadline/
+2025-02-13 12:13:30,272 [INFO] User shakti logged in successfully.
+2025-02-13 12:13:30,281 [INFO] Generated tokens for user shakti.
+2025-02-13 12:13:33,639 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-13 12:13:33,652 [ERROR] Unexpected error: cannot access local variable 'get_time_remaining' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/saving_plan/views/saving_plan.py", line 39, in get
+    "results": serializer.data,
+               ^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+           ^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py", line 147, in get_progress
+    get_time_remaining = get_time_remaining(obj)
+                         ^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'get_time_remaining' where it is not associated with a value
+2025-02-13 12:13:33,661 [ERROR] Internal Server Error: /api/v1/savings-plans/
+2025-02-13 12:13:39,801 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:13:42,164 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:13:45,214 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-13 12:13:57,159 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 12:14:58,082 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-13 12:14:58,086 [WARNING] Validation error while creating savings plan: {'current_deadline': [ErrorDetail(string='Deadline must be in the future', code='invalid')]}
+2025-02-13 12:14:58,087 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-13 12:15:07,863 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-13 12:15:07,866 [WARNING] Validation error while creating savings plan: {'current_deadline': [ErrorDetail(string='Deadline must be in the future', code='invalid')]}
+2025-02-13 12:15:07,867 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-13 12:15:19,094 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-13 12:15:19,101 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-13 12:15:56,763 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-13 12:15:56,768 [WARNING] Validation error while creating savings plan: {'name': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-13 12:15:56,768 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-13 12:16:02,454 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-13 12:16:21,990 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-13 12:17:46,013 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:17:46,164 [INFO] Transaction created successfully with ID: 5145820b-e1c5-4f7a-aa6c-d1c6f374b77f
+2025-02-13 12:17:58,132 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:17:58,140 [INFO] Transaction created successfully with ID: 79caf2d8-b293-4c13-896e-76f49514bbb3
+2025-02-13 12:17:59,209 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:17:59,219 [INFO] Transaction created successfully with ID: 5b5e5fa2-060b-46e8-9347-706583c97831
+2025-02-13 12:18:00,190 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:18:00,199 [INFO] Transaction created successfully with ID: 464ce961-6d4e-4adc-b701-498abf875aa0
+2025-02-13 12:18:01,040 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:18:01,047 [INFO] Transaction created successfully with ID: 367a3b65-4b9d-4178-b212-38576a7c1a6c
+2025-02-13 12:18:01,991 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:18:02,000 [INFO] Transaction created successfully with ID: 5003a819-46b2-4aea-8f55-c1b1d22536bd
+2025-02-13 12:18:07,858 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:18:07,863 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'category': [ErrorDetail(string='Category type does not match transaction type.', code='invalid')]}
+2025-02-13 12:18:07,863 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-13 12:18:09,882 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:18:09,887 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'category': [ErrorDetail(string='Category type does not match transaction type.', code='invalid')]}
+2025-02-13 12:18:09,887 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-13 12:18:15,764 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:18:15,773 [INFO] Transaction created successfully with ID: 13420e6d-1396-4b19-831a-dadc8aeca022
+2025-02-13 12:18:17,582 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:18:17,590 [INFO] Transaction created successfully with ID: 22be6d9e-999d-4e38-b6a4-467455dec0f8
+2025-02-13 12:18:21,847 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-13 12:18:21,855 [INFO] Transaction created successfully with ID: 2e1f02c3-0aaf-4b2f-8db1-edd62231cbb4
+2025-02-13 12:19:10,513 [INFO] Fetching transactions for user: 2004shakti@gmail.com
+2025-02-13 12:19:10,517 [INFO] Transactions retrieved successfully for user: 2004shakti@gmail.com
+2025-02-13 12:21:38,179 [ERROR] Unexpected error: Method "GET" not allowed.
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 167, in http_method_not_allowed
+    raise exceptions.MethodNotAllowed(request.method)
+rest_framework.exceptions.MethodNotAllowed: Method "GET" not allowed.
+2025-02-13 12:21:38,199 [ERROR] Internal Server Error: /api/v1/auth/password-reset/confirm/NTQ3Zjc2NjgtMmM3NS00MDdhLTk4NDctZWVlMmUwZWYxMDlj/cl4304-4e01f4af11eb1b1173c490ed5f4e808d/
+2025-02-13 12:37:06,571 [INFO] /Users/mac/Downloads/expense_tracker copy 3/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-13 13:12:47,823 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-13 13:12:47,836 [WARNING] Validation error while creating savings plan: {'name': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-13 13:12:47,838 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-13 13:13:35,331 [WARNING] Unauthorized: /api/v1/savings-plans/
+2025-02-13 13:13:48,793 [INFO] User shakti logged in successfully.
+2025-02-13 13:13:48,805 [INFO] Generated tokens for user shakti.
+2025-02-13 13:31:10,541 [WARNING] Bad Request: /api/v1/auth/password-reset/
+2025-02-13 13:31:31,338 [WARNING] Bad Request: /api/v1/auth/register/
+2025-02-13 13:31:38,636 [INFO] User user_user_2334 created successfully.
+2025-02-13 13:32:06,405 [ERROR] Unexpected error: Method "GET" not allowed.
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 167, in http_method_not_allowed
+    raise exceptions.MethodNotAllowed(request.method)
+rest_framework.exceptions.MethodNotAllowed: Method "GET" not allowed.
+2025-02-13 13:32:06,470 [ERROR] Internal Server Error: /api/v1/auth/password-reset/confirm/MDM1NDMyOTQtYWNlMS00ZWFjLTk2NjctYmRiYjVhNzdmZmY4/cl608w-7af33de62dbd462c06b86e3e342da91e/
+2025-02-13 13:32:50,264 [ERROR] Unexpected error: Method "GET" not allowed.
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 167, in http_method_not_allowed
+    raise exceptions.MethodNotAllowed(request.method)
+rest_framework.exceptions.MethodNotAllowed: Method "GET" not allowed.
+2025-02-13 13:32:50,271 [ERROR] Internal Server Error: /api/v1/auth/password-reset/confirm/MDM1NDMyOTQtYWNlMS00ZWFjLTk2NjctYmRiYjVhNzdmZmY4/cl608w-7af33de62dbd462c06b86e3e342da91e/
+2025-02-13 13:32:58,121 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/MDM1NDMyOTQtYWNlMS00ZWFjLTk2NjctYmRiYjVhNzdmZmY4/cl608w-7af33de62dbd462c06b86e3e342da91e/
+2025-02-13 13:33:06,920 [ERROR] Unexpected error: Method "GET" not allowed.
+Traceback (most recent call last):
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.pyenv/versions/3.11.0/envs/finance_tracker_env/lib/python3.11/site-packages/rest_framework/views.py", line 167, in http_method_not_allowed
+    raise exceptions.MethodNotAllowed(request.method)
+rest_framework.exceptions.MethodNotAllowed: Method "GET" not allowed.
+2025-02-13 13:33:06,928 [ERROR] Internal Server Error: /api/v1/auth/password-reset/confirm/MDM1NDMyOTQtYWNlMS00ZWFjLTk2NjctYmRiYjVhNzdmZmY4/cl608z-df000c3f38add344b585f6ed2d2722c8/
+2025-02-13 13:33:14,166 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/MDM1NDMyOTQtYWNlMS00ZWFjLTk2NjctYmRiYjVhNzdmZmY4/cl608z-df000c3f38add344b585f6ed2d2722c8/
+2025-02-13 13:36:53,997 [INFO] /Users/mac/Downloads/expense_tracker copy 3/utils/is_uuid.py changed, reloading.
+2025-02-14 12:03:52,724 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-14 12:04:30,220 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-14 12:04:38,012 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-14 12:04:48,687 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-14 12:05:25,205 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-14 12:07:41,683 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-14 12:07:59,526 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-14 12:09:48,000 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-14 12:09:50,493 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-14 12:10:38,654 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-14 18:13:39,747 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-15 13:09:04,557 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-15 13:12:50,866 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-15 13:14:07,206 [WARNING] Unauthorized: /api/v1/transactions/
+2025-02-15 13:14:15,024 [INFO] User shakti logged in successfully.
+2025-02-15 13:14:15,033 [INFO] Generated tokens for user shakti.
+2025-02-15 13:14:19,049 [WARNING] Unauthorized: /api/v1/transactions/
+2025-02-15 13:15:25,867 [INFO] User shakti logged in successfully.
+2025-02-15 13:15:25,872 [INFO] Generated tokens for user shakti.
+2025-02-15 13:15:31,242 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-15 13:15:31,247 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'category': [ErrorDetail(string='Invalid pk "304d35d3-88a7-479c-8cc1-f2abe13e986d" - object does not exist.', code='does_not_exist')], 'user': [ErrorDetail(string='Invalid pk "d3d27461-400e-422d-9052-4ce70f14c086" - object does not exist.', code='does_not_exist')]}
+2025-02-15 13:15:31,247 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-15 13:15:45,583 [ERROR] Unexpected error: You do not have permission to perform this action.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 175, in permission_denied
+    raise exceptions.PermissionDenied(detail=message, code=code)
+rest_framework.exceptions.PermissionDenied: You do not have permission to perform this action.
+2025-02-15 13:15:45,587 [ERROR] Internal Server Error: /api/v1/users/
+2025-02-15 13:16:43,927 [ERROR] Unexpected error: You do not have permission to perform this action.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 175, in permission_denied
+    raise exceptions.PermissionDenied(detail=message, code=code)
+rest_framework.exceptions.PermissionDenied: You do not have permission to perform this action.
+2025-02-15 13:16:43,928 [ERROR] Internal Server Error: /api/v1/users/
+2025-02-15 13:17:09,832 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/permissions.py changed, reloading.
+2025-02-15 13:17:13,096 [ERROR] Unexpected error: You do not have permission to perform this action.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 175, in permission_denied
+    raise exceptions.PermissionDenied(detail=message, code=code)
+rest_framework.exceptions.PermissionDenied: You do not have permission to perform this action.
+2025-02-15 13:17:13,109 [ERROR] Internal Server Error: /api/v1/users/
+2025-02-15 13:18:37,324 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-15 13:18:39,644 [ERROR] Unexpected error: You do not have permission to perform this action.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 175, in permission_denied
+    raise exceptions.PermissionDenied(detail=message, code=code)
+rest_framework.exceptions.PermissionDenied: You do not have permission to perform this action.
+2025-02-15 13:18:39,645 [ERROR] Internal Server Error: /api/v1/users/
+2025-02-15 13:18:47,485 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-15 13:18:50,491 [ERROR] Unexpected error: You do not have permission to perform this action.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 175, in permission_denied
+    raise exceptions.PermissionDenied(detail=message, code=code)
+rest_framework.exceptions.PermissionDenied: You do not have permission to perform this action.
+2025-02-15 13:18:50,494 [ERROR] Internal Server Error: /api/v1/users/
+2025-02-15 13:19:19,335 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-15 13:19:21,212 [ERROR] Unexpected error: You do not have permission to perform this action.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 175, in permission_denied
+    raise exceptions.PermissionDenied(detail=message, code=code)
+rest_framework.exceptions.PermissionDenied: You do not have permission to perform this action.
+2025-02-15 13:19:21,213 [ERROR] Internal Server Error: /api/v1/users/
+2025-02-15 13:19:22,134 [ERROR] Unexpected error: You do not have permission to perform this action.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 175, in permission_denied
+    raise exceptions.PermissionDenied(detail=message, code=code)
+rest_framework.exceptions.PermissionDenied: You do not have permission to perform this action.
+2025-02-15 13:19:22,136 [ERROR] Internal Server Error: /api/v1/users/
+2025-02-15 13:20:41,152 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-15 13:20:45,645 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-15 13:20:48,041 [ERROR] Unexpected error: You do not have permission to perform this action.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 175, in permission_denied
+    raise exceptions.PermissionDenied(detail=message, code=code)
+rest_framework.exceptions.PermissionDenied: You do not have permission to perform this action.
+2025-02-15 13:20:48,043 [ERROR] Internal Server Error: /api/v1/users/
+2025-02-15 13:21:06,075 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-15 13:21:08,419 [ERROR] Unexpected error: You do not have permission to perform this action.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 175, in permission_denied
+    raise exceptions.PermissionDenied(detail=message, code=code)
+rest_framework.exceptions.PermissionDenied: You do not have permission to perform this action.
+2025-02-15 13:21:08,421 [ERROR] Internal Server Error: /api/v1/users/
+2025-02-15 13:21:11,713 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-15 13:23:47,602 [WARNING] Forbidden: /api/v1/users/
+2025-02-15 13:23:49,086 [WARNING] Forbidden: /api/v1/users/
+2025-02-15 13:24:25,081 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-15 13:25:34,283 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/permissions.py changed, reloading.
+2025-02-15 13:25:36,423 [WARNING] Not Found: /api/v1/users/
+2025-02-15 13:25:37,550 [WARNING] Not Found: /api/v1/users/
+2025-02-15 13:26:18,551 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/utils/exceptions.py changed, reloading.
+2025-02-15 13:27:08,165 [WARNING] Not Found: /api/v1/users/
+2025-02-15 13:27:35,262 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/utils/exceptions.py changed, reloading.
+2025-02-15 13:27:51,062 [WARNING] Not Found: /api/v1/users/
+2025-02-15 13:29:12,357 [INFO] User admin logged in successfully.
+2025-02-15 13:29:12,365 [INFO] Generated tokens for user admin.
+2025-02-15 13:30:28,834 [INFO] Creating a new transaction for user: admin@email.com
+2025-02-15 13:30:29,016 [INFO] Transaction created successfully with ID: f3ad5d10-05f5-44e7-b5d6-e1a39dc87619
+2025-02-15 13:32:29,013 [WARNING] Not Found: /api/v1/savings-plan/
+2025-02-15 13:32:33,840 [WARNING] Not Found: /api/v1/savings-plan/
+2025-02-15 13:32:55,811 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-15 13:32:55,812 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-15 13:32:58,911 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-15 13:32:58,915 [WARNING] Validation error while creating savings plan: {'current_deadline': [ErrorDetail(string='This field is required.', code='required')], 'priority': [ErrorDetail(string='This field is required.', code='required')], 'user': [ErrorDetail(string='This field may not be null.', code='null')]}
+2025-02-15 13:32:58,916 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-15 13:33:31,134 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-15 13:33:31,142 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-15 13:34:07,859 [INFO] Creating a new transaction for user: admin@email.com
+2025-02-15 13:34:07,871 [INFO] Transaction created successfully with ID: 2aed722f-6750-45d6-a780-e2b12b689dd4
+2025-02-15 13:34:44,247 [WARNING] Not Found: /api/v1/savings_plan/
+2025-02-15 13:34:46,238 [WARNING] Not Found: /api/v1/savings_plans/
+2025-02-15 13:34:51,806 [WARNING] Not Found: /api/v1/savings_plans/
+2025-02-15 13:35:15,747 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-15 13:36:08,384 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-15 13:36:11,671 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-15 13:39:36,787 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-15 13:39:45,539 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/admin.py changed, reloading.
+2025-02-15 14:01:28,485 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-15 17:59:47,027 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-15 18:02:36,989 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-15 18:06:22,130 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-15 18:06:37,387 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-15 18:07:17,295 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-15 18:07:57,106 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-15 18:08:19,173 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-15 18:09:38,276 [WARNING] Unauthorized: /api/v1/savings-plans/
+2025-02-15 18:09:42,024 [INFO] User admin logged in successfully.
+2025-02-15 18:09:42,032 [INFO] Generated tokens for user admin.
+2025-02-15 18:09:45,954 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-15 18:09:45,961 [ERROR] Unexpected error: Field name `priority` is not valid for model `SavingsPlan` in `saving_plan.serializers.saving_plan.SavingsPlanSerializer`.
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 39, in get
+    "results": serializer.data,
+               ^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+           ^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `priority` is not valid for model `SavingsPlan` in `saving_plan.serializers.saving_plan.SavingsPlanSerializer`.
+2025-02-15 18:09:45,967 [ERROR] Internal Server Error: /api/v1/savings-plans/
+2025-02-15 18:10:18,918 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-15 18:10:24,650 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-15 18:10:26,283 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-15 18:10:39,219 [INFO] Creating a new transaction for user: admin@email.com
+2025-02-15 18:10:39,406 [INFO] Transaction created successfully with ID: 8e781084-cb72-4e5d-af45-5f67788df8ba
+2025-02-15 18:10:44,036 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-15 18:11:27,632 [INFO] Creating a new transaction for user: admin@email.com
+2025-02-15 18:11:27,663 [INFO] Transaction created successfully with ID: 48accf30-5b1d-4149-b396-04677e2b0a65
+2025-02-15 18:11:29,730 [INFO] Creating a new transaction for user: admin@email.com
+2025-02-15 18:11:29,737 [ERROR] Unexpected error: unsupported operand type(s) for -: 'float' and 'decimal.Decimal'
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/transaction/views.py", line 60, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py", line 241, in validate_savings_plan
+    f"Transaction exceeds the remaining savings target by {transaction_amount - remaining_amount}."
+                                                           ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'float' and 'decimal.Decimal'
+2025-02-15 18:11:29,740 [ERROR] Internal Server Error: /api/v1/transactions/
+2025-02-15 18:13:00,922 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-15 18:13:09,826 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-15 18:13:11,502 [INFO] Creating a new transaction for user: admin@email.com
+2025-02-15 18:13:11,511 [ERROR] Transaction creation failed for user: admin@email.com. Errors: {'savings_plan': [ErrorDetail(string='Transaction exceeds the remaining savings target by 49800.00.', code='invalid')]}
+2025-02-15 18:13:11,511 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-15 18:13:32,603 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 05:40:38,550 [WARNING] Unauthorized: /api/v1/savings-plans/
+2025-02-16 05:40:43,421 [INFO] User admin logged in successfully.
+2025-02-16 05:40:43,444 [INFO] Generated tokens for user admin.
+2025-02-16 05:40:46,275 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 05:44:33,574 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-16 05:44:41,294 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-16 05:45:25,664 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 05:45:25,673 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 05:45:31,741 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 05:45:31,749 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 05:45:33,396 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 05:45:33,404 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 05:45:34,289 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 05:45:34,295 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 05:45:35,548 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 05:45:35,553 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 05:45:59,899 [INFO] Creating a new transaction for user: admin@email.com
+2025-02-16 05:46:00,162 [INFO] Transaction created successfully with ID: acc162c1-d940-4a5f-b70a-1ea805708666
+2025-02-16 05:46:03,675 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 05:46:16,609 [INFO] Creating a new transaction for user: admin@email.com
+2025-02-16 05:46:16,640 [INFO] Transaction created successfully with ID: 7e07d8a4-aa0a-408c-a147-90943427a384
+2025-02-16 05:46:19,991 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 05:47:05,877 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-16 05:56:47,525 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 05:56:52,151 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 05:57:07,269 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 05:58:45,810 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 05:59:03,760 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 05:59:10,133 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 05:59:10,140 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 05:59:12,010 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 05:59:12,015 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 06:01:34,298 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:01:36,007 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:01:36,013 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 06:01:37,011 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:01:37,016 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 06:01:58,358 [WARNING] Not Found: /admin
+2025-02-16 06:01:58,430 [WARNING] Not Found: /favicon.ico
+2025-02-16 06:02:12,148 [WARNING] Not Found: /
+2025-02-16 06:02:16,941 [WARNING] Not Found: /admin
+2025-02-16 06:02:29,353 [WARNING] Not Found: /api/v1/categories
+2025-02-16 06:02:39,799 [WARNING] Not Found: /api/v1/auth/login
+2025-02-16 06:02:41,868 [WARNING] Method Not Allowed: /api/v1/auth/login/
+2025-02-16 06:03:49,402 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:03:51,306 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:03:51,313 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 06:04:01,299 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:04:04,686 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:04:04,692 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 06:04:30,130 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:04:31,714 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:04:31,718 [WARNING] Validation error while creating savings plan: {'name': [ErrorDetail(string='You already have a savings plan with this name', code='invalid')]}
+2025-02-16 06:04:31,719 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 06:04:46,272 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:04:46,279 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 06:05:22,221 [WARNING] Not Found: /api/v1/savings_plans/
+2025-02-16 06:05:33,375 [WARNING] Method Not Allowed: /api/v1/savings-plans/
+2025-02-16 06:06:00,151 [WARNING] Not Found: /api/v1/saving-plans/
+2025-02-16 06:06:02,381 [WARNING] Method Not Allowed: /api/v1/savings-plans/
+2025-02-16 06:06:33,699 [INFO] Fetching savings plan with ID: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:06:33,701 [INFO] Updating savings plan: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:06:33,702 [ERROR] Unexpected error: 'SavingsPlan' object has no attribute 'is_completed'
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 86, in patch
+    was_completed = plan.is_completed
+                    ^^^^^^^^^^^^^^^^^
+AttributeError: 'SavingsPlan' object has no attribute 'is_completed'
+2025-02-16 06:06:33,703 [ERROR] Internal Server Error: /api/v1/savings-plans/5f89592f-7e14-42f6-8b63-c7d1f4dc4122/
+2025-02-16 06:07:02,567 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-16 06:07:29,027 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-16 06:07:30,815 [INFO] Fetching savings plan with ID: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:07:30,817 [INFO] Updating savings plan: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:07:30,817 [ERROR] Unexpected error: 'SavingsPlan' object has no attribute 'is_completed'
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 86, in patch
+    was_completed = plan.is_completed
+                    ^^^^^^^^^^^^^^^^^
+AttributeError: 'SavingsPlan' object has no attribute 'is_completed'
+2025-02-16 06:07:30,819 [ERROR] Internal Server Error: /api/v1/savings-plans/5f89592f-7e14-42f6-8b63-c7d1f4dc4122/
+2025-02-16 06:07:39,898 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-16 06:07:42,597 [INFO] Fetching savings plan with ID: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:07:42,599 [INFO] Updating savings plan: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:08:01,837 [INFO] Fetching savings plan with ID: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:08:01,839 [INFO] Updating savings plan: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:08:07,928 [INFO] Fetching savings plan with ID: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:08:07,930 [INFO] Updating savings plan: 5f89592f-7e14-42f6-8b63-c7d1f4dc4122
+2025-02-16 06:08:14,870 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 06:09:27,620 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:12:02,155 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:12:38,870 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:12:41,861 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 06:12:46,343 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:12:46,345 [ERROR] Unexpected error: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 48, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py", line 236, in validate_name
+    user = value.get("user", request.user)
+           ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-02-16 06:12:46,347 [ERROR] Internal Server Error: /api/v1/savings-plans/
+2025-02-16 06:12:48,841 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:12:48,843 [ERROR] Unexpected error: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 48, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py", line 236, in validate_name
+    user = value.get("user", request.user)
+           ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-02-16 06:12:48,845 [ERROR] Internal Server Error: /api/v1/savings-plans/
+2025-02-16 06:13:25,464 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:14:59,340 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:15:03,120 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:15:03,126 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 06:15:04,375 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:15:04,378 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name', code='invalid')]}
+2025-02-16 06:15:04,379 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 06:15:06,122 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:15:06,126 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name', code='invalid')]}
+2025-02-16 06:15:06,126 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 06:15:06,990 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:15:06,995 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name', code='invalid')]}
+2025-02-16 06:15:06,995 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 06:15:07,763 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:15:07,766 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name', code='invalid')]}
+2025-02-16 06:15:07,767 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 06:15:18,641 [INFO] Fetching savings plan with ID: b0f0bf35-d43e-47e6-befb-02d10028c905
+2025-02-16 06:15:18,643 [ERROR] Savings plan not found for update: b0f0bf35-d43e-47e6-befb-02d10028c905, Error: No SavingsPlan matches the given query.
+2025-02-16 06:15:18,643 [WARNING] Not Found: /api/v1/savings-plans/b0f0bf35-d43e-47e6-befb-02d10028c905/
+2025-02-16 06:15:20,370 [INFO] Fetching savings plan with ID: b0f0bf35-d43e-47e6-befb-02d10028c905
+2025-02-16 06:15:20,373 [ERROR] Savings plan not found for update: b0f0bf35-d43e-47e6-befb-02d10028c905, Error: No SavingsPlan matches the given query.
+2025-02-16 06:15:20,373 [WARNING] Not Found: /api/v1/savings-plans/b0f0bf35-d43e-47e6-befb-02d10028c905/
+2025-02-16 06:15:21,302 [INFO] Fetching savings plan with ID: b0f0bf35-d43e-47e6-befb-02d10028c905
+2025-02-16 06:15:21,303 [ERROR] Savings plan not found for update: b0f0bf35-d43e-47e6-befb-02d10028c905, Error: No SavingsPlan matches the given query.
+2025-02-16 06:15:21,304 [WARNING] Not Found: /api/v1/savings-plans/b0f0bf35-d43e-47e6-befb-02d10028c905/
+2025-02-16 06:15:57,719 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 06:18:06,345 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:18:06,352 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 06:18:16,625 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:18:16,628 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name', code='invalid')]}
+2025-02-16 06:18:16,628 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 06:18:22,461 [INFO] Creating a new savings plan for user: admin@email.com
+2025-02-16 06:18:22,467 [INFO] Savings plan created successfully for user: admin@email.com
+2025-02-16 06:18:33,773 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:18:33,775 [INFO] Fetched savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:18:40,810 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:18:40,812 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:18:55,872 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:18:55,875 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:18:58,596 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 06:19:09,571 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:19:09,573 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:19:13,222 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 06:19:48,764 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:19:53,129 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:20:03,910 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:20:07,383 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:20:10,869 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:20:13,462 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:20:17,214 [INFO] Fetching savings plans for user: admin@email.com
+2025-02-16 06:20:21,357 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:20:21,358 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:20:21,360 [ERROR] Unexpected error: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 89, in patch
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py", line 346, in validate
+    data["name"] = self._validate_name(
+                   ^^^^^^^^^^^^^^^^^^^^
+TypeError: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+2025-02-16 06:20:21,361 [ERROR] Internal Server Error: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:20:22,714 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:20:22,718 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:20:22,720 [ERROR] Unexpected error: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 89, in patch
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py", line 346, in validate
+    data["name"] = self._validate_name(
+                   ^^^^^^^^^^^^^^^^^^^^
+TypeError: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+2025-02-16 06:20:22,721 [ERROR] Internal Server Error: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:20:37,941 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:20:41,025 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:20:41,027 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:20:41,031 [ERROR] Unexpected error: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 89, in patch
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py", line 346, in validate
+    data["name"] = self._validate_name(
+                   ^^^^^^^^^^^^^^^^^^^^
+TypeError: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+2025-02-16 06:20:41,035 [ERROR] Internal Server Error: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:20:58,286 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:21:00,190 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:21:00,191 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:21:00,193 [ERROR] Unexpected error: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 89, in patch
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py", line 346, in validate
+    data["name"] = self._validate_name(
+                   ^^^^^^^^^^^^^^^^^^^^
+TypeError: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+2025-02-16 06:21:00,196 [ERROR] Internal Server Error: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:21:01,365 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:21:01,367 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:21:01,370 [ERROR] Unexpected error: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 89, in patch
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py", line 346, in validate
+    data["name"] = self._validate_name(
+                   ^^^^^^^^^^^^^^^^^^^^
+TypeError: SavingsPlanSerializer._validate_name() takes 2 positional arguments but 3 were given
+2025-02-16 06:21:01,372 [ERROR] Internal Server Error: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:21:36,160 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:21:53,375 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:22:07,311 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:22:15,664 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:22:33,539 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:22:46,273 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:22:46,276 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:22:46,279 [WARNING] Validation error while updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29, Errors: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name', code='invalid')]}
+2025-02-16 06:22:46,280 [WARNING] Bad Request: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:22:52,438 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:22:52,439 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:22:57,190 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:22:57,192 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:22:57,195 [WARNING] Validation error while updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29, Errors: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name', code='invalid')]}
+2025-02-16 06:22:57,195 [WARNING] Bad Request: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:24:13,073 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:24:15,884 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:15,886 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:15,888 [WARNING] Validation error while updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29, Errors: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-16 06:24:15,889 [WARNING] Bad Request: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:24:16,793 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:16,795 [INFO] Updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:16,797 [WARNING] Validation error while updating savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29, Errors: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-16 06:24:16,798 [WARNING] Bad Request: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:24:19,580 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:19,582 [INFO] Fetched savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:22,705 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:22,707 [INFO] Fetched savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:43,194 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:43,196 [INFO] Fetched savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:47,012 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:47,014 [INFO] Soft deleting savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:47,143 [INFO] Savings plan soft deleted successfully: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:52,923 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:24:52,925 [INFO] Fetched savings plan: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:25:12,980 [INFO] User shakti logged in successfully.
+2025-02-16 06:25:12,987 [INFO] Generated tokens for user shakti.
+2025-02-16 06:25:17,032 [INFO] Fetching savings plan with ID: 871ca573-9b28-45c6-943d-82c2abea9b29
+2025-02-16 06:25:17,034 [ERROR] Savings plan not found: 871ca573-9b28-45c6-943d-82c2abea9b29, Error: You do not have permission to perform this action.
+2025-02-16 06:25:17,035 [WARNING] Not Found: /api/v1/savings-plans/871ca573-9b28-45c6-943d-82c2abea9b29/
+2025-02-16 06:25:30,512 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 06:26:34,643 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:26:47,518 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 06:26:57,335 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:21:42,606 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 07:21:56,615 [INFO] Fetching savings plan with ID: 0bab1915-c0cf-4eb3-b67b-d8f9ba3f6561
+2025-02-16 07:21:56,618 [INFO] Fetched savings plan: 0bab1915-c0cf-4eb3-b67b-d8f9ba3f6561
+2025-02-16 07:22:02,739 [INFO] Fetching savings plan with ID: 0bab1915-c0cf-4eb3-b67b-d8f9ba3f6561
+2025-02-16 07:22:02,742 [INFO] Soft deleting savings plan: 0bab1915-c0cf-4eb3-b67b-d8f9ba3f6561
+2025-02-16 07:22:02,878 [INFO] Savings plan soft deleted successfully: 0bab1915-c0cf-4eb3-b67b-d8f9ba3f6561
+2025-02-16 07:22:10,716 [INFO] Fetching savings plan with ID: 0bab1915-c0cf-4eb3-b67b-d8f9ba3f6561
+2025-02-16 07:22:10,717 [ERROR] Savings plan not found for update: 0bab1915-c0cf-4eb3-b67b-d8f9ba3f6561, Error: You do not have permission to perform this action.
+2025-02-16 07:22:10,718 [WARNING] Not Found: /api/v1/savings-plans/0bab1915-c0cf-4eb3-b67b-d8f9ba3f6561/
+2025-02-16 07:22:40,213 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 07:22:40,215 [WARNING] Validation error while creating savings plan: {'name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+2025-02-16 07:22:40,216 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 07:22:46,391 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 07:22:46,394 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='Name must be between 3 and 100 characters.', code='invalid')]}
+2025-02-16 07:22:46,395 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 07:23:00,929 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 07:23:00,938 [ERROR] Unexpected error: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (2b7f8b6d-59a7-47dc-9e1d-475a3549c5cc, 2025-02-16 07:23:00.934217+00, 2025-02-16 07:23:00.934243+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (2b7f8b6d-59a7-47dc-9e1d-475a3549c5cc, 2025-02-16 07:23:00.934217+00, 2025-02-16 07:23:00.934243+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 49, in post
+    serializer.save()
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 1160, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 1201, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (2b7f8b6d-59a7-47dc-9e1d-475a3549c5cc, 2025-02-16 07:23:00.934217+00, 2025-02-16 07:23:00.934243+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+
+2025-02-16 07:23:00,950 [ERROR] Internal Server Error: /api/v1/savings-plans/
+2025-02-16 07:23:02,002 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 07:23:02,013 [ERROR] Unexpected error: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (b32d218d-b9cc-4a38-a026-55e54587122d, 2025-02-16 07:23:02.012207+00, 2025-02-16 07:23:02.012229+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (b32d218d-b9cc-4a38-a026-55e54587122d, 2025-02-16 07:23:02.012207+00, 2025-02-16 07:23:02.012229+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 49, in post
+    serializer.save()
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 1160, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 1201, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (b32d218d-b9cc-4a38-a026-55e54587122d, 2025-02-16 07:23:02.012207+00, 2025-02-16 07:23:02.012229+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+
+2025-02-16 07:23:02,015 [ERROR] Internal Server Error: /api/v1/savings-plans/
+2025-02-16 07:24:15,453 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 07:24:15,458 [ERROR] Unexpected error: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (b79db62c-0b3f-4b09-b942-bab2f545f1f0, 2025-02-16 07:24:15.457744+00, 2025-02-16 07:24:15.457762+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (b79db62c-0b3f-4b09-b942-bab2f545f1f0, 2025-02-16 07:24:15.457744+00, 2025-02-16 07:24:15.457762+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 49, in post
+    serializer.save()
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 1160, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 1201, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (b79db62c-0b3f-4b09-b942-bab2f545f1f0, 2025-02-16 07:24:15.457744+00, 2025-02-16 07:24:15.457762+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+
+2025-02-16 07:24:15,466 [ERROR] Internal Server Error: /api/v1/savings-plans/
+2025-02-16 07:24:16,900 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 07:24:16,905 [ERROR] Unexpected error: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (27d2e627-73fa-45d9-86e9-59901b179caf, 2025-02-16 07:24:16.905162+00, 2025-02-16 07:24:16.90518+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (27d2e627-73fa-45d9-86e9-59901b179caf, 2025-02-16 07:24:16.905162+00, 2025-02-16 07:24:16.90518+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py", line 49, in post
+    serializer.save()
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 1160, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/base.py", line 1201, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "original_deadline" of relation "saving_plan_savingsplan" violates not-null constraint
+DETAIL:  Failing row contains (27d2e627-73fa-45d9-86e9-59901b179caf, 2025-02-16 07:24:16.905162+00, 2025-02-16 07:24:16.90518+00, f, test, 50000.00, null, 2025-03-10, MONTHLY, b0f0bf35-d43e-47e6-befb-02d10028c905, ACTIVE).
+
+2025-02-16 07:24:16,908 [ERROR] Internal Server Error: /api/v1/savings-plans/
+2025-02-16 07:30:25,403 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:30:29,472 [WARNING] Unauthorized: /api/v1/savings-plans/
+2025-02-16 07:30:35,823 [INFO] User shakti logged in successfully.
+2025-02-16 07:30:35,828 [INFO] Generated tokens for user shakti.
+2025-02-16 07:30:38,233 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 07:30:38,238 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 07:31:10,335 [INFO] Fetching savings plan with ID: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:31:10,348 [INFO] Updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:33:36,374 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:34:18,684 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:35:35,175 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:35:56,524 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:36:23,728 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 07:36:39,090 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 07:36:39,095 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'savings_plan': [ErrorDetail(string='Invalid pk "60425cee-c83c-414f-98bf-d4fc3f16cf25" - object does not exist.', code='does_not_exist')]}
+2025-02-16 07:36:39,096 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 07:36:54,519 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 07:36:54,522 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'savings_plan': [ErrorDetail(string='Invalid pk "60425cee-c83c-414f-98bf-d4fc3f16cf25" - object does not exist.', code='does_not_exist')], 'user': [ErrorDetail(string='Invalid pk "d8887d0d-6beb-4fba-a43c-e39bcef16fac" - object does not exist.', code='does_not_exist')]}
+2025-02-16 07:36:54,522 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 07:37:03,242 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 07:37:03,379 [INFO] Transaction created successfully with ID: 85cf5afa-6985-4cdc-a708-00cd8ea84095
+2025-02-16 07:37:04,581 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 07:37:04,587 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'savings_plan': [ErrorDetail(string='Cannot add transactions to a completed savings plan.', code='invalid')]}
+2025-02-16 07:37:04,587 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 07:37:23,652 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 07:55:11,419 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:55:18,146 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:56:05,676 [INFO] Fetching savings plan with ID: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:56:05,679 [INFO] Updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:56:05,682 [WARNING] Validation error while updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac, Errors: {'status': [ErrorDetail(string='Cannot change status of a completed plan.', code='invalid')]}
+2025-02-16 07:56:05,683 [WARNING] Bad Request: /api/v1/savings-plans/d8887d0d-6beb-4fba-a43c-e39bcef16fac/
+2025-02-16 07:56:31,500 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:56:33,449 [INFO] Fetching savings plan with ID: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:56:33,451 [INFO] Updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:56:33,454 [WARNING] Validation error while updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac, Errors: {'status': [ErrorDetail(string='Cannot change status of a completed plan.', code='invalid')]}
+2025-02-16 07:56:33,455 [WARNING] Bad Request: /api/v1/savings-plans/d8887d0d-6beb-4fba-a43c-e39bcef16fac/
+2025-02-16 07:56:34,623 [INFO] Fetching savings plan with ID: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:56:34,626 [INFO] Updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:56:34,630 [WARNING] Validation error while updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac, Errors: {'status': [ErrorDetail(string='Cannot change status of a completed plan.', code='invalid')]}
+2025-02-16 07:56:34,631 [WARNING] Bad Request: /api/v1/savings-plans/d8887d0d-6beb-4fba-a43c-e39bcef16fac/
+2025-02-16 07:56:48,141 [INFO] Fetching savings plan with ID: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:56:48,146 [INFO] Updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:56:48,154 [WARNING] Validation error while updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac, Errors: {'status': [ErrorDetail(string='Cannot change status of a completed plan.', code='invalid')]}
+2025-02-16 07:56:48,154 [WARNING] Bad Request: /api/v1/savings-plans/d8887d0d-6beb-4fba-a43c-e39bcef16fac/
+2025-02-16 07:57:29,177 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 07:57:42,946 [INFO] Fetching savings plan with ID: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:57:42,950 [INFO] Updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac
+2025-02-16 07:57:42,954 [WARNING] Validation error while updating savings plan: d8887d0d-6beb-4fba-a43c-e39bcef16fac, Errors: {'status': [ErrorDetail(string='Cannot change status of a completed plan.', code='invalid')]}
+2025-02-16 07:57:42,955 [WARNING] Bad Request: /api/v1/savings-plans/d8887d0d-6beb-4fba-a43c-e39bcef16fac/
+2025-02-16 07:57:55,033 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 07:57:55,039 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-16 07:57:55,039 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 07:58:00,869 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 07:58:00,879 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 07:58:17,394 [INFO] Fetching savings plan with ID: 06362471-f1ff-4225-9f05-0c7052d1725c
+2025-02-16 07:58:17,399 [INFO] Updating savings plan: 06362471-f1ff-4225-9f05-0c7052d1725c
+2025-02-16 08:00:05,953 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 08:00:08,204 [INFO] Fetching savings plan with ID: 06362471-f1ff-4225-9f05-0c7052d1725c
+2025-02-16 08:00:08,207 [INFO] Updating savings plan: 06362471-f1ff-4225-9f05-0c7052d1725c
+2025-02-16 08:00:14,872 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 08:00:21,616 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 08:01:23,062 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-16 08:01:35,344 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 08:01:35,349 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'savings_plan': [ErrorDetail(string='Cannot add transactions to a paused savings plan.', code='invalid')]}
+2025-02-16 08:01:35,350 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 08:01:41,796 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 08:01:41,807 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'savings_plan': [ErrorDetail(string='Cannot add transactions to a paused savings plan.', code='invalid')]}
+2025-02-16 08:01:41,808 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 08:02:00,885 [INFO] Fetching savings plan with ID: 06362471-f1ff-4225-9f05-0c7052d1725c
+2025-02-16 08:02:00,887 [INFO] Updating savings plan: 06362471-f1ff-4225-9f05-0c7052d1725c
+2025-02-16 08:02:03,452 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 08:02:03,595 [INFO] Transaction created successfully with ID: a67352a0-51a5-430a-8f0a-64d0b5035760
+2025-02-16 08:03:39,052 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 08:03:39,064 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'user': [ErrorDetail(string='You can only create transactions for yourself.', code='invalid')]}
+2025-02-16 08:03:39,064 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 08:04:04,074 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-16 08:04:24,529 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 08:04:32,876 [INFO] Fetching transactions for user: 2004shakti@gmail.com
+2025-02-16 08:04:32,880 [INFO] Transactions retrieved successfully for user: 2004shakti@gmail.com
+2025-02-16 08:04:47,169 [WARNING] Not Found: /api/transactions/a67352a0-51a5-430a-8f0a-64d0b5035760/
+2025-02-16 08:04:55,763 [WARNING] Not Found: /api/v1transactions/a67352a0-51a5-430a-8f0a-64d0b5035760/
+2025-02-16 08:05:13,515 [INFO] Fetching transaction with ID: a67352a0-51a5-430a-8f0a-64d0b5035760
+2025-02-16 08:05:13,524 [INFO] Transaction deleted successfully with ID: a67352a0-51a5-430a-8f0a-64d0b5035760
+2025-02-16 08:05:16,874 [INFO] Fetching transactions for user: 2004shakti@gmail.com
+2025-02-16 08:05:16,881 [INFO] Transactions retrieved successfully for user: 2004shakti@gmail.com
+2025-02-16 08:05:22,406 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 08:06:28,657 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 08:06:28,862 [INFO] Transaction created successfully with ID: 41541e4f-6f25-477b-9b9a-69a36135bec2
+2025-02-16 08:06:30,870 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 08:06:30,877 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'savings_plan': [ErrorDetail(string='Cannot add transactions to a completed savings plan.', code='invalid')]}
+2025-02-16 08:06:30,878 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 08:06:34,970 [INFO] Fetching transactions for user: 2004shakti@gmail.com
+2025-02-16 08:06:34,974 [INFO] Transactions retrieved successfully for user: 2004shakti@gmail.com
+2025-02-16 08:06:46,905 [INFO] Fetching transaction with ID: 41541e4f-6f25-477b-9b9a-69a36135bec2
+2025-02-16 08:06:46,910 [INFO] Transaction deleted successfully with ID: 41541e4f-6f25-477b-9b9a-69a36135bec2
+2025-02-16 08:06:50,389 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 08:10:49,329 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/views.py changed, reloading.
+2025-02-16 08:11:16,214 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/views.py changed, reloading.
+2025-02-16 08:11:23,052 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/views.py changed, reloading.
+2025-02-16 08:12:11,778 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 08:12:25,130 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 08:12:25,237 [INFO] Transaction created successfully with ID: 1e62e2e3-4650-460e-8deb-ce93b21525a4
+2025-02-16 08:12:28,489 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 08:12:43,330 [INFO] Fetching transaction with ID: 1e62e2e3-4650-460e-8deb-ce93b21525a4
+2025-02-16 08:12:43,339 [INFO] Transaction deleted successfully with ID: 1e62e2e3-4650-460e-8deb-ce93b21525a4
+2025-02-16 08:12:46,749 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 08:13:42,792 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 08:13:57,152 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/admin.py changed, reloading.
+2025-02-16 08:14:00,990 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 08:23:18,055 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 08:24:17,911 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 08:24:35,557 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 08:56:29,376 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 08:56:34,686 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 08:56:49,709 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 08:56:52,986 [WARNING] Unauthorized: /api/v1/savings-plans/
+2025-02-16 08:56:57,200 [INFO] User shakti logged in successfully.
+2025-02-16 08:56:57,209 [INFO] Generated tokens for user shakti.
+2025-02-16 08:56:59,756 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 10:29:38,446 [INFO] User shakti logged in successfully.
+2025-02-16 10:29:38,459 [INFO] Generated tokens for user shakti.
+2025-02-16 10:30:01,375 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 10:30:01,393 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 10:30:24,361 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 10:30:24,657 [INFO] Transaction created successfully with ID: b18ea6e3-4a3b-4e81-a3c3-bbd32a756cc8
+2025-02-16 10:30:28,171 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 10:31:27,734 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 10:31:38,505 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 10:31:58,543 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 10:47:48,080 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/tasks.py changed, reloading.
+2025-02-16 10:48:22,747 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 10:48:32,462 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 10:48:32,599 [INFO] Transaction created successfully with ID: f0c6f833-d970-436a-8570-8f8aaffd82d2
+2025-02-16 10:49:11,163 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/tasks.py changed, reloading.
+2025-02-16 10:49:17,816 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/tasks.py changed, reloading.
+2025-02-16 10:49:21,798 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 10:49:21,935 [INFO] Transaction created successfully with ID: 607e6058-1b60-4109-bb07-dd3b24f68f62
+2025-02-16 10:49:30,560 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 10:49:57,810 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 10:54:16,552 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 10:55:12,114 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 10:59:11,968 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 10:59:28,714 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 10:59:33,831 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 10:59:41,171 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 11:12:57,097 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 11:13:07,673 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 11:20:59,757 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/views/saving_plan.py changed, reloading.
+2025-02-16 11:21:28,954 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:21:29,073 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 11:22:12,086 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:22:14,319 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:22:14,323 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-16 11:22:14,324 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 11:22:20,215 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:22:20,351 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 11:23:11,136 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:24:03,257 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:24:03,263 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-16 11:24:03,265 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 11:24:08,246 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:24:08,384 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 11:24:54,984 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:25:00,821 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:25:00,960 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 11:25:34,009 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:25:43,301 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:25:43,305 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-16 11:25:43,306 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 11:25:46,743 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:25:46,877 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 11:26:35,145 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:27:08,315 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:27:08,442 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 11:27:25,819 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 11:28:13,885 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 11:28:14,034 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 11:45:39,454 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:45:55,784 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:46:29,435 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 11:48:04,712 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:48:41,616 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 11:51:28,304 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:51:38,825 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 11:58:15,252 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 12:01:29,719 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-16 12:01:43,677 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-16 12:02:11,990 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-16 12:04:51,694 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:40:43,588 [WARNING] Unauthorized: /api/v1/savings-plans/
+2025-02-16 12:40:48,709 [INFO] User shakti logged in successfully.
+2025-02-16 12:40:48,720 [INFO] Generated tokens for user shakti.
+2025-02-16 12:40:50,873 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 12:40:55,985 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 12:40:56,200 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 12:42:03,334 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 12:42:03,366 [INFO] Transaction created successfully with ID: 02656bc0-107d-4889-af89-bf77a65d1e42
+2025-02-16 12:42:07,444 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 12:42:36,144 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:42:36,153 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:42:36,158 [WARNING] Validation error while updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3, Errors: {'target_amount': [ErrorDetail(string='Target amount cannot be less than already saved: 10000.00', code='invalid')]}
+2025-02-16 12:42:36,159 [WARNING] Bad Request: /api/v1/savings-plans/7fa7f91b-4819-4795-a8f8-412712e01db3/
+2025-02-16 12:42:44,737 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:42:44,739 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:43:17,561 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/views.py changed, reloading.
+2025-02-16 12:45:01,443 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:46:43,875 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:46:43,878 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:47:09,300 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:47:46,012 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:48:15,447 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:48:29,276 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:48:35,007 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:48:51,539 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 12:48:51,679 [INFO] Transaction created successfully with ID: c9559c0f-673a-406b-b28a-7555935ea56f
+2025-02-16 12:48:53,536 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 12:48:53,541 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'savings_plan': [ErrorDetail(string='Cannot add transactions to a completed savings plan.', code='invalid')]}
+2025-02-16 12:48:53,541 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 12:48:56,448 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 12:49:42,617 [INFO] Fetching transactions for user: 2004shakti@gmail.com
+2025-02-16 12:49:42,621 [INFO] Transactions retrieved successfully for user: 2004shakti@gmail.com
+2025-02-16 12:50:57,207 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:51:13,355 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:51:40,588 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 12:51:40,739 [INFO] Transaction created successfully with ID: 6f06acee-cccc-4262-b6fb-8b691b804a38
+2025-02-16 12:52:20,008 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:52:36,380 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 12:52:36,535 [INFO] Transaction created successfully with ID: 86d938f5-b656-45cd-a38a-669c26f1984f
+2025-02-16 12:53:07,335 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 12:53:38,997 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:53:46,272 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 12:53:46,279 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'savings_plan': [ErrorDetail(string='Cannot add transactions to a completed savings plan.', code='invalid')]}
+2025-02-16 12:53:46,280 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 12:54:14,581 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 12:54:14,810 [INFO] Transaction created successfully with ID: 7879209e-4c8f-4017-ae04-83914de58522
+2025-02-16 12:54:23,462 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:54:50,252 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 12:54:50,398 [INFO] Transaction created successfully with ID: 86dbb60b-ed13-4017-a34e-afdff8d87190
+2025-02-16 12:55:34,805 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:55:34,811 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:55:34,815 [WARNING] Validation error while updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3, Errors: {'target_amount': [ErrorDetail(string='Target amount cannot be less than already saved: 51000.00', code='invalid')]}
+2025-02-16 12:55:34,817 [WARNING] Bad Request: /api/v1/savings-plans/7fa7f91b-4819-4795-a8f8-412712e01db3/
+2025-02-16 12:55:53,559 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:55:53,561 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:56:05,861 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:56:15,931 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/serializers/saving_plan.py changed, reloading.
+2025-02-16 12:56:30,074 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 12:56:30,169 [INFO] Transaction created successfully with ID: 00f5d358-4b6b-4914-bbfc-a90b3aa0c5a0
+2025-02-16 12:56:37,052 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:56:37,055 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:58:07,755 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:58:07,758 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:58:07,760 [WARNING] Validation error while updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3, Errors: {'target_amount': [ErrorDetail(string='Cannot modify target amount of completed plan.', code='invalid')]}
+2025-02-16 12:58:07,761 [WARNING] Bad Request: /api/v1/savings-plans/7fa7f91b-4819-4795-a8f8-412712e01db3/
+2025-02-16 12:58:17,197 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 12:58:24,316 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 12:58:46,542 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:58:46,544 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:58:58,251 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 12:59:05,564 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 12:59:05,572 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:00:13,392 [INFO] Fetching transactions for user: 2004shakti@gmail.com
+2025-02-16 13:00:13,398 [INFO] Transactions retrieved successfully for user: 2004shakti@gmail.com
+2025-02-16 13:00:15,927 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 13:00:28,044 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:00:28,054 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:01:20,566 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 13:02:06,463 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 13:02:18,754 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:02:18,757 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:03:34,788 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 13:04:12,970 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 13:04:15,830 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:04:15,833 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:06:03,408 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 13:06:06,029 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:06:06,033 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:07:40,441 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 13:07:45,288 [INFO] Fetching savings plan with ID: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:07:45,290 [INFO] Updating savings plan: 7fa7f91b-4819-4795-a8f8-412712e01db3
+2025-02-16 13:13:12,445 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 13:13:17,042 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 13:37:34,580 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 13:37:43,331 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 13:38:01,872 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 13:41:44,331 [WARNING] Unauthorized: /api/v1/savings-plans/
+2025-02-16 13:41:49,079 [INFO] User shakti logged in successfully.
+2025-02-16 13:41:49,088 [INFO] Generated tokens for user shakti.
+2025-02-16 13:41:51,859 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 13:41:51,865 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-16 13:41:51,865 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 13:42:01,758 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 13:42:02,021 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 13:44:33,552 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 13:48:12,570 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 13:49:24,843 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 13:49:47,998 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 13:49:57,365 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 13:49:57,612 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 13:50:12,649 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 13:50:12,653 [ERROR] Transaction creation failed for user: 2004shakti@gmail.com. Errors: {'savings_plan': [ErrorDetail(string='Invalid pk "b0f0bf35-d43e-47e6-befb-02d10028c905" - object does not exist.', code='does_not_exist')]}
+2025-02-16 13:50:12,654 [WARNING] Bad Request: /api/v1/transactions/
+2025-02-16 13:50:22,355 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 13:50:33,156 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 13:50:33,171 [INFO] Transaction created successfully with ID: fd45343d-d168-4138-b9ac-911ec5fee7a5
+2025-02-16 14:39:06,388 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 14:39:10,632 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 14:39:13,808 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 14:40:03,245 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 14:42:43,626 [WARNING] Unauthorized: /api/v1/transactions/
+2025-02-16 14:42:48,139 [INFO] User shakti logged in successfully.
+2025-02-16 14:42:48,148 [INFO] Generated tokens for user shakti.
+2025-02-16 14:42:50,221 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 14:42:50,405 [INFO] Transaction created successfully with ID: ba7d3181-a483-42f3-8c23-be737156c484
+2025-02-16 14:43:36,624 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 14:43:48,677 [INFO] Fetching savings plan with ID: cd7d2e03-94bb-4245-801e-5daa46ea0a30
+2025-02-16 14:43:48,681 [INFO] Fetched savings plan: cd7d2e03-94bb-4245-801e-5daa46ea0a30
+2025-02-16 14:44:20,614 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 14:44:20,630 [INFO] Transaction created successfully with ID: 9c094f0c-1c98-40a9-b13d-483f06e46229
+2025-02-16 15:33:38,914 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 15:33:38,922 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-16 15:33:38,923 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 15:34:04,508 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 15:34:04,536 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 15:34:52,511 [INFO] Creating a new transaction for user: 2004shakti@gmail.com
+2025-02-16 15:34:52,537 [INFO] Transaction created successfully with ID: 4e91d552-464a-40f0-833f-222f8fc2dba7
+2025-02-16 15:34:57,596 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 15:35:53,611 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 15:35:53,623 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 15:36:49,373 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 15:37:40,316 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 15:59:13,049 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 15:59:43,348 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 16:00:03,241 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 16:00:47,858 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 16:01:00,705 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 16:01:12,577 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 16:01:16,157 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 16:01:21,710 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 16:04:27,709 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 16:05:19,112 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/tasks.py changed, reloading.
+2025-02-16 16:05:41,321 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 16:07:02,576 [WARNING] Unauthorized: /api/v1/savings-plans/
+2025-02-16 16:07:07,946 [INFO] User shakti logged in successfully.
+2025-02-16 16:07:07,958 [INFO] Generated tokens for user shakti.
+2025-02-16 16:07:11,018 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 16:07:11,022 [WARNING] Validation error while creating savings plan: {'current_deadline': [ErrorDetail(string='Deadline must be in the future.', code='invalid')]}
+2025-02-16 16:07:11,022 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 16:07:21,417 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 16:07:21,420 [WARNING] Validation error while creating savings plan: {'target_amount': [ErrorDetail(string='Target amount must be greater than 0.', code='invalid')], 'current_deadline': [ErrorDetail(string='Deadline must be in the future.', code='invalid')]}
+2025-02-16 16:07:21,421 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 16:07:28,704 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 16:07:28,707 [WARNING] Validation error while creating savings plan: {'current_deadline': [ErrorDetail(string='Deadline must be in the future.', code='invalid')]}
+2025-02-16 16:07:28,707 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 16:07:34,964 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 16:07:34,967 [WARNING] Validation error while creating savings plan: {'current_deadline': [ErrorDetail(string='Deadline must be in the future.', code='invalid')]}
+2025-02-16 16:07:34,968 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 16:07:43,498 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 16:07:43,503 [WARNING] Validation error while creating savings plan: {'current_deadline': [ErrorDetail(string='Deadline must be in the future.', code='invalid')]}
+2025-02-16 16:07:43,504 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 16:07:47,717 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 16:07:47,723 [WARNING] Validation error while creating savings plan: {'non_field_errors': [ErrorDetail(string='You already have a savings plan with this name.', code='invalid')]}
+2025-02-16 16:07:47,724 [WARNING] Bad Request: /api/v1/savings-plans/
+2025-02-16 16:07:52,493 [INFO] Creating a new savings plan for user: 2004shakti@gmail.com
+2025-02-16 16:07:52,686 [INFO] Savings plan created successfully for user: 2004shakti@gmail.com
+2025-02-16 16:08:55,834 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 16:17:38,949 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 16:17:55,719 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 16:18:40,904 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 16:18:43,534 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 16:18:47,099 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 16:18:52,710 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 16:19:17,065 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 16:19:41,404 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-16 16:21:45,543 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/admin.py changed, reloading.
+2025-02-16 16:21:51,708 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/admin.py changed, reloading.
+2025-02-16 17:22:20,603 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 17:22:40,523 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 17:25:15,997 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/models.py changed, reloading.
+2025-02-16 17:25:58,743 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/models.py changed, reloading.
+2025-02-16 17:26:31,316 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/utils/constants.py changed, reloading.
+2025-02-16 17:27:01,681 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/saving_plan/models.py changed, reloading.
+2025-02-16 17:27:21,795 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-16 17:27:26,246 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/models.py changed, reloading.
+2025-02-16 17:28:10,215 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/models.py changed, reloading.
+2025-02-16 17:28:37,786 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/models.py changed, reloading.
+2025-02-16 17:31:55,837 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 17:33:00,641 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 17:33:48,916 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 17:36:22,541 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 17:36:33,132 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 17:40:39,774 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 17:41:51,950 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-16 17:42:04,010 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/transaction/serializers.py changed, reloading.
+2025-02-16 17:48:32,049 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 17:48:50,732 [ERROR] Signal handler <promise@0x1020b8370 --> <bound method Celery._autodiscover_tasks of <Celery expense_tracker at 0x1020a9510>>> raised: ImportError("cannot import name 'send_savings_plan_completion_notification' from 'services.notification' (/Users/gkmit/Downloads/expense_tracker copy 5/services/notification.py)")
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/vine/promises.py", line 161, in __call__
+    return self.throw()
+           ^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/vine/promises.py", line 158, in __call__
+    retval = fun(*final_args, **final_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/app/base.py", line 694, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_fixups(related_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/app/base.py", line 703, in _autodiscover_tasks_from_fixups
+    return self._autodiscover_tasks_from_names([
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/app/base.py", line 698, in _autodiscover_tasks_from_names
+    return self.loader.autodiscover_tasks(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/loaders/base.py", line 220, in autodiscover_tasks
+    mod.__name__ for mod in autodiscover_tasks(packages or (),
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/loaders/base.py", line 246, in autodiscover_tasks
+    return [find_related_module(pkg, related_name) for pkg in packages]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/loaders/base.py", line 246, in <listcomp>
+    return [find_related_module(pkg, related_name) for pkg in packages]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/loaders/base.py", line 270, in find_related_module
+    return importlib.import_module(module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/tasks.py", line 99, in <module>
+    from services.notification import send_savings_plan_completion_notification
+ImportError: cannot import name 'send_savings_plan_completion_notification' from 'services.notification' (/Users/gkmit/Downloads/expense_tracker copy 5/services/notification.py)
+2025-02-16 17:48:54,799 [ERROR] Signal handler <promise@0x10c16c370 --> <bound method Celery._autodiscover_tasks of <Celery expense_tracker at 0x10c1598d0>>> raised: ImportError("cannot import name 'send_savings_plan_completion_notification' from 'services.notification' (/Users/gkmit/Downloads/expense_tracker copy 5/services/notification.py)")
+Traceback (most recent call last):
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/vine/promises.py", line 161, in __call__
+    return self.throw()
+           ^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/vine/promises.py", line 158, in __call__
+    retval = fun(*final_args, **final_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/app/base.py", line 694, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_fixups(related_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/app/base.py", line 703, in _autodiscover_tasks_from_fixups
+    return self._autodiscover_tasks_from_names([
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/app/base.py", line 698, in _autodiscover_tasks_from_names
+    return self.loader.autodiscover_tasks(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/loaders/base.py", line 220, in autodiscover_tasks
+    mod.__name__ for mod in autodiscover_tasks(packages or (),
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/loaders/base.py", line 246, in autodiscover_tasks
+    return [find_related_module(pkg, related_name) for pkg in packages]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/loaders/base.py", line 246, in <listcomp>
+    return [find_related_module(pkg, related_name) for pkg in packages]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/envs/finance_tracker/lib/python3.11/site-packages/celery/loaders/base.py", line 270, in find_related_module
+    return importlib.import_module(module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gkmit/.pyenv/versions/3.11.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/tasks.py", line 99, in <module>
+    from services.notification import send_savings_plan_completion_notification
+ImportError: cannot import name 'send_savings_plan_completion_notification' from 'services.notification' (/Users/gkmit/Downloads/expense_tracker copy 5/services/notification.py)
+2025-02-16 18:29:02,161 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 18:29:08,010 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 18:29:15,547 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 18:29:41,772 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 18:55:36,630 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/views.py changed, reloading.
+2025-02-16 18:55:42,185 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 19:03:03,669 [WARNING] Unauthorized: /api/v1/savings-plans/
+2025-02-16 19:03:07,722 [INFO] User shakti logged in successfully.
+2025-02-16 19:03:07,729 [INFO] Generated tokens for user shakti.
+2025-02-16 19:03:10,896 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 19:04:30,607 [WARNING] Validation error: {'type': [ErrorDetail(string='"debit" is not a valid choice.', code='invalid_choice')], 'frequency': [ErrorDetail(string='"daily" is not a valid choice.', code='invalid_choice')], 'start_date': {'start_date': ErrorDetail(string='Start date cannot be in the past.', code='invalid'), 'code': ErrorDetail(string='invalid_start_date', code='invalid')}}
+2025-02-16 19:04:30,608 [WARNING] Bad Request: /api/v1/recurring-transactions/
+2025-02-16 19:05:03,938 [WARNING] Validation error: {'type': [ErrorDetail(string='"debit" is not a valid choice.', code='invalid_choice')]}
+2025-02-16 19:05:03,939 [WARNING] Bad Request: /api/v1/recurring-transactions/
+2025-02-16 19:05:11,667 [WARNING] Validation error: {'end_date': [ErrorDetail(string='End date must be after start date.', code='invalid')], 'code': [ErrorDetail(string='invalid_date_range', code='invalid')]}
+2025-02-16 19:05:11,667 [WARNING] Bad Request: /api/v1/recurring-transactions/
+2025-02-16 19:05:20,373 [INFO] User b0f0bf35-d43e-47e6-befb-02d10028c905 created a new recurring transaction.
+2025-02-16 19:06:07,285 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-16 19:21:14,824 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/models.py changed, reloading.
+2025-02-16 19:21:28,296 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/models.py changed, reloading.
+2025-02-16 19:21:46,624 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/models.py changed, reloading.
+2025-02-16 19:22:24,160 [INFO] User b0f0bf35-d43e-47e6-befb-02d10028c905 created a new recurring transaction.
+2025-02-16 19:33:11,487 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 19:33:26,187 [INFO] User b0f0bf35-d43e-47e6-befb-02d10028c905 created a new recurring transaction.
+2025-02-16 19:35:15,558 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 19:36:06,467 [INFO] User b0f0bf35-d43e-47e6-befb-02d10028c905 created a new recurring transaction.
+2025-02-16 19:36:35,348 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 19:37:05,893 [WARNING] Validation error: {'savings_plan': [ErrorDetail(string='Cannot add transactions to a completed savings plan.', code='invalid')]}
+2025-02-16 19:37:05,894 [WARNING] Bad Request: /api/v1/recurring-transactions/
+2025-02-16 19:37:37,124 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 19:37:39,566 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 19:37:41,974 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 19:38:20,019 [INFO] User b0f0bf35-d43e-47e6-befb-02d10028c905 retrieved recurring transactions.
+2025-02-16 19:38:25,862 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 19:39:18,740 [INFO] Fetching savings plans for user: 2004shakti@gmail.com
+2025-02-16 19:39:34,166 [INFO] User b0f0bf35-d43e-47e6-befb-02d10028c905 created a new recurring transaction.
+2025-02-16 19:41:08,668 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.
+2025-02-16 19:41:16,344 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/recurring_transaction/serializers.py changed, reloading.

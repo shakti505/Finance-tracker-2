@@ -15,6 +15,7 @@ class RecurringTransactionSerializer(serializers.ModelSerializer):
             "id",
             "user",
             "category",
+            "savings_plan",
             "type",
             "amount",
             "frequency",
@@ -33,6 +34,7 @@ class RecurringTransactionSerializer(serializers.ModelSerializer):
         if request and request.method in ["PATCH"]:
             self.fields["user"].read_only = True
             self.fields["type"].read_only = True
+            self.fields["savings_plan"].read_only = True
 
     def _get_recurring_transaction_user(self):
         """Helper method to get and validate the recurring transaction user"""
@@ -78,9 +80,6 @@ class RecurringTransactionSerializer(serializers.ModelSerializer):
 
     def validate_category(self, category):
         """Comprehensive category validation"""
-        if category.is_deleted:
-            raise serializers.ValidationError("Category not found.")
-
         user = self._get_recurring_transaction_user()
         transaction_type = self._get_recurring_transaction_type()
 
@@ -103,31 +102,80 @@ class RecurringTransactionSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Start date cannot be in the past.")
         return start_date
 
-    def validate(self, attrs):
+    def validate(self, data):
         """Cross-field validations"""
         instance = self.instance
+        category = data.get("category")
+        savings_plan = data.get('savings_plan')
+    
+        if category and savings_plan:
+            raise serializers.ValidationError(
+                "A transaction can only be associated with either a category or a savings plan, not both."
+            )
 
+        if not category and not savings_plan:
+            raise serializers.ValidationError(
+                "A transaction must be associated with either a category or a savings plan."
+            )
         # Validate end_date must be after start_date
-        if "end_date" in attrs:
-            start_date = attrs.get(
+        if "end_date" in data:
+            start_date = data.get(
                 "start_date", instance.start_date if instance else None
             )
-            if attrs["end_date"].date() <= start_date.date():
+            if data["end_date"].date() <= start_date.date():
                 raise serializers.ValidationError(
                     {"End_date": "End date must be after start date."}
                 )
-        return attrs
+        return data
+    
+    def validate_savings_plan(self, savings_plan):
+        """Ensure savings plan belongs to the user and is not completed or paused"""
+        user = self._get_recurring_transaction_user()
+
+        if not savings_plan:
+            raise serializers.ValidationError("Savings plan is required.")
+
+        if savings_plan.user != user:
+            raise serializers.ValidationError("Savings plan does not belong to the provided user.")
+
+        if savings_plan.is_deleted:
+            raise serializers.ValidationError("Savings plan not found.")
+
+        if savings_plan.status in ["COMPLETED", "PAUSED"]:
+            raise serializers.ValidationError(f"Cannot add transactions to a {savings_plan.status.lower()} savings plan.")
+
+        transaction_amount = self.initial_data.get("amount")
+
+        if transaction_amount:
+            try:
+                transaction_amount = Decimal(transaction_amount)
+            except (ValueError, TypeError):
+                raise serializers.ValidationError("Invalid transaction amount.")
+
+            remaining_amount = savings_plan.get_remaining_amount()
+
+            if transaction_amount > remaining_amount:
+                raise serializers.ValidationError(
+                    f"Transaction exceeds the remaining savings target by {transaction_amount - remaining_amount}."
+                )
+
+        return savings_plan
+
 
     @transaction.atomic
     def create(self, validated_data):
-        """Create with next_run set to start_date"""
+        """Create a recurring transaction and update savings plan status if necessary."""
         validated_data["next_run"] = validated_data["start_date"]
-        return super().create(validated_data)
+        instance = super().create(validated_data)
+
+        return instance
+
 
     @transaction.atomic
     def update(self, instance, validated_data):
-        """Update recurring transaction with comprehensive checks"""
-        if "start_date" in validated_data:
-            # If start_date is updated, set next_run to new start_date
-            validated_data["next_run"] = validated_data["start_date"]
-        return super().update(instance, validated_data)
+        """Update a recurring transaction and check if savings plan status needs to be changed."""
+
+        validated_data["next_run"] = validated_data.get("start_date", instance.next_run)
+
+        instance = super().update(instance, validated_data)
+        return instance

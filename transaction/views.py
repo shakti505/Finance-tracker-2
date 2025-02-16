@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
-
+from django.db import models
 from django.shortcuts import get_object_or_404
 from .models import Transaction
 from .serializers import TransactionSerializer
@@ -60,6 +60,7 @@ class TransactionListCreateView(APIView, CustomPageNumberPagination):
         if serializer.is_valid():
             transaction = serializer.save()
             track_and_notify_budget.delay(transaction.id)
+            
             logger.info("Transaction created successfully with ID: %s", transaction.id)
             return success_single_response(
                 serializer.data, status_code=status.HTTP_201_CREATED
@@ -125,7 +126,17 @@ class TransactionDetailView(APIView):
             transaction = self.get_object(id, request)
         except Exception:
             return not_found_error_response(f"No transaction found with ID: {id}")
+        savings_plan = transaction.savings_plan
         transaction.is_deleted = True
         transaction.save()
+        if savings_plan and savings_plan.status == "COMPLETED":
+            current_total = Transaction.objects.filter(
+                savings_plan=savings_plan, is_deleted=False
+            ).aggregate(total=models.Sum("amount"))["total"] or 0
+
+            if current_total < savings_plan.target_amount:
+                savings_plan.status = "ACTIVE"
+                savings_plan.save()
+
         logger.info("Transaction deleted successfully with ID: %s", id)
         return success_no_content_response()

@@ -94,15 +94,11 @@ class LogoutView(APIView):
 
 
 class UserListView(APIView):
-    permission_classes = [IsStaffUser, IsAuthenticated]
+    permission_classes = [ IsAuthenticated, IsStaffUser]    
 
     @user_profile_get_doc
     def get(self, request):
         users = CustomUser.objects.all()
-        try:
-            self.check_object_permissions(request, users)
-        except Exception:
-            return not_found_error_response("No users found.")
         serializer = UserSerializer(users, many=True)
         return success_response(serializer.data)
 
@@ -194,15 +190,12 @@ class PasswordResetRequestView(APIView):
                 )
 
             token = default_token_generator.make_token(user)
-            uid = urlsafe_base64_encode(
-                str(user.id).encode()
-            )  # Use UUID bytes for encoding
+            uid = urlsafe_base64_encode(str(user.id).encode())
 
             # Generate reset URL
             reset_link = f"http://localhost:8000/api/v1/auth/password-reset/confirm/{uid}/{token}/"
             print(reset_link)
 
-            # Send email
             send_mail.delay(
                 [email],
                 reset_link,
