@@ -13,17 +13,6 @@ class SavingsPlanStatus:
     ]
 
 
-class SavingsPlanPriority:
-    """Enum for Savings Plan Priority"""
-    HIGH = "HIGH"
-    MEDIUM = "MEDIUM"
-    LOW = "LOW"
-
-    CHOICES = [
-        (HIGH, "High"),
-        (MEDIUM, "Medium"),
-        (LOW, "Low"),
-    ]
 
 
 class Frequency:

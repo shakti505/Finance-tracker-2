@@ -48,7 +48,7 @@ class CategoryListView(APIView, CustomPageNumberPagination):
                 "-created_at"
             )
 
-        if category_type in ["debit", "credit"]:
+        if category_type in ["DEBIT", "CREDIT"]:
             categories = categories.filter(type=category_type)
         paginated_categories = self.paginate_queryset(categories, request)
         serializer = CategorySerializer(paginated_categories, many=True)

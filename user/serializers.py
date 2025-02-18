@@ -47,10 +47,7 @@ class LoginSerializer(serializers.Serializer):
     def validate(self, data):
         username = data.get("username")
         password = data.get("password")
-        print(username)
-        print(password)
         user = authenticate(username=username, password=password)
-        print(user)
         if not user:
             raise AuthenticationFailed("Invalid credentials")
 

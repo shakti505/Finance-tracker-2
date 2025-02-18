@@ -53,6 +53,7 @@ class TransactionListCreateView(APIView, CustomPageNumberPagination):
 
     def post(self, request):
         """Create a new transaction."""
+        print(request)
         logger.info("Creating a new transaction for user: %s", request.user)
         serializer = TransactionSerializer(
             data=request.data, context={"request": request}
@@ -60,7 +61,7 @@ class TransactionListCreateView(APIView, CustomPageNumberPagination):
         if serializer.is_valid():
             transaction = serializer.save()
             track_and_notify_budget.delay(transaction.id)
-            
+
             logger.info("Transaction created successfully with ID: %s", transaction.id)
             return success_single_response(
                 serializer.data, status_code=status.HTTP_201_CREATED

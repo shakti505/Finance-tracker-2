@@ -102,6 +102,7 @@ from user.models import CustomUser
 from decimal import Decimal
 from django.db import models
 from saving_plan.tasks import send_savings_plan_completion_notification
+from datetime import datetime
 
 
 class TransactionSerializer(serializers.ModelSerializer):
@@ -155,24 +156,39 @@ class TransactionSerializer(serializers.ModelSerializer):
         type = self.initial_data.get("type")
         return type
 
+
     def validate(self, data):
         """
-        Validate that only one of category or savings_plan is provided.
+        Validate that transaction date does not exceed savings plan deadline.
         """
-        category = data.get('category')
-        savings_plan = data.get('savings_plan')
-
+        category = data.get("category")
+        savings_plan = data.get("savings_plan")
+        transaction_date = data.get("date")
         if category and savings_plan:
             raise serializers.ValidationError(
-                "A transaction can only be associated with either a category or a savings plan, not both."
-            )
+            "A transaction can only be associated with either a category or a savings plan, not both."
+        )
 
         if not category and not savings_plan:
             raise serializers.ValidationError(
-                "A transaction must be associated with either a category or a savings plan."
-            )
-        
+            "A transaction must be associated with either a category or a savings plan."
+        )
+
+        if savings_plan and transaction_date:
+            savings_plan_deadline = savings_plan.current_deadline
+
+            # Convert datetime to date for comparison
+            if isinstance(transaction_date, datetime):
+                transaction_date = transaction_date.date()
+
+            if transaction_date > savings_plan_deadline:
+                raise serializers.ValidationError(
+                    "Transaction date cannot be after the savings plan's deadline."
+                )
+
         return data
+
+
 
     def validate_amount(self, amount):
         """Ensure amount is positive."""
@@ -243,7 +259,7 @@ class TransactionSerializer(serializers.ModelSerializer):
                 raise serializers.ValidationError(
                     f"Transaction exceeds the remaining savings target by {Decimal(transaction_amount) - Decimal(remaining_amount)}.")
 
-
+        return savings_plan
     def create(self, validated_data):
         """Create a transaction and update savings plan status if target is met."""
         transaction = super().create(validated_data)

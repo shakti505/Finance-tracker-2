@@ -90,7 +90,7 @@ class BudgetSerializer(serializers.ModelSerializer):
             )
         if category.is_deleted:
             raise ValidationError("Not Found")
-        if category.type != "debit":
+        if category.type != "DEBIT":
             raise ValidationError("Budget can only be created for debit categories")
         return category
 

@@ -95,6 +95,7 @@ DATABASES = {
         "NAME": "finance_tracker",
         "USERNAME": os.getenv("POSTGRES_USER"),
         "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
+        "ATOMIC_REQUESTS": True,
     }
 }
 
@@ -174,15 +175,12 @@ import os
 CELERY_BEAT_SCHEDULE = {
     "process-recurring-transactions": {
         "task": "recurring_transaction.tasks.process_recurring_transactions",
-        "schedule": crontab(minute="*/1"),
+        "schedule": crontab(minute="*/10"),
     },
-    "check_overdue_savings_plans": {
-        "task": "saving_plan.tasks.check_overdue_savings_plans",
-        "schedule": crontab(hour=6, minute=0),
-    },
+
     'check-savings-progress': {
         'task': 'saving_plan.tasks.schedule_savings_checks',
-        'schedule': crontab(hour=20 ,minute=0),  
+        'schedule': crontab( minute="*/1"),  
     },
 }
 

@@ -63,8 +63,8 @@ class TransactionReportAPI(BaseTransactionView):
             user = self.get_target_user(request)
             start_date, end_date = self.get_date_range(request)
             transactions = self.get_transactions(user, start_date, end_date)
-            credit_trans = transactions.filter(type="credit")
-            debit_trans = transactions.filter(type="debit")
+            credit_trans = transactions.filter(type="CREDIT")
+            debit_trans = transactions.filter(type="DEBIT")
 
             return success_response(
                 {
@@ -104,8 +104,8 @@ class SpendingTrendsView(BaseTransactionView):
             start_date, end_date = self.get_date_range(request)
             transactions = self.get_transactions(user, start_date, end_date)
 
-            credit_trans = transactions.filter(type="credit")
-            debit_trans = transactions.filter(type="debit")
+            credit_trans = transactions.filter(type="CREDIT")
+            debit_trans = transactions.filter(type="DEBIT")
 
             total_income = credit_trans.aggregate(total=Sum("amount"))["total"] or 0
             total_expense = debit_trans.aggregate(total=Sum("amount"))["total"] or 0

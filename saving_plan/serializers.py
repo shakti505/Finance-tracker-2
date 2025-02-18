@@ -135,11 +135,15 @@ class SavingsPlanSerializer(serializers.ModelSerializer):
             current_status = self.instance.status
             current_saved = self.instance.get_total_saved()
             target_amount = self.instance.target_amount
-            # percentage = (current_saved / target_amount * 100) if target_amount > 0 else 0
+            percentage = (current_saved / target_amount * 100) if target_amount > 0 else 0
 
             # Prevent reverting a completed plan
             if current_status == "COMPLETED" and value != "COMPLETED":
                 raise serializers.ValidationError("Cannot change status of a completed plan.")
+                
+            # Prevent manual completion if target not reached
+            if value == "COMPLETED" and percentage < 100:
+                raise serializers.ValidationError("Cannot mark plan as completed until 100% of target is saved.")
 
         return value
 
@@ -185,19 +189,17 @@ class SavingsPlanSerializer(serializers.ModelSerializer):
             percentage = 0
 
         return {
-            "amount_saved": total_saved,
-            "remaining_amount": obj.get_remaining_amount(),
-            "percentage": percentage,
-        }
 
+            "remaining_amount": obj.get_remaining_amount(),
+            "saved_amount_percentage": percentage,
+        }
+    
     def get_time_remaining(self, obj):
         """Calculate remaining time until deadline."""
         today = timezone.now().date()
         if obj.current_deadline < today:
             return "Deadline passed"
-
         days_remaining = (obj.current_deadline - today).days
-
         if days_remaining == 0:
             return "Due today"
         if days_remaining > 30:

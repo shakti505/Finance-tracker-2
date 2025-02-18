@@ -10,6 +10,7 @@ from utils.responses import (
     not_found_error_response,
     success_no_content_response,
 )
+import os
 from uuid import UUID
 from utils.token import TokenHandler
 from .models import CustomUser
@@ -66,7 +67,7 @@ class UserCreateView(APIView):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return success_single_response(serializer.data)
+            return success_single_response(serializer.data, status_code=status.HTTP_201_CREATED)
         return validation_error_response(serializer.errors)
 
 
@@ -192,9 +193,10 @@ class PasswordResetRequestView(APIView):
             token = default_token_generator.make_token(user)
             uid = urlsafe_base64_encode(str(user.id).encode())
 
-            # Generate reset URL
-            reset_link = f"http://localhost:8000/api/v1/auth/password-reset/confirm/{uid}/{token}/"
-            print(reset_link)
+            reset_link_template = os.getenv('RESET_LINK')
+
+            reset_link = reset_link_template.format(uid=uid, token=token)
+
 
             send_mail.delay(
                 [email],

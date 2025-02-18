@@ -71,7 +71,11 @@ class RecurringTransactionSerializer(serializers.ModelSerializer):
                 "Staff can only create recurring transactions for non-staff users."
             )
         return user
-
+    def validate_type(self, type):
+        savings_plan = self.initial_data.get("savings_plan")
+        if savings_plan and type!= "DEBIT":
+            raise serializers.ValidationError("You can not add ")
+        return type
     def validate_amount(self, amount):
         """Validate transaction amount"""
         if amount <= 0:
