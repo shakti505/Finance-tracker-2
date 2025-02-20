@@ -193,10 +193,9 @@ class PasswordResetRequestView(APIView):
             token = default_token_generator.make_token(user)
             uid = urlsafe_base64_encode(str(user.id).encode())
 
-            reset_link_template = os.getenv('RESET_LINK')
 
-            reset_link = reset_link_template.format(uid=uid, token=token)
-
+            reset_link = f"http://localhost:8000/api/v1/auth/password-reset/confirm/{uid}/{token}/"
+            print(reset_link)
 
             send_mail.delay(
                 [email],

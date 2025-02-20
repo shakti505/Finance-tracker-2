@@ -14,7 +14,7 @@ from pathlib import Path
 from datetime import timedelta
 from celery.schedules import crontab
 import os
-
+import sys
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -95,10 +95,16 @@ DATABASES = {
         "NAME": "finance_tracker",
         "USERNAME": os.getenv("POSTGRES_USER"),
         "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
-        "ATOMIC_REQUESTS": True,
     }
 }
 
+if "pytest" in sys.modules:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": ":memory:",  # Use in-memory database
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

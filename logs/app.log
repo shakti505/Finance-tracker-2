@@ -16316,3 +16316,46 @@ AttributeError: 'UserSerializer' object has no attribute 'datam'
 2025-02-18 05:35:13,271 [INFO] Invalidated 0 tokens for user testuser.
 2025-02-18 05:35:13,272 [INFO] User session invalidated for testuser.
 2025-02-18 05:56:40,330 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-18 06:07:29,191 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/expense_tracker/settings.py changed, reloading.
+2025-02-18 10:30:47,282 [INFO] User testuser logged in successfully.
+2025-02-18 10:30:47,298 [INFO] Generated tokens for user testuser.
+2025-02-18 10:30:51,145 [WARNING] Not Found: /api/v1/users/0f9c8ec9-3b66-4d49-b127-f7bca6493480/
+2025-02-18 10:31:12,626 [WARNING] Bad Request: /api/v1/users/508582dc-3941-4034-9674-60b027ebe08f/
+2025-02-18 11:05:49,117 [WARNING] Not Found: /api/v1/users/update-password/547f7668-2c75-407a-9847-eee2e0ef109c/
+2025-02-18 11:05:54,897 [INFO] User testuser logged in successfully.
+2025-02-18 11:05:54,905 [INFO] Generated tokens for user testuser.
+2025-02-18 11:06:16,496 [WARNING] Bad Request: /api/v1/users/update-password/508582dc-3941-4034-9674-60b027ebe08f/
+2025-02-18 11:08:01,501 [WARNING] Bad Request: /api/v1/users/update-password/508582dc-3941-4034-9674-60b027ebe08f/
+2025-02-18 11:08:07,778 [INFO] Password updated successfully for user testuser
+2025-02-18 11:16:27,799 [WARNING] Method Not Allowed: /api/v1/auth/password-reset/confirm/YzMwZjQ0MjEtOGYyZi00YWU3LTg5YmUtZjkyNDFmYmFhNDRj/clf34v-2a9f64a2ce76452564992f914aaa8733/
+2025-02-18 11:18:57,750 [WARNING] Not Found: /api/v1/auth/password-reset/confirm/YzMwZjQ0MjEtOGYyZi00YWU3LTg5YmUtZjkyNDFmYmFhNDRj/clf34v-2a9f64a2ce76452564992f914aaa8733/
+2025-02-18 11:21:01,168 [WARNING] Method Not Allowed: /api/v1/auth/password-reset/confirm/ZDc4NTM3MjgtMTg4YS00MGI3LThkYjQtZDBmZDBkYmU1ZjUw/clf3gb-284f3c03a12b28e24d7465c6a03d86c0/
+2025-02-18 11:21:07,333 [WARNING] Not Found: /api/v1/auth/password-reset/confirm/ZDc4NTM3MjgtMTg4YS00MGI3LThkYjQtZDBmZDBkYmU1ZjUw/clf3gb-284f3c03a12b28e24d7465c6a03d86c0/
+2025-02-18 11:22:58,057 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-18 11:23:06,692 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-18 11:23:43,603 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/YjBmMGJmMzUtZDQzZS00N2U2LWJlZmItMDJkMTAwMjhjOTA1/clf3mq-941f2177ecadd1bed65f4eab10743ec8/
+2025-02-18 11:24:00,602 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/YjBmMGJmMzUtZDQzZS00N2U2LWJlZmItMDJkMTAwMjhjOTA1/clf3mq-941f2177ecadd1bed65f4eab10743ec8/
+2025-02-18 11:24:29,894 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/YjBmMGJmMzUtZDQzZS00N2U2LWJlZmItMDJkMTAwMjhjOTA1/clf3mq-941f2177ecadd1bed65f4eab10743ec8/
+2025-02-18 11:24:41,993 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/YjBmMGJmMzUtZDQzZS00N2U2LWJlZmItMDJkMTAwMjhjOTA1/clf3mq-941f2177ecadd1bed65f4eab10743ec8/
+2025-02-18 12:08:04,609 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/YjBmMGJmMzUtZDQzZS00N2U2LWJlZmItMDJkMTAwMjhjOTA1/clf3mq-941f2177ecadd1bed65f4eab10743ec8/
+2025-02-19 06:44:43,626 [WARNING] Bad Request: /api/v1/auth/password-reset/
+2025-02-19 07:13:29,342 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-19 07:13:53,852 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-19 07:20:58,115 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/models.py changed, reloading.
+2025-02-19 07:21:38,828 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/models.py changed, reloading.
+2025-02-19 07:44:16,390 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/YjBmMGJmMzUtZDQzZS00N2U2LWJlZmItMDJkMTAwMjhjOTA1/clf3mq-941f2177ecadd1bed65f4eab10743ec8/
+2025-02-19 07:46:36,549 [WARNING] Unauthorized: /api/v1/auth/login/
+2025-02-19 07:47:18,512 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-19 07:47:59,501 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/views.py changed, reloading.
+2025-02-19 07:48:19,267 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/YjBmMGJmMzUtZDQzZS00N2U2LWJlZmItMDJkMTAwMjhjOTA1/clgobr-cb2f54d3a7e3b2c5149d0343d5f4bebf/
+2025-02-19 07:48:38,029 [WARNING] Bad Request: /api/v1/auth/password-reset/confirm/YjBmMGJmMzUtZDQzZS00N2U2LWJlZmItMDJkMTAwMjhjOTA1/clgobr-cb2f54d3a7e3b2c5149d0343d5f4bebf/
+2025-02-19 09:33:46,415 [INFO] /Users/gkmit/Downloads/expense_tracker copy 5/user/serializers.py changed, reloading.
+2025-02-19 13:28:30,382 [WARNING] Unauthorized: /api/v1/categories/
+2025-02-19 13:28:34,222 [WARNING] Unauthorized: /api/v1/auth/login/
+2025-02-19 13:28:43,091 [WARNING] Bad Request: /api/v1/auth/register/
+2025-02-19 13:28:53,077 [WARNING] Unauthorized: /api/v1/auth/login/
+2025-02-19 13:29:06,833 [INFO] User testuser2 created successfully.
+2025-02-19 13:29:14,843 [INFO] User testuser2 logged in successfully.
+2025-02-19 13:29:14,858 [INFO] Generated tokens for user testuser2.
+2025-02-20 04:51:02,324 [INFO] User testuser2 logged in successfully.
+2025-02-20 04:51:02,346 [INFO] Generated tokens for user testuser2.

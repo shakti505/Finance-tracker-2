@@ -99,24 +99,19 @@ class UpdatePasswordSerializer(serializers.Serializer):
         return data
 
     def update_password(self):
-        try:
-            user = self.context["user"]
-            user.set_password(self.validated_data["new_password"])
-            user.save()
 
-            # Invalidate all other tokens except current one only for non-staff users
-            if not self.context["request"].user.is_staff:
-                ActiveTokens.objects.filter(user=user).exclude(
-                    token=self.context["request"].auth
-                ).delete()
+        user = self.context["user"]
+        user.set_password(self.validated_data["new_password"])
+        user.save()
 
-            logger.info(f"Password updated successfully for user {user.username}")
-            return True
-        except Exception as e:
-            logger.error(f"Error updating password for user {user.username}: {str(e)}")
-            raise serializers.ValidationError(
-                "Error updating password. Please try again."
-            )
+        # Invalidate all other tokens except current one only for non-staff users
+        if not self.context["request"].user.is_staff:
+            ActiveTokens.objects.filter(user=user).exclude(
+                token=self.context["request"].auth
+            ).delete()
+
+        logger.info(f"Password updated successfully for user {user.username}")
+        return True
 
 
 class DeleteUserSerializer(serializers.Serializer):
